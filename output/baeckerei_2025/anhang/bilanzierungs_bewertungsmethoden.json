@@ -1,0 +1,138 @@
+{
+  "section_id": "bilanzierungs_bewertungsmethoden",
+  "norm_refs": [
+    "§ 284 Abs. 2 Nr. 1 HGB"
+  ],
+  "blocks": [
+    {
+      "typ": "prosa",
+      "text": "Das Sachanlagevermögen wird zu Anschaffungs- oder Herstellungskosten, vermindert um planmäßige lineare Abschreibungen, angesetzt. Für die einzelnen Anlagegruppen werden folgende Nutzungsdauern angewendet: Geschäftsbauten 40 Jahre, Maschinen 10 bis 15 Jahre, Fuhrpark 6 Jahre, Betriebs- und Geschäftsausstattung 10 Jahre. Der in den Geschäftsbauten enthaltene Anteil an Grund und Boden wird nicht abgeschrieben.",
+      "claims": [
+        {
+          "aussage": "Geschaeftsbauten Methode",
+          "wert": "Linear",
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[konto=0210].methode"
+          }
+        },
+        {
+          "aussage": "Geschaeftsbauten ND",
+          "wert": "40 (Gebäude)",
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[konto=0210].nd"
+          }
+        },
+        {
+          "aussage": "Maschinen0440 Methode",
+          "wert": "Linear",
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[konto=0440].methode"
+          }
+        },
+        {
+          "aussage": "Maschinen0440 ND",
+          "wert": "15",
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[konto=0440].nd"
+          }
+        },
+        {
+          "aussage": "Maschinen0441 Methode",
+          "wert": "Linear",
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[konto=0441].methode"
+          }
+        },
+        {
+          "aussage": "Maschinen0441 ND",
+          "wert": "15",
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[konto=0441].nd"
+          }
+        },
+        {
+          "aussage": "Maschinen0450 Methode",
+          "wert": "Linear",
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[konto=0450].methode"
+          }
+        },
+        {
+          "aussage": "Maschinen0450 ND",
+          "wert": "10",
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[konto=0450].nd"
+          }
+        },
+        {
+          "aussage": "Fuhrpark0520 Methode",
+          "wert": "Linear",
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[konto=0520].methode"
+          }
+        },
+        {
+          "aussage": "Fuhrpark0520 ND",
+          "wert": "6",
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[konto=0520].nd"
+          }
+        },
+        {
+          "aussage": "Fuhrpark0521 Methode",
+          "wert": "Linear",
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[konto=0521].methode"
+          }
+        },
+        {
+          "aussage": "Fuhrpark0521 ND",
+          "wert": "6",
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[konto=0521].nd"
+          }
+        },
+        {
+          "aussage": "BGA Methode",
+          "wert": "Linear",
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[konto=0650].methode"
+          }
+        },
+        {
+          "aussage": "BGA ND",
+          "wert": "10",
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[konto=0650].nd"
+          }
+        }
+      ]
+    }
+  ],
+  "confidence": "hoch",
+  "escalation_flag": false,
+  "escalation_grund": null,
+  "offene_punkte": [],
+  "_validierung": {
+    "phase3": "ok",
+    "claims_geprueft": 14,
+    "fehler": 0,
+    "warnungen": 0,
+    "geerdet_gegen": "Saldenliste.xlsx + sachverhaltsblatt.json",
+    "datum": "2026-09-24"
+  }
+}

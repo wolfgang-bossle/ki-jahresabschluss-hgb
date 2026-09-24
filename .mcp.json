@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "jahresabschluss-hgb": {
+      "command": "uv",
+      "args": ["run", "python", "mcp/server.py"]
+    }
+  }
+}

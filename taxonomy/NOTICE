@@ -1,0 +1,16 @@
+Taxonomie: E-Bilanz / HGB-Taxonomie Version 6.9 (2025-04-01)
+Rechteinhaber: XBRL Deutschland e.V., Düsseldorf
+Bezug: https://www.xbrl.de/german-gaap-taxonomy-v6.9-2025-04-01.zip
+Nutzungsbedingungen: https://de.xbrl.org/disclaimer/
+
+Unverändert aus dem Original (Copyright-Vermerk im Dateikopf):
+  de-gaap-ci-2025-04-01-label-de.xml
+  de-gaap-ci-2025-04-01-presentation-balanceSheet.xml
+  de-gaap-ci-2025-04-01-presentation-incomeStatement.xml
+
+Bearbeitete Fassungen, aus dem Original abgeleitet, (c) XBRL Deutschland e.V.:
+  de-gaap-ci-2025-04-01-balance-is.json
+  taxonomy_complete_gmbh.json
+
+Als authentisch gilt im Zweifelsfall nur die Fassung auf https://www.xbrl.de
+beziehungsweise https://de.xbrl.org.

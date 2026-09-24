@@ -1,0 +1,34 @@
+{
+  "section_id": "bewertungseinheiten_254",
+  "norm_refs": [
+    "§ 285 Nr. 23 HGB"
+  ],
+  "blocks": [
+    {
+      "typ": "prosa",
+      "text": "Keine Bildung von Bewertungseinheiten (Hedge-Accounting) nach § 254 HGB.",
+      "claims": [
+        {
+          "aussage": "Bewertungseinheiten",
+          "wert": "Keine Bildung von Bewertungseinheiten (Hedge-Accounting) nach § 254 HGB.",
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "bewertungseinheiten_254.begruendung"
+          }
+        }
+      ]
+    }
+  ],
+  "confidence": "hoch",
+  "escalation_flag": false,
+  "escalation_grund": null,
+  "offene_punkte": [],
+  "_validierung": {
+    "phase3": "ok",
+    "claims_geprueft": 1,
+    "fehler": 0,
+    "warnungen": 0,
+    "geerdet_gegen": "Saldenliste.xlsx + sachverhaltsblatt.json",
+    "datum": "2026-09-24"
+  }
+}

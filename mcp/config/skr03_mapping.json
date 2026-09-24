@@ -1,0 +1,199 @@
+{
+  "metadata": {
+    "kontenrahmen": "SKR03",
+    "tabelle": "B (Konto -> Taxonomie-Konzept)",
+    "taxonomie": "de-gaap-ci-2025-04-01",
+    "erstellt": "2026-06-18",
+    "konten": 31,
+    "hinweis": "KEINE Werte hier — die kommen aus der Saldenliste. Reine Struktur-Zuordnung, gilt fuer ALLE SKR03-Mandanten.",
+    "verifikation": "alle 31 Konzepte gegen Taxonomie geprueft; Bilanzprobe GJ+VJ = 0,00 EUR (2026-06-18)"
+  },
+  "mapping": {
+    "0210": {
+      "name": "Geschaeftsbauten",
+      "taxonomy_concept": "de-gaap-ci_bs.ass.fixAss.tan.landBuildings",
+      "taxonomy_label": "Grundstücke, grundstücksgleiche Rechte und Bauten einschließlich der Bauten auf fremden Grundstücken",
+      "section": "balanceSheet"
+    },
+    "0440": {
+      "name": "Maschinen (Ofen Bestand)",
+      "taxonomy_concept": "de-gaap-ci_bs.ass.fixAss.tan.machinery",
+      "taxonomy_label": "technische Anlagen und Maschinen",
+      "section": "balanceSheet"
+    },
+    "0441": {
+      "name": "Maschinen (Ofen Zugang 2025)",
+      "taxonomy_concept": "de-gaap-ci_bs.ass.fixAss.tan.machinery",
+      "taxonomy_label": "technische Anlagen und Maschinen",
+      "section": "balanceSheet"
+    },
+    "0450": {
+      "name": "Maschinen (Knetmaschine)",
+      "taxonomy_concept": "de-gaap-ci_bs.ass.fixAss.tan.machinery",
+      "taxonomy_label": "technische Anlagen und Maschinen",
+      "section": "balanceSheet"
+    },
+    "0520": {
+      "name": "Fuhrpark (Fahrzeug 1)",
+      "taxonomy_concept": "de-gaap-ci_bs.ass.fixAss.tan.otherEquipm",
+      "taxonomy_label": "andere Anlagen, Betriebs- und Geschäftsausstattung",
+      "section": "balanceSheet"
+    },
+    "0521": {
+      "name": "Fuhrpark (Fahrzeug 2)",
+      "taxonomy_concept": "de-gaap-ci_bs.ass.fixAss.tan.otherEquipm",
+      "taxonomy_label": "andere Anlagen, Betriebs- und Geschäftsausstattung",
+      "section": "balanceSheet"
+    },
+    "0650": {
+      "name": "Betriebs- und Geschaeftsausstattung (Filialen)",
+      "taxonomy_concept": "de-gaap-ci_bs.ass.fixAss.tan.otherEquipm",
+      "taxonomy_label": "andere Anlagen, Betriebs- und Geschäftsausstattung",
+      "section": "balanceSheet"
+    },
+    "1140": {
+      "name": "Roh-, Hilfs- und Betriebsstoffe",
+      "taxonomy_concept": "de-gaap-ci_bs.ass.currAss.inventory.material",
+      "taxonomy_label": "Roh-, Hilfs- und Betriebsstoffe",
+      "section": "balanceSheet"
+    },
+    "1400": {
+      "name": "Forderungen aus Lieferungen und Leistungen",
+      "taxonomy_concept": "de-gaap-ci_bs.ass.currAss.receiv.trade",
+      "taxonomy_label": "Forderungen aus Lieferungen und Leistungen",
+      "section": "balanceSheet"
+    },
+    "1200": {
+      "name": "Bank",
+      "taxonomy_concept": "de-gaap-ci_bs.ass.currAss.cashEquiv.bank",
+      "taxonomy_label": "Kassenbestand, Bundesbankguthaben, Guthaben bei Kreditinstituten und Schecks; Guthaben bei Kreditinstituten",
+      "section": "balanceSheet"
+    },
+    "1000": {
+      "name": "Kasse",
+      "taxonomy_concept": "de-gaap-ci_bs.ass.currAss.cashEquiv.cash",
+      "taxonomy_label": "Kassenbestand, Bundesbankguthaben, Guthaben bei Kreditinstituten und Schecks; Kasse",
+      "section": "balanceSheet"
+    },
+    "0800": {
+      "name": "Gezeichnetes Kapital (Stammkapital)",
+      "taxonomy_concept": "de-gaap-ci_bs.eqLiab.equity.subscribed",
+      "taxonomy_label": "Gezeichnetes Kapital / Kapitalkonto / Kapitalanteile",
+      "section": "balanceSheet"
+    },
+    "0860": {
+      "name": "Gewinnvortrag",
+      "taxonomy_concept": "de-gaap-ci_bs.eqLiab.equity.retainedEarnings",
+      "taxonomy_label": "Eigenkapital, Gewinn-/Verlustvortrag - bei Kapitalgesellschaften",
+      "section": "balanceSheet"
+    },
+    "0950": {
+      "name": "Steuerrueckstellungen",
+      "taxonomy_concept": "de-gaap-ci_bs.eqLiab.accruals.tax",
+      "taxonomy_label": "Steuerrückstellungen",
+      "section": "balanceSheet"
+    },
+    "0670": {
+      "name": "Verbindlichkeiten Kreditinstitute (langfristig)",
+      "taxonomy_concept": "de-gaap-ci_bs.eqLiab.liab.bank",
+      "taxonomy_label": "Verbindlichkeiten gegenüber Kreditinstituten",
+      "section": "balanceSheet"
+    },
+    "0671": {
+      "name": "Verbindlichkeiten Kreditinstitute (kurzfristig)",
+      "taxonomy_concept": "de-gaap-ci_bs.eqLiab.liab.bank",
+      "taxonomy_label": "Verbindlichkeiten gegenüber Kreditinstituten",
+      "section": "balanceSheet"
+    },
+    "1600": {
+      "name": "Verbindlichkeiten aus Lieferungen und Leistungen",
+      "taxonomy_concept": "de-gaap-ci_bs.eqLiab.liab.trade",
+      "taxonomy_label": "Verbindlichkeiten aus Lieferungen und Leistungen",
+      "section": "balanceSheet"
+    },
+    "1740": {
+      "name": "Sonstige Verbindlichkeiten",
+      "taxonomy_concept": "de-gaap-ci_bs.eqLiab.liab.other",
+      "taxonomy_label": "sonstige Verbindlichkeiten",
+      "section": "balanceSheet"
+    },
+    "8400": {
+      "name": "Erloese Ladenverkauf",
+      "taxonomy_concept": "de-gaap-ci_is.netIncome.regular.operatingTC.grossTradingProfit.totalOutput.netSales",
+      "taxonomy_label": "Umsatzerlöse (GKV)",
+      "section": "incomeStatement"
+    },
+    "8401": {
+      "name": "Erloese Filialbelieferung",
+      "taxonomy_concept": "de-gaap-ci_is.netIncome.regular.operatingTC.grossTradingProfit.totalOutput.netSales",
+      "taxonomy_label": "Umsatzerlöse (GKV)",
+      "section": "incomeStatement"
+    },
+    "3300": {
+      "name": "Aufwendungen fuer Rohstoffe",
+      "taxonomy_concept": "de-gaap-ci_is.netIncome.regular.operatingTC.grossTradingProfit.materialServices.material",
+      "taxonomy_label": "Aufwendungen für Roh-, Hilfs- und Betriebsstoffe und für bezogene Waren (GKV)",
+      "section": "incomeStatement"
+    },
+    "3310": {
+      "name": "Aufwendungen Hilfs-/Verpackungsstoffe",
+      "taxonomy_concept": "de-gaap-ci_is.netIncome.regular.operatingTC.grossTradingProfit.materialServices.material",
+      "taxonomy_label": "Aufwendungen für Roh-, Hilfs- und Betriebsstoffe und für bezogene Waren (GKV)",
+      "section": "incomeStatement"
+    },
+    "4100": {
+      "name": "Gehaelter",
+      "taxonomy_concept": "de-gaap-ci_is.netIncome.regular.operatingTC.staff.salaries",
+      "taxonomy_label": "Löhne und Gehälter (GKV)",
+      "section": "incomeStatement"
+    },
+    "4130": {
+      "name": "Gesetzliche soziale Aufwendungen",
+      "taxonomy_concept": "de-gaap-ci_is.netIncome.regular.operatingTC.staff.social",
+      "taxonomy_label": "soziale Abgaben und Aufwendungen für Altersversorgung und für Unterstützung (GKV)",
+      "section": "incomeStatement"
+    },
+    "4210": {
+      "name": "Miete Filialen",
+      "taxonomy_concept": "de-gaap-ci_is.netIncome.regular.operatingTC.otherCost",
+      "taxonomy_label": "sonstige betriebliche Aufwendungen (GKV)",
+      "section": "incomeStatement"
+    },
+    "4240": {
+      "name": "Energiekosten",
+      "taxonomy_concept": "de-gaap-ci_is.netIncome.regular.operatingTC.otherCost",
+      "taxonomy_label": "sonstige betriebliche Aufwendungen (GKV)",
+      "section": "incomeStatement"
+    },
+    "4360": {
+      "name": "Werbe- und Reisekosten",
+      "taxonomy_concept": "de-gaap-ci_is.netIncome.regular.operatingTC.otherCost",
+      "taxonomy_label": "sonstige betriebliche Aufwendungen (GKV)",
+      "section": "incomeStatement"
+    },
+    "4900": {
+      "name": "Sonstige betriebliche Aufwendungen",
+      "taxonomy_concept": "de-gaap-ci_is.netIncome.regular.operatingTC.otherCost",
+      "taxonomy_label": "sonstige betriebliche Aufwendungen (GKV)",
+      "section": "incomeStatement"
+    },
+    "4830": {
+      "name": "Abschreibungen auf Sachanlagen",
+      "taxonomy_concept": "de-gaap-ci_is.netIncome.regular.operatingTC.deprAmort.fixAss",
+      "taxonomy_label": "Abschreibungen (GKV), auf immaterielle Vermögensgegenstände des Anlagevermögens und Sachanlagen",
+      "section": "incomeStatement"
+    },
+    "2100": {
+      "name": "Zinsaufwendungen",
+      "taxonomy_concept": "de-gaap-ci_is.netIncome.regular.fin.netInterest.expenses",
+      "taxonomy_label": "Zinsen und ähnliche Aufwendungen",
+      "section": "incomeStatement"
+    },
+    "7610": {
+      "name": "Steuern vom Einkommen und vom Ertrag",
+      "taxonomy_concept": "de-gaap-ci_is.netIncome.tax",
+      "taxonomy_label": "Steuern vom Einkommen und vom Ertrag",
+      "section": "incomeStatement"
+    }
+  }
+}

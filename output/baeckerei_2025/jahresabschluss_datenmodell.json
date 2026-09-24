@@ -1,0 +1,859 @@
+{
+  "bilanz": {
+    "aktiva": [
+      {
+        "ebene": 0,
+        "konzept": "de-gaap-ci_bs.ass",
+        "label": "Bilanzsumme, Summe Aktiva",
+        "wert_gj": 1700000.0,
+        "wert_vj": 1476500.0,
+        "quelle": [
+          "0210",
+          "0440",
+          "0441",
+          "0450",
+          "0520",
+          "0521",
+          "0650",
+          "1000",
+          "1140",
+          "1200",
+          "1400"
+        ]
+      },
+      {
+        "ebene": 1,
+        "konzept": "de-gaap-ci_bs.ass.fixAss",
+        "label": "Anlagevermögen",
+        "wert_gj": 943000.0,
+        "wert_vj": 876500.0,
+        "quelle": [
+          "0210",
+          "0440",
+          "0441",
+          "0450",
+          "0520",
+          "0521",
+          "0650"
+        ]
+      },
+      {
+        "ebene": 2,
+        "konzept": "de-gaap-ci_bs.ass.fixAss.tan",
+        "label": "Sachanlagen",
+        "wert_gj": 943000.0,
+        "wert_vj": 876500.0,
+        "quelle": [
+          "0210",
+          "0440",
+          "0441",
+          "0450",
+          "0520",
+          "0521",
+          "0650"
+        ]
+      },
+      {
+        "ebene": 3,
+        "konzept": "de-gaap-ci_bs.ass.fixAss.tan.landBuildings",
+        "label": "Grundstücke, grundstücksgleiche Rechte und Bauten einschließlich der Bauten auf fremden Grundstücken",
+        "wert_gj": 520000.0,
+        "wert_vj": 545000.0,
+        "quelle": [
+          "0210"
+        ]
+      },
+      {
+        "ebene": 3,
+        "konzept": "de-gaap-ci_bs.ass.fixAss.tan.machinery",
+        "label": "technische Anlagen und Maschinen",
+        "wert_gj": 295000.0,
+        "wert_vj": 170000.0,
+        "quelle": [
+          "0440",
+          "0441",
+          "0450"
+        ]
+      },
+      {
+        "ebene": 3,
+        "konzept": "de-gaap-ci_bs.ass.fixAss.tan.otherEquipm",
+        "label": "andere Anlagen, Betriebs- und Geschäftsausstattung",
+        "wert_gj": 128000.0,
+        "wert_vj": 161500.0,
+        "quelle": [
+          "0520",
+          "0521",
+          "0650"
+        ]
+      },
+      {
+        "ebene": 1,
+        "konzept": "de-gaap-ci_bs.ass.currAss",
+        "label": "Umlaufvermögen",
+        "wert_gj": 757000.0,
+        "wert_vj": 600000.0,
+        "quelle": [
+          "1000",
+          "1140",
+          "1200",
+          "1400"
+        ]
+      },
+      {
+        "ebene": 2,
+        "konzept": "de-gaap-ci_bs.ass.currAss.inventory",
+        "label": "Vorräte",
+        "wert_gj": 90000.0,
+        "wert_vj": 75000.0,
+        "quelle": [
+          "1140"
+        ]
+      },
+      {
+        "ebene": 3,
+        "konzept": "de-gaap-ci_bs.ass.currAss.inventory.material",
+        "label": "Roh-, Hilfs- und Betriebsstoffe",
+        "wert_gj": 90000.0,
+        "wert_vj": 75000.0,
+        "quelle": [
+          "1140"
+        ]
+      },
+      {
+        "ebene": 2,
+        "konzept": "de-gaap-ci_bs.ass.currAss.receiv",
+        "label": "Forderungen und sonstige Vermögensgegenstände",
+        "wert_gj": 75000.0,
+        "wert_vj": 65000.0,
+        "quelle": [
+          "1400"
+        ]
+      },
+      {
+        "ebene": 3,
+        "konzept": "de-gaap-ci_bs.ass.currAss.receiv.trade",
+        "label": "Forderungen aus Lieferungen und Leistungen",
+        "wert_gj": 75000.0,
+        "wert_vj": 65000.0,
+        "quelle": [
+          "1400"
+        ]
+      },
+      {
+        "ebene": 2,
+        "konzept": "de-gaap-ci_bs.ass.currAss.cashEquiv",
+        "label": "Kassenbestand, Bundesbankguthaben, Guthaben bei Kreditinstituten und Schecks",
+        "wert_gj": 592000.0,
+        "wert_vj": 460000.0,
+        "quelle": [
+          "1000",
+          "1200"
+        ]
+      },
+      {
+        "ebene": 3,
+        "konzept": "de-gaap-ci_bs.ass.currAss.cashEquiv.cash",
+        "label": "Kassenbestand, Bundesbankguthaben, Guthaben bei Kreditinstituten und Schecks; Kasse",
+        "wert_gj": 52000.0,
+        "wert_vj": 40000.0,
+        "quelle": [
+          "1000"
+        ]
+      },
+      {
+        "ebene": 3,
+        "konzept": "de-gaap-ci_bs.ass.currAss.cashEquiv.bank",
+        "label": "Kassenbestand, Bundesbankguthaben, Guthaben bei Kreditinstituten und Schecks; Guthaben bei Kreditinstituten",
+        "wert_gj": 540000.0,
+        "wert_vj": 420000.0,
+        "quelle": [
+          "1200"
+        ]
+      }
+    ],
+    "passiva": [
+      {
+        "ebene": 0,
+        "konzept": "de-gaap-ci_bs.eqLiab",
+        "label": "Bilanzsumme, Summe Passiva",
+        "wert_gj": 1700000.0,
+        "wert_vj": 1476500.0,
+        "quelle": [
+          "(abgeleitet aus GuV)",
+          "0670",
+          "0671",
+          "0800",
+          "0860",
+          "0950",
+          "1600",
+          "1740"
+        ]
+      },
+      {
+        "ebene": 1,
+        "konzept": "de-gaap-ci_bs.eqLiab.equity",
+        "label": "Eigenkapital",
+        "wert_gj": 530000.0,
+        "wert_vj": 330000.0,
+        "quelle": [
+          "(abgeleitet aus GuV)",
+          "0800",
+          "0860"
+        ]
+      },
+      {
+        "ebene": 2,
+        "konzept": "de-gaap-ci_bs.eqLiab.equity.subscribed",
+        "label": "Gezeichnetes Kapital / Kapitalkonto / Kapitalanteile",
+        "wert_gj": 50000.0,
+        "wert_vj": 50000.0,
+        "quelle": [
+          "0800"
+        ]
+      },
+      {
+        "ebene": 2,
+        "konzept": "de-gaap-ci_bs.eqLiab.equity.retainedEarnings",
+        "label": "Eigenkapital, Gewinn-/Verlustvortrag - bei Kapitalgesellschaften",
+        "wert_gj": 280000.0,
+        "wert_vj": 130000.0,
+        "quelle": [
+          "0860"
+        ]
+      },
+      {
+        "ebene": 2,
+        "konzept": "de-gaap-ci_bs.eqLiab.equity.netIncome",
+        "label": "Eigenkapital, Jahresüberschuss/-fehlbetrag (Bilanz) - bei Kapitalgesellschaften",
+        "wert_gj": 200000.0,
+        "wert_vj": 150000.0,
+        "quelle": [
+          "(abgeleitet aus GuV)"
+        ]
+      },
+      {
+        "ebene": 1,
+        "konzept": "de-gaap-ci_bs.eqLiab.accruals",
+        "label": "Rückstellungen",
+        "wert_gj": 86000.0,
+        "wert_vj": 65000.0,
+        "quelle": [
+          "0950"
+        ]
+      },
+      {
+        "ebene": 2,
+        "konzept": "de-gaap-ci_bs.eqLiab.accruals.tax",
+        "label": "Steuerrückstellungen",
+        "wert_gj": 86000.0,
+        "wert_vj": 65000.0,
+        "quelle": [
+          "0950"
+        ]
+      },
+      {
+        "ebene": 1,
+        "konzept": "de-gaap-ci_bs.eqLiab.liab",
+        "label": "Verbindlichkeiten",
+        "wert_gj": 1084000.0,
+        "wert_vj": 1081500.0,
+        "quelle": [
+          "0670",
+          "0671",
+          "1600",
+          "1740"
+        ]
+      },
+      {
+        "ebene": 2,
+        "konzept": "de-gaap-ci_bs.eqLiab.liab.bank",
+        "label": "Verbindlichkeiten gegenüber Kreditinstituten",
+        "wert_gj": 900000.0,
+        "wert_vj": 900000.0,
+        "quelle": [
+          "0670",
+          "0671"
+        ]
+      },
+      {
+        "ebene": 2,
+        "konzept": "de-gaap-ci_bs.eqLiab.liab.trade",
+        "label": "Verbindlichkeiten aus Lieferungen und Leistungen",
+        "wert_gj": 120000.0,
+        "wert_vj": 100000.0,
+        "quelle": [
+          "1600"
+        ]
+      },
+      {
+        "ebene": 2,
+        "konzept": "de-gaap-ci_bs.eqLiab.liab.other",
+        "label": "sonstige Verbindlichkeiten",
+        "wert_gj": 64000.0,
+        "wert_vj": 81500.0,
+        "quelle": [
+          "1740"
+        ]
+      }
+    ],
+    "summe_aktiva_gj": 1700000.0,
+    "summe_aktiva_vj": 1476500.0,
+    "summe_passiva_gj": 1700000.0,
+    "summe_passiva_vj": 1476500.0
+  },
+  "guv": {
+    "positionen": [
+      {
+        "ebene": 0,
+        "konzept": "de-gaap-ci_is",
+        "label": "Gewinn- und Verlustrechnung",
+        "wert_gj": 200000.0,
+        "wert_vj": 150000.0,
+        "quelle": [
+          "2100",
+          "3300",
+          "3310",
+          "4100",
+          "4130",
+          "4210",
+          "4240",
+          "4360",
+          "4830",
+          "4900",
+          "7610",
+          "8400",
+          "8401"
+        ]
+      },
+      {
+        "ebene": 1,
+        "konzept": "de-gaap-ci_is.netIncome",
+        "label": "Jahresüberschuss/-fehlbetrag",
+        "wert_gj": 200000.0,
+        "wert_vj": 150000.0,
+        "quelle": [
+          "2100",
+          "3300",
+          "3310",
+          "4100",
+          "4130",
+          "4210",
+          "4240",
+          "4360",
+          "4830",
+          "4900",
+          "7610",
+          "8400",
+          "8401"
+        ]
+      },
+      {
+        "ebene": 2,
+        "konzept": "de-gaap-ci_is.netIncome.eat",
+        "label": "Ergebnis nach Steuern",
+        "wert_gj": 200000.0,
+        "wert_vj": 150000.0,
+        "quelle": [
+          "2100",
+          "3300",
+          "3310",
+          "4100",
+          "4130",
+          "4210",
+          "4240",
+          "4360",
+          "4830",
+          "4900",
+          "7610",
+          "8400",
+          "8401"
+        ]
+      },
+      {
+        "ebene": 3,
+        "konzept": "de-gaap-ci_is.netIncome.regular.operatingTC",
+        "label": "Betriebsergebnis (GKV)",
+        "wert_gj": 320000.0,
+        "wert_vj": 251000.0,
+        "quelle": [
+          "3300",
+          "3310",
+          "4100",
+          "4130",
+          "4210",
+          "4240",
+          "4360",
+          "4830",
+          "4900",
+          "8400",
+          "8401"
+        ]
+      },
+      {
+        "ebene": 4,
+        "konzept": "de-gaap-ci_is.netIncome.regular.operatingTC.grossTradingProfit",
+        "label": "Rohergebnis (GKV)",
+        "wert_gj": 2560000.0,
+        "wert_vj": 2300000.0,
+        "quelle": [
+          "3300",
+          "3310",
+          "8400",
+          "8401"
+        ]
+      },
+      {
+        "ebene": 5,
+        "konzept": "de-gaap-ci_is.netIncome.regular.operatingTC.grossTradingProfit.totalOutput",
+        "label": "Gesamtleistung (GKV)",
+        "wert_gj": 3800000.0,
+        "wert_vj": 3420000.0,
+        "quelle": [
+          "8400",
+          "8401"
+        ]
+      },
+      {
+        "ebene": 6,
+        "konzept": "de-gaap-ci_is.netIncome.regular.operatingTC.grossTradingProfit.totalOutput.netSales",
+        "label": "Umsatzerlöse (GKV)",
+        "wert_gj": 3800000.0,
+        "wert_vj": 3420000.0,
+        "quelle": [
+          "8400",
+          "8401"
+        ]
+      },
+      {
+        "ebene": 5,
+        "konzept": "de-gaap-ci_is.netIncome.regular.operatingTC.grossTradingProfit.materialServices",
+        "label": "Materialaufwand (GKV)",
+        "wert_gj": -1240000.0,
+        "wert_vj": -1120000.0,
+        "quelle": [
+          "3300",
+          "3310"
+        ]
+      },
+      {
+        "ebene": 6,
+        "konzept": "de-gaap-ci_is.netIncome.regular.operatingTC.grossTradingProfit.materialServices.material",
+        "label": "Aufwendungen für Roh-, Hilfs- und Betriebsstoffe und für bezogene Waren (GKV)",
+        "wert_gj": -1240000.0,
+        "wert_vj": -1120000.0,
+        "quelle": [
+          "3300",
+          "3310"
+        ]
+      },
+      {
+        "ebene": 4,
+        "konzept": "de-gaap-ci_is.netIncome.regular.operatingTC.staff",
+        "label": "Personalaufwand (GKV)",
+        "wert_gj": -1570000.0,
+        "wert_vj": -1428000.0,
+        "quelle": [
+          "4100",
+          "4130"
+        ]
+      },
+      {
+        "ebene": 5,
+        "konzept": "de-gaap-ci_is.netIncome.regular.operatingTC.staff.salaries",
+        "label": "Löhne und Gehälter (GKV)",
+        "wert_gj": -1320000.0,
+        "wert_vj": -1200000.0,
+        "quelle": [
+          "4100"
+        ]
+      },
+      {
+        "ebene": 5,
+        "konzept": "de-gaap-ci_is.netIncome.regular.operatingTC.staff.social",
+        "label": "soziale Abgaben und Aufwendungen für Altersversorgung und für Unterstützung (GKV)",
+        "wert_gj": -250000.0,
+        "wert_vj": -228000.0,
+        "quelle": [
+          "4130"
+        ]
+      },
+      {
+        "ebene": 4,
+        "konzept": "de-gaap-ci_is.netIncome.regular.operatingTC.deprAmort",
+        "label": "Abschreibungen (GKV)",
+        "wert_gj": -83500.0,
+        "wert_vj": -83500.0,
+        "quelle": [
+          "4830"
+        ]
+      },
+      {
+        "ebene": 5,
+        "konzept": "de-gaap-ci_is.netIncome.regular.operatingTC.deprAmort.fixAss",
+        "label": "Abschreibungen (GKV), auf immaterielle Vermögensgegenstände des Anlagevermögens und Sachanlagen",
+        "wert_gj": -83500.0,
+        "wert_vj": -83500.0,
+        "quelle": [
+          "4830"
+        ]
+      },
+      {
+        "ebene": 4,
+        "konzept": "de-gaap-ci_is.netIncome.regular.operatingTC.otherCost",
+        "label": "sonstige betriebliche Aufwendungen (GKV)",
+        "wert_gj": -586500.0,
+        "wert_vj": -537500.0,
+        "quelle": [
+          "4210",
+          "4240",
+          "4360",
+          "4900"
+        ]
+      },
+      {
+        "ebene": 3,
+        "konzept": "de-gaap-ci_is.netIncome.regular.fin",
+        "label": "Finanz- und Beteiligungsergebnis",
+        "wert_gj": -34000.0,
+        "wert_vj": -36000.0,
+        "quelle": [
+          "2100"
+        ]
+      },
+      {
+        "ebene": 4,
+        "konzept": "de-gaap-ci_is.netIncome.regular.fin.netInterest.expenses",
+        "label": "Zinsen und ähnliche Aufwendungen",
+        "wert_gj": -34000.0,
+        "wert_vj": -36000.0,
+        "quelle": [
+          "2100"
+        ]
+      },
+      {
+        "ebene": 3,
+        "konzept": "de-gaap-ci_is.netIncome.tax",
+        "label": "Steuern vom Einkommen und vom Ertrag",
+        "wert_gj": -86000.0,
+        "wert_vj": -65000.0,
+        "quelle": [
+          "7610"
+        ]
+      }
+    ],
+    "jahresueberschuss_gj": 200000.0,
+    "jahresueberschuss_vj": 150000.0
+  },
+  "metadata": {
+    "quelle": "Saldenliste.xlsx",
+    "bilanzprobe_gj": 0.0,
+    "bilanzprobe_vj": 0.0,
+    "jue_abgestimmt": true,
+    "taxonomie": "de-gaap-ci-2025-04-01"
+  },
+  "anlagenspiegel": {
+    "positionen": [
+      {
+        "ebene": 0,
+        "konzept": "de-gaap-ci_bs.ass.fixAss",
+        "konto": null,
+        "label": "Anlagevermögen",
+        "quelle": [
+          "0210",
+          "0440",
+          "0441",
+          "0450",
+          "0520",
+          "0521",
+          "0650"
+        ],
+        "ahk_anf": 1833000.0,
+        "zugang": 150000.0,
+        "abgang_ahk": 0.0,
+        "umbuchung": 0.0,
+        "ahk_ende": 1983000.0,
+        "kumafa_anf": 956500.0,
+        "afa_jahr": 83500.0,
+        "abgang_afa": 0.0,
+        "kumafa_ende": 1040000.0,
+        "bw_gj": 943000.0,
+        "bw_vj": 876500.0
+      },
+      {
+        "ebene": 1,
+        "konzept": "de-gaap-ci_bs.ass.fixAss.tan",
+        "konto": null,
+        "label": "Sachanlagen",
+        "quelle": [
+          "0210",
+          "0440",
+          "0441",
+          "0450",
+          "0520",
+          "0521",
+          "0650"
+        ],
+        "ahk_anf": 1833000.0,
+        "zugang": 150000.0,
+        "abgang_ahk": 0.0,
+        "umbuchung": 0.0,
+        "ahk_ende": 1983000.0,
+        "kumafa_anf": 956500.0,
+        "afa_jahr": 83500.0,
+        "abgang_afa": 0.0,
+        "kumafa_ende": 1040000.0,
+        "bw_gj": 943000.0,
+        "bw_vj": 876500.0
+      },
+      {
+        "ebene": 2,
+        "konzept": "de-gaap-ci_bs.ass.fixAss.tan.landBuildings",
+        "konto": null,
+        "label": "Grundstücke, grundstücksgleiche Rechte und Bauten einschließlich der Bauten auf fremden Grundstücken",
+        "quelle": [
+          "0210"
+        ],
+        "ahk_anf": 1200000.0,
+        "zugang": 0.0,
+        "abgang_ahk": 0.0,
+        "umbuchung": 0.0,
+        "ahk_ende": 1200000.0,
+        "kumafa_anf": 655000.0,
+        "afa_jahr": 25000.0,
+        "abgang_afa": 0.0,
+        "kumafa_ende": 680000.0,
+        "bw_gj": 520000.0,
+        "bw_vj": 545000.0
+      },
+      {
+        "ebene": 3,
+        "konzept": null,
+        "konto": "0210",
+        "label": "Geschäftsbauten",
+        "quelle": [
+          "0210"
+        ],
+        "methode": "Linear",
+        "nd": "40 (Gebäude)",
+        "ahk_anf": 1200000.0,
+        "zugang": 0.0,
+        "abgang_ahk": 0.0,
+        "umbuchung": 0.0,
+        "ahk_ende": 1200000.0,
+        "kumafa_anf": 655000.0,
+        "afa_jahr": 25000.0,
+        "abgang_afa": 0.0,
+        "kumafa_ende": 680000.0,
+        "bw_gj": 520000.0,
+        "bw_vj": 545000.0
+      },
+      {
+        "ebene": 2,
+        "konzept": "de-gaap-ci_bs.ass.fixAss.tan.machinery",
+        "konto": null,
+        "label": "technische Anlagen und Maschinen",
+        "quelle": [
+          "0440",
+          "0441",
+          "0450"
+        ],
+        "ahk_anf": 340000.0,
+        "zugang": 150000.0,
+        "abgang_ahk": 0.0,
+        "umbuchung": 0.0,
+        "ahk_ende": 490000.0,
+        "kumafa_anf": 170000.0,
+        "afa_jahr": 25000.0,
+        "abgang_afa": 0.0,
+        "kumafa_ende": 195000.0,
+        "bw_gj": 295000.0,
+        "bw_vj": 170000.0
+      },
+      {
+        "ebene": 3,
+        "konzept": null,
+        "konto": "0440",
+        "label": "Maschinen (Ofen Bestand)",
+        "quelle": [
+          "0440"
+        ],
+        "methode": "Linear",
+        "nd": "15",
+        "ahk_anf": 270000.0,
+        "zugang": 0.0,
+        "abgang_ahk": 0.0,
+        "umbuchung": 0.0,
+        "ahk_ende": 270000.0,
+        "kumafa_anf": 142000.0,
+        "afa_jahr": 18000.0,
+        "abgang_afa": 0.0,
+        "kumafa_ende": 160000.0,
+        "bw_gj": 110000.0,
+        "bw_vj": 128000.0
+      },
+      {
+        "ebene": 3,
+        "konzept": null,
+        "konto": "0441",
+        "label": "Maschinen (Ofen Zugang 2025)",
+        "quelle": [
+          "0441"
+        ],
+        "methode": "Linear",
+        "nd": "15",
+        "ahk_anf": 0.0,
+        "zugang": 150000.0,
+        "abgang_ahk": 0.0,
+        "umbuchung": 0.0,
+        "ahk_ende": 150000.0,
+        "kumafa_anf": 0.0,
+        "afa_jahr": 0.0,
+        "abgang_afa": 0.0,
+        "kumafa_ende": 0.0,
+        "bw_gj": 150000.0,
+        "bw_vj": 0.0
+      },
+      {
+        "ebene": 3,
+        "konzept": null,
+        "konto": "0450",
+        "label": "Maschinen (Knetmaschine)",
+        "quelle": [
+          "0450"
+        ],
+        "methode": "Linear",
+        "nd": "10",
+        "ahk_anf": 70000.0,
+        "zugang": 0.0,
+        "abgang_ahk": 0.0,
+        "umbuchung": 0.0,
+        "ahk_ende": 70000.0,
+        "kumafa_anf": 28000.0,
+        "afa_jahr": 7000.0,
+        "abgang_afa": 0.0,
+        "kumafa_ende": 35000.0,
+        "bw_gj": 35000.0,
+        "bw_vj": 42000.0
+      },
+      {
+        "ebene": 2,
+        "konzept": "de-gaap-ci_bs.ass.fixAss.tan.otherEquipm",
+        "konto": null,
+        "label": "andere Anlagen, Betriebs- und Geschäftsausstattung",
+        "quelle": [
+          "0520",
+          "0521",
+          "0650"
+        ],
+        "ahk_anf": 293000.0,
+        "zugang": 0.0,
+        "abgang_ahk": 0.0,
+        "umbuchung": 0.0,
+        "ahk_ende": 293000.0,
+        "kumafa_anf": 131500.0,
+        "afa_jahr": 33500.0,
+        "abgang_afa": 0.0,
+        "kumafa_ende": 165000.0,
+        "bw_gj": 128000.0,
+        "bw_vj": 161500.0
+      },
+      {
+        "ebene": 3,
+        "konzept": null,
+        "konto": "0520",
+        "label": "Fuhrpark (Fahrzeug 1)",
+        "quelle": [
+          "0520"
+        ],
+        "methode": "Linear",
+        "nd": "6",
+        "ahk_anf": 33000.0,
+        "zugang": 0.0,
+        "abgang_ahk": 0.0,
+        "umbuchung": 0.0,
+        "ahk_ende": 33000.0,
+        "kumafa_anf": 10500.0,
+        "afa_jahr": 5500.0,
+        "abgang_afa": 0.0,
+        "kumafa_ende": 16000.0,
+        "bw_gj": 17000.0,
+        "bw_vj": 22500.0
+      },
+      {
+        "ebene": 3,
+        "konzept": null,
+        "konto": "0521",
+        "label": "Fuhrpark (Fahrzeug 2)",
+        "quelle": [
+          "0521"
+        ],
+        "methode": "Linear",
+        "nd": "6",
+        "ahk_anf": 30000.0,
+        "zugang": 0.0,
+        "abgang_ahk": 0.0,
+        "umbuchung": 0.0,
+        "ahk_ende": 30000.0,
+        "kumafa_anf": 5000.0,
+        "afa_jahr": 5000.0,
+        "abgang_afa": 0.0,
+        "kumafa_ende": 10000.0,
+        "bw_gj": 20000.0,
+        "bw_vj": 25000.0
+      },
+      {
+        "ebene": 3,
+        "konzept": null,
+        "konto": "0650",
+        "label": "Betriebs- und Geschäftsausstattung",
+        "quelle": [
+          "0650"
+        ],
+        "methode": "Linear",
+        "nd": "10",
+        "ahk_anf": 230000.0,
+        "zugang": 0.0,
+        "abgang_ahk": 0.0,
+        "umbuchung": 0.0,
+        "ahk_ende": 230000.0,
+        "kumafa_anf": 116000.0,
+        "afa_jahr": 23000.0,
+        "abgang_afa": 0.0,
+        "kumafa_ende": 139000.0,
+        "bw_gj": 91000.0,
+        "bw_vj": 114000.0
+      }
+    ],
+    "summe": {
+      "ahk_anf": 1833000.0,
+      "zugang": 150000.0,
+      "abgang_ahk": 0.0,
+      "umbuchung": 0.0,
+      "ahk_ende": 1983000.0,
+      "kumafa_anf": 956500.0,
+      "afa_jahr": 83500.0,
+      "abgang_afa": 0.0,
+      "kumafa_ende": 1040000.0,
+      "bw_gj": 943000.0,
+      "bw_vj": 876500.0
+    },
+    "hinweise": [
+      {
+        "gruppe": "Grundstücke und Bauten (Konto 0210)",
+        "hinweis": "Im Posten Grundstücke und Bauten ist ein nicht abschreibbarer Grund-und-Boden-Anteil von 200.000 EUR enthalten. AfA nur auf den Gebäudeanteil 1.000.000 EUR, linear 40 Jahre = 25.000 EUR/Jahr.",
+        "typ": "B"
+      }
+    ],
+    "reconciliation": {
+      "bw_gj": 943000.0,
+      "bw_vj": 876500.0,
+      "afa_jahr": 83500.0,
+      "afa_aufwand_saldenliste": 83500.0,
+      "afa_konten": [
+        "4830"
+      ],
+      "abgestimmt": true
+    }
+  }
+}

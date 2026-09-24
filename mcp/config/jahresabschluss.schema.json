@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "jahresabschluss.schema.json",
+  "title": "HGB-Jahresabschluss-Datenmodell",
+  "description": "Formales Schema für den Engine-Output (jahresabschluss.py). Bilanzprobe = 0,00 ist hartes Kriterium (§2.7 PROJECT.md).",
+  "type": "object",
+  "required": ["bilanz", "guv", "metadata"],
+  "additionalProperties": false,
+  "properties": {
+    "bilanz":         { "$ref": "#/$defs/Bilanz" },
+    "guv":            { "$ref": "#/$defs/GuV" },
+    "metadata":       { "$ref": "#/$defs/Metadata" },
+    "anlagenspiegel": { "$ref": "#/$defs/Anlagenspiegel" }
+  },
+  "$defs": {
+    "Position": {
+      "description": "Wiederverwendbare Kerneinheit — trägt Wert + Herkunft + Normbezug (§4 PROJECT.md).",
+      "type": "object",
+      "required": ["ebene", "konzept", "label", "quelle"],
+      "additionalProperties": false,
+      "properties": {
+        "ebene":    { "type": "integer", "minimum": 0 },
+        "konzept":  { "type": "string" },
+        "label":    { "type": "string" },
+        "wert_gj":  { "type": ["number", "null"] },
+        "wert_vj":  { "type": ["number", "null"] },
+        "quelle":   { "type": "array", "items": { "type": "string" }, "minItems": 0 }
+      }
+    },
+    "Bilanz": {
+      "type": "object",
+      "required": ["aktiva", "passiva", "summe_aktiva_gj", "summe_aktiva_vj", "summe_passiva_gj", "summe_passiva_vj"],
+      "additionalProperties": false,
+      "properties": {
+        "aktiva":           { "type": "array", "items": { "$ref": "#/$defs/Position" } },
+        "passiva":          { "type": "array", "items": { "$ref": "#/$defs/Position" } },
+        "summe_aktiva_gj":  { "type": "number" },
+        "summe_aktiva_vj":  { "type": "number" },
+        "summe_passiva_gj": { "type": "number" },
+        "summe_passiva_vj": { "type": "number" }
+      }
+    },
+    "GuV": {
+      "type": "object",
+      "required": ["positionen", "jahresueberschuss_gj", "jahresueberschuss_vj"],
+      "additionalProperties": false,
+      "properties": {
+        "positionen":           { "type": "array", "items": { "$ref": "#/$defs/Position" } },
+        "jahresueberschuss_gj": { "type": "number" },
+        "jahresueberschuss_vj": { "type": "number" }
+      }
+    },
+    "Metadata": {
+      "type": "object",
+      "required": ["quelle", "bilanzprobe_gj", "bilanzprobe_vj", "jue_abgestimmt"],
+      "additionalProperties": false,
+      "properties": {
+        "quelle":          { "type": "string" },
+        "bilanzprobe_gj":  { "type": "number" },
+        "bilanzprobe_vj":  { "type": "number" },
+        "jue_abgestimmt":  { "type": "boolean" },
+        "taxonomie":       { "type": "string" }
+      }
+    },
+    "Bewegungsfelder": {
+      "description": "Shared-Felder Anlagenspiegel (AHK-Bewegungen + AfA + Buchwert).",
+      "type": "object",
+      "properties": {
+        "ahk_anf":     { "type": ["number", "null"] },
+        "zugang":      { "type": ["number", "null"] },
+        "abgang_ahk":  { "type": ["number", "null"] },
+        "umbuchung":   { "type": ["number", "null"] },
+        "ahk_ende":    { "type": ["number", "null"] },
+        "kumafa_anf":  { "type": ["number", "null"] },
+        "afa_jahr":    { "type": ["number", "null"] },
+        "abgang_afa":  { "type": ["number", "null"] },
+        "kumafa_ende": { "type": ["number", "null"] },
+        "bw_gj":       { "type": ["number", "null"] },
+        "bw_vj":       { "type": ["number", "null"] }
+      }
+    },
+    "AnlagePosition": {
+      "description": "Eine Anlageposition mit Bewegungsfeldern + Identifikation.",
+      "allOf": [
+        { "$ref": "#/$defs/Bewegungsfelder" },
+        {
+          "type": "object",
+          "required": ["ebene", "konzept", "konto", "label", "quelle"],
+          "properties": {
+            "ebene":   { "type": "integer" },
+            "konzept": { "type": ["string", "null"] },
+            "konto":   { "type": ["string", "null"] },
+            "label":   { "type": "string" },
+            "quelle":  { "type": "array", "items": { "type": "string" } }
+          }
+        }
+      ]
+    },
+    "Anlagenspiegel": {
+      "type": "object",
+      "required": ["positionen", "summe"],
+      "properties": {
+        "positionen":     { "type": "array", "items": { "$ref": "#/$defs/AnlagePosition" } },
+        "summe":          { "$ref": "#/$defs/Bewegungsfelder" },
+        "hinweise": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["gruppe", "hinweis", "typ"],
+            "properties": {
+              "gruppe":  { "type": "string" },
+              "hinweis": { "type": "string" },
+              "typ":     { "type": "string", "enum": ["A", "B", "C"] }
+            }
+          }
+        },
+        "reconciliation": { "type": "object" }
+      }
+    }
+  }
+}

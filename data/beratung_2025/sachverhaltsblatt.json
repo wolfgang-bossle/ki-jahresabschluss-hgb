@@ -1,0 +1,30 @@
+{
+  "_hinweis": "Case-Facts-Block für Muster Consulting GmbH (Demo-Mandant). Numerische Wahrheiten leiten sich aus der Saldenliste ab (eiserner Grundsatz §2.7). Generiert via profile_beratung.json.",
+  "stammdaten": {
+    "firma": "Muster Consulting GmbH",
+    "rechtsform": "Gesellschaft mit beschränkter Haftung",
+    "sitz": "Musterstadt",
+    "registergericht": "Amtsgericht Musterstadt",
+    "handelsregister_nr": "HRB 99999",
+    "geschaeftsjahr": "2025",
+    "stichtag": "31.12.2025",
+    "stichtag_vorjahr": "31.12.2024",
+    "groessenklasse": "kleine Kapitalgesellschaft (§ 267 Abs. 1 HGB)",
+    "guv_verfahren": "Gesamtkostenverfahren (§ 275 Abs. 2 HGB)"
+  },
+  "mitarbeiter": {
+    "durchschnitt_gj": 8,
+    "durchschnitt_vj": 7,
+    "methode": "Durchschnitt der Beschäftigtenzahlen zu den vier Quartalsenden (§ 285 Nr. 7 HGB)"
+  },
+  "organbezuege": {
+    "geschaeftsfuehrer_anzahl": 1,
+    "schutzklausel_286_4": true,
+    "begruendung": "Die Gesellschaft hat einen einzigen Geschäftsführer. Die Angabe der Gesamtbezüge würde unmittelbar Rückschlüsse auf diese einzelne Person zulassen; sie unterbleibt daher gemäß § 286 Abs. 4 HGB."
+  },
+  "nachtragsereignisse": [],
+  "anlagenspiegel": {
+    "_befreiungshinweis": "Kleine Kapitalgesellschaften sind nach § 288 Abs. 1 i. V. m. § 284 Abs. 3 HGB von der Pflicht zur Erstellung und Veröffentlichung eines Anlagenspiegels im Jahresabschluss befreit. Eine freiwillige Erstellung kann dennoch sinnvoll sein, wenn Kreditinstitute oder das Finanzamt (E-Bilanz nach § 5b EStG) ihn als Nachweis anfordern.",
+    "erstellen": false
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "section_id": "mitarbeiter",
+  "norm_refs": [
+    "§ 285 Nr. 7 HGB"
+  ],
+  "blocks": [
+    {
+      "typ": "prosa",
+      "text": "Die durchschnittliche Zahl der während des Geschäftsjahres beschäftigten Arbeitnehmer betrug 38 (Vorjahr: 35). Berechnung: Durchschnitt der Beschäftigtenzahlen zu den vier Quartalsenden (§ 285 Nr. 7 HGB)",
+      "claims": [
+        {
+          "aussage": "Durchschnittliche Arbeitnehmer GJ",
+          "wert": 38,
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "mitarbeiter.durchschnitt_gj"
+          }
+        },
+        {
+          "aussage": "Durchschnittliche Arbeitnehmer VJ",
+          "wert": 35,
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "mitarbeiter.durchschnitt_vj"
+          }
+        },
+        {
+          "aussage": "Berechnungsmethode",
+          "wert": "Durchschnitt der Beschäftigtenzahlen zu den vier Quartalsenden (§ 285 Nr. 7 HGB)",
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "mitarbeiter.methode"
+          }
+        }
+      ]
+    }
+  ],
+  "confidence": "hoch",
+  "escalation_flag": false,
+  "escalation_grund": null,
+  "offene_punkte": [],
+  "_validierung": {
+    "phase3": "ok",
+    "claims_geprueft": 3,
+    "fehler": 0,
+    "warnungen": 0,
+    "geerdet_gegen": "Saldenliste.xlsx + sachverhaltsblatt.json",
+    "datum": "2026-09-24"
+  }
+}

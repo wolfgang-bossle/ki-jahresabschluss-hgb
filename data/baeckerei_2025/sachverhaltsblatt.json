@@ -1,0 +1,108 @@
+{
+  "_hinweis": "Case-Facts-Block (Sachverhaltsblatt) für die Anhang-Texte. Fiktiver Demo-Mandant. Numerische Wahrheiten (Bilanz/GuV/Anlagenspiegel) stehen NICHT hier, sondern leiten sich aus der Saldenliste ab (eiserner Grundsatz §2.7). Hier nur Sachverhalte, die NICHT in der Saldenliste stehen (Stammdaten, Mitarbeiter, Organbezüge, Nachtragsereignisse).",
+  "stammdaten": {
+    "firma": "Muster Bäckerei GmbH",
+    "rechtsform": "Gesellschaft mit beschränkter Haftung",
+    "sitz": "Musterstadt",
+    "registergericht": "Amtsgericht Musterstadt",
+    "handelsregister_nr": "HRB 12345",
+    "geschaeftsjahr": "2025",
+    "stichtag": "31.12.2025",
+    "stichtag_vorjahr": "31.12.2024",
+    "groessenklasse": "kleine Kapitalgesellschaft (§ 267 Abs. 1 HGB)",
+    "guv_verfahren": "Gesamtkostenverfahren (§ 275 Abs. 2 HGB)"
+  },
+  "feststellung": {
+    "_hinweis": "PROPOSED — Platzhalter, austauschbar. Ergänzt nach docs/local/ANHANG_REALWELT_ABGLEICH.md: alle 32 echten Unternehmensregister-Auszüge haben Geschäftsführer-Nennung, Feststellungsvermerk und Unterschrift.",
+    "datum": "14.03.2026",
+    "ort": "Musterstadt"
+  },
+  "mitarbeiter": {
+    "durchschnitt_gj": 38,
+    "durchschnitt_vj": 35,
+    "methode": "Durchschnitt der Beschäftigtenzahlen zu den vier Quartalsenden (§ 285 Nr. 7 HGB)"
+  },
+  "organbezuege": {
+    "geschaeftsfuehrer_anzahl": 1,
+    "geschaeftsfuehrer_name": "Michael Fischer",
+    "schutzklausel_286_4": true,
+    "begruendung": "Die Gesellschaft hat einen einzigen Geschäftsführer. Die Angabe der Gesamtbezüge der Geschäftsführung würde unmittelbar Rückschlüsse auf die Bezüge dieser einzelnen Person zulassen; sie unterbleibt daher gemäß § 286 Abs. 4 HGB.",
+    "vorschuesse_kredite_9c": {
+      "gewaehrt": false,
+      "begruendung": "Der Geschäftsführer hat im Geschäftsjahr keine Vorschüsse oder Kredite von der Gesellschaft erhalten; keine zu seinen Gunsten eingegangenen Haftungsverhältnisse."
+    }
+  },
+  "nachtragsereignisse": [],
+  "anlagenspiegel": {
+    "_befreiungshinweis": "Kleine Kapitalgesellschaften sind nach § 288 Abs. 1 i. V. m. § 284 Abs. 3 HGB von der Pflicht zur Erstellung und Veröffentlichung eines Anlagenspiegels im Jahresabschluss befreit. Eine freiwillige Erstellung kann dennoch sinnvoll sein, wenn Kreditinstitute oder das Finanzamt (E-Bilanz nach § 5b EStG) ihn als Nachweis anfordern.",
+    "erstellen": true
+  },
+  "_hinweis_showcase": "Ab hier: Sachverhalte für den §288-Abs.1-Vollkatalog-Showcase (Kandidat 3, 2026-07-03) — zeigt den vollständigen, für eine kleine Kapitalgesellschaft NICHT befreiten Angabenkatalog, inkl. ehrlicher 'nicht einschlägig'-Aussagen dort, wo der Sachverhalt bei der Bäckerei nicht vorliegt.",
+  "bilanz_guv_erlaeuterung": {
+    "besonderheiten_vorhanden": false,
+    "begruendung": "Bilanz und Gewinn- und Verlustrechnung folgen unverändert dem gesetzlichen Gliederungsschema (§ 266 Abs. 2/3, § 275 Abs. 2 HGB); keine Postenzusammenfassung (§ 265 Abs. 7 HGB), kein Wechsel des GuV-Verfahrens."
+  },
+  "methodenaenderung": {
+    "abweichung_vorhanden": false,
+    "begruendung": "Die Bewertungsmethoden (lineare Abschreibung, Nutzungsdauern gemäß Anlagenspiegel) wurden gegenüber dem Vorjahr unverändert beibehalten."
+  },
+  "verbindlichkeiten_detail": {
+    "davon": [
+      {
+        "kategorie": "Verbindlichkeiten gegenüber Kreditinstituten",
+        "betrag_gj": 900000,
+        "rlz_bis_1j": 60000,
+        "rlz_1_bis_5j": 90000,
+        "rlz_ueber_5j": 750000,
+        "gesichert_durch": "Grundschuld auf dem Betriebsgrundstück Hauptstraße; Sicherungsübereignung von Anlagevermögen (Industrieofen, Fahrzeuge)"
+      },
+      {
+        "kategorie": "Verbindlichkeiten aus Lieferungen und Leistungen",
+        "betrag_gj": 120000,
+        "rlz_bis_1j": 120000,
+        "rlz_1_bis_5j": 0,
+        "rlz_ueber_5j": 0,
+        "gesichert_durch": null
+      },
+      {
+        "kategorie": "sonstige Verbindlichkeiten",
+        "betrag_gj": 64000,
+        "rlz_bis_1j": 64000,
+        "rlz_1_bis_5j": 0,
+        "rlz_ueber_5j": 0,
+        "gesichert_durch": null
+      }
+    ]
+  },
+  "sonstige_finanzielle_verpflichtungen": {
+    "gesamtbetrag": 186000,
+    "posten": [
+      { "art": "Mietverträge Filialflächen (3 Filialen, Restlaufzeit 1–4 Jahre)", "betrag": 126000 },
+      { "art": "Leasing Auslieferungsfahrzeuge (2 Fahrzeuge, Restlaufzeit bis 2027)", "betrag": 60000 }
+    ]
+  },
+  "goodwill": {
+    "vorhanden": false,
+    "begruendung": "Kein entgeltlich erworbener Geschäfts- oder Firmenwert bilanziert; das Anlagevermögen besteht ausschließlich aus Sachanlagen."
+  },
+  "konzernzugehoerigkeit": {
+    "mutterunternehmen_vorhanden": false,
+    "begruendung": "Alleiniger Gesellschafter-Geschäftsführer; keine Einbeziehung in den Konzernabschluss eines Mutterunternehmens."
+  },
+  "finanzinstrumente_fair_value": {
+    "vorhanden": false,
+    "begruendung": "Keine mit dem beizulegenden Zeitwert bewerteten Finanzinstrumente (keine Derivate, keine Wertpapiere)."
+  },
+  "bewertungseinheiten_254": {
+    "vorhanden": false,
+    "begruendung": "Keine Bildung von Bewertungseinheiten (Hedge-Accounting) nach § 254 HGB."
+  },
+  "verrechnung_246_abs2": {
+    "vorhanden": false,
+    "begruendung": "Keine Verrechnung von Vermögensgegenständen mit Schulden nach § 246 Abs. 2 Satz 2 HGB; die Rückstellungen betreffen ausschließlich Steuerrückstellungen, kein Deckungsvermögen für Altersversorgungsverpflichtungen."
+  },
+  "aussergewoehnliche_ertraege_aufwendungen": {
+    "vorhanden": false,
+    "begruendung": "Keine Erträge oder Aufwendungen von außergewöhnlicher Größenordnung oder Bedeutung im Geschäftsjahr."
+  }
+}

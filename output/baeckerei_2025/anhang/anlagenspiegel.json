@@ -1,0 +1,1367 @@
+{
+  "section_id": "anlagenspiegel",
+  "norm_refs": [
+    "§ 284 Abs. 3 HGB"
+  ],
+  "blocks": [
+    {
+      "typ": "tabelle",
+      "spalten": [
+        "Posten",
+        "AHK Anfang",
+        "Zugänge",
+        "Abgänge",
+        "Umbuchungen",
+        "AHK Ende",
+        "Kum. AfA Anfang",
+        "AfA des GJ",
+        "Abgänge AfA",
+        "Kum. AfA Ende",
+        "Buchwert Ende",
+        "Buchwert Vorjahr"
+      ],
+      "zeilen": [
+        [
+          "Anlagevermögen",
+          1833000.0,
+          150000.0,
+          0.0,
+          0.0,
+          1983000.0,
+          956500.0,
+          83500.0,
+          0.0,
+          1040000.0,
+          943000.0,
+          876500.0
+        ],
+        [
+          "Sachanlagen",
+          1833000.0,
+          150000.0,
+          0.0,
+          0.0,
+          1983000.0,
+          956500.0,
+          83500.0,
+          0.0,
+          1040000.0,
+          943000.0,
+          876500.0
+        ],
+        [
+          "Grundstücke, grundstücksgleiche Rechte und Bauten einschließlich der Bauten auf fremden Grundstücken",
+          1200000.0,
+          0.0,
+          0.0,
+          0.0,
+          1200000.0,
+          655000.0,
+          25000.0,
+          0.0,
+          680000.0,
+          520000.0,
+          545000.0
+        ],
+        [
+          "Geschäftsbauten",
+          1200000.0,
+          0.0,
+          0.0,
+          0.0,
+          1200000.0,
+          655000.0,
+          25000.0,
+          0.0,
+          680000.0,
+          520000.0,
+          545000.0
+        ],
+        [
+          "technische Anlagen und Maschinen",
+          340000.0,
+          150000.0,
+          0.0,
+          0.0,
+          490000.0,
+          170000.0,
+          25000.0,
+          0.0,
+          195000.0,
+          295000.0,
+          170000.0
+        ],
+        [
+          "Maschinen (Ofen Bestand)",
+          270000.0,
+          0.0,
+          0.0,
+          0.0,
+          270000.0,
+          142000.0,
+          18000.0,
+          0.0,
+          160000.0,
+          110000.0,
+          128000.0
+        ],
+        [
+          "Maschinen (Ofen Zugang 2025)",
+          0.0,
+          150000.0,
+          0.0,
+          0.0,
+          150000.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          150000.0,
+          0.0
+        ],
+        [
+          "Maschinen (Knetmaschine)",
+          70000.0,
+          0.0,
+          0.0,
+          0.0,
+          70000.0,
+          28000.0,
+          7000.0,
+          0.0,
+          35000.0,
+          35000.0,
+          42000.0
+        ],
+        [
+          "andere Anlagen, Betriebs- und Geschäftsausstattung",
+          293000.0,
+          0.0,
+          0.0,
+          0.0,
+          293000.0,
+          131500.0,
+          33500.0,
+          0.0,
+          165000.0,
+          128000.0,
+          161500.0
+        ],
+        [
+          "Fuhrpark (Fahrzeug 1)",
+          33000.0,
+          0.0,
+          0.0,
+          0.0,
+          33000.0,
+          10500.0,
+          5500.0,
+          0.0,
+          16000.0,
+          17000.0,
+          22500.0
+        ],
+        [
+          "Fuhrpark (Fahrzeug 2)",
+          30000.0,
+          0.0,
+          0.0,
+          0.0,
+          30000.0,
+          5000.0,
+          5000.0,
+          0.0,
+          10000.0,
+          20000.0,
+          25000.0
+        ],
+        [
+          "Betriebs- und Geschäftsausstattung",
+          230000.0,
+          0.0,
+          0.0,
+          0.0,
+          230000.0,
+          116000.0,
+          23000.0,
+          0.0,
+          139000.0,
+          91000.0,
+          114000.0
+        ],
+        [
+          "Summe Anlagevermögen",
+          1833000.0,
+          150000.0,
+          0.0,
+          0.0,
+          1983000.0,
+          956500.0,
+          83500.0,
+          0.0,
+          1040000.0,
+          943000.0,
+          876500.0
+        ]
+      ],
+      "claims": [
+        {
+          "aussage": "Anlagevermögen — ahk_anf",
+          "wert": 1833000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[0].ahk_anf"
+          }
+        },
+        {
+          "aussage": "Anlagevermögen — zugang",
+          "wert": 150000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[0].zugang"
+          }
+        },
+        {
+          "aussage": "Anlagevermögen — abgang_ahk",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[0].abgang_ahk"
+          }
+        },
+        {
+          "aussage": "Anlagevermögen — umbuchung",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[0].umbuchung"
+          }
+        },
+        {
+          "aussage": "Anlagevermögen — ahk_ende",
+          "wert": 1983000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[0].ahk_ende"
+          }
+        },
+        {
+          "aussage": "Anlagevermögen — kumafa_anf",
+          "wert": 956500.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[0].kumafa_anf"
+          }
+        },
+        {
+          "aussage": "Anlagevermögen — afa_jahr",
+          "wert": 83500.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[0].afa_jahr"
+          }
+        },
+        {
+          "aussage": "Anlagevermögen — abgang_afa",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[0].abgang_afa"
+          }
+        },
+        {
+          "aussage": "Anlagevermögen — kumafa_ende",
+          "wert": 1040000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[0].kumafa_ende"
+          }
+        },
+        {
+          "aussage": "Anlagevermögen — bw_gj",
+          "wert": 943000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[0].bw_gj"
+          }
+        },
+        {
+          "aussage": "Anlagevermögen — bw_vj",
+          "wert": 876500.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[0].bw_vj"
+          }
+        },
+        {
+          "aussage": "Sachanlagen — ahk_anf",
+          "wert": 1833000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[1].ahk_anf"
+          }
+        },
+        {
+          "aussage": "Sachanlagen — zugang",
+          "wert": 150000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[1].zugang"
+          }
+        },
+        {
+          "aussage": "Sachanlagen — abgang_ahk",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[1].abgang_ahk"
+          }
+        },
+        {
+          "aussage": "Sachanlagen — umbuchung",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[1].umbuchung"
+          }
+        },
+        {
+          "aussage": "Sachanlagen — ahk_ende",
+          "wert": 1983000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[1].ahk_ende"
+          }
+        },
+        {
+          "aussage": "Sachanlagen — kumafa_anf",
+          "wert": 956500.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[1].kumafa_anf"
+          }
+        },
+        {
+          "aussage": "Sachanlagen — afa_jahr",
+          "wert": 83500.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[1].afa_jahr"
+          }
+        },
+        {
+          "aussage": "Sachanlagen — abgang_afa",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[1].abgang_afa"
+          }
+        },
+        {
+          "aussage": "Sachanlagen — kumafa_ende",
+          "wert": 1040000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[1].kumafa_ende"
+          }
+        },
+        {
+          "aussage": "Sachanlagen — bw_gj",
+          "wert": 943000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[1].bw_gj"
+          }
+        },
+        {
+          "aussage": "Sachanlagen — bw_vj",
+          "wert": 876500.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[1].bw_vj"
+          }
+        },
+        {
+          "aussage": "Grundstücke, grundstücksgleiche Rechte und Bauten einschließlich der Bauten auf fremden Grundstücken — ahk_anf",
+          "wert": 1200000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[2].ahk_anf"
+          }
+        },
+        {
+          "aussage": "Grundstücke, grundstücksgleiche Rechte und Bauten einschließlich der Bauten auf fremden Grundstücken — zugang",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[2].zugang"
+          }
+        },
+        {
+          "aussage": "Grundstücke, grundstücksgleiche Rechte und Bauten einschließlich der Bauten auf fremden Grundstücken — abgang_ahk",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[2].abgang_ahk"
+          }
+        },
+        {
+          "aussage": "Grundstücke, grundstücksgleiche Rechte und Bauten einschließlich der Bauten auf fremden Grundstücken — umbuchung",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[2].umbuchung"
+          }
+        },
+        {
+          "aussage": "Grundstücke, grundstücksgleiche Rechte und Bauten einschließlich der Bauten auf fremden Grundstücken — ahk_ende",
+          "wert": 1200000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[2].ahk_ende"
+          }
+        },
+        {
+          "aussage": "Grundstücke, grundstücksgleiche Rechte und Bauten einschließlich der Bauten auf fremden Grundstücken — kumafa_anf",
+          "wert": 655000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[2].kumafa_anf"
+          }
+        },
+        {
+          "aussage": "Grundstücke, grundstücksgleiche Rechte und Bauten einschließlich der Bauten auf fremden Grundstücken — afa_jahr",
+          "wert": 25000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[2].afa_jahr"
+          }
+        },
+        {
+          "aussage": "Grundstücke, grundstücksgleiche Rechte und Bauten einschließlich der Bauten auf fremden Grundstücken — abgang_afa",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[2].abgang_afa"
+          }
+        },
+        {
+          "aussage": "Grundstücke, grundstücksgleiche Rechte und Bauten einschließlich der Bauten auf fremden Grundstücken — kumafa_ende",
+          "wert": 680000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[2].kumafa_ende"
+          }
+        },
+        {
+          "aussage": "Grundstücke, grundstücksgleiche Rechte und Bauten einschließlich der Bauten auf fremden Grundstücken — bw_gj",
+          "wert": 520000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[2].bw_gj"
+          }
+        },
+        {
+          "aussage": "Grundstücke, grundstücksgleiche Rechte und Bauten einschließlich der Bauten auf fremden Grundstücken — bw_vj",
+          "wert": 545000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[2].bw_vj"
+          }
+        },
+        {
+          "aussage": "Geschäftsbauten — ahk_anf",
+          "wert": 1200000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[3].ahk_anf"
+          }
+        },
+        {
+          "aussage": "Geschäftsbauten — zugang",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[3].zugang"
+          }
+        },
+        {
+          "aussage": "Geschäftsbauten — abgang_ahk",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[3].abgang_ahk"
+          }
+        },
+        {
+          "aussage": "Geschäftsbauten — umbuchung",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[3].umbuchung"
+          }
+        },
+        {
+          "aussage": "Geschäftsbauten — ahk_ende",
+          "wert": 1200000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[3].ahk_ende"
+          }
+        },
+        {
+          "aussage": "Geschäftsbauten — kumafa_anf",
+          "wert": 655000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[3].kumafa_anf"
+          }
+        },
+        {
+          "aussage": "Geschäftsbauten — afa_jahr",
+          "wert": 25000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[3].afa_jahr"
+          }
+        },
+        {
+          "aussage": "Geschäftsbauten — abgang_afa",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[3].abgang_afa"
+          }
+        },
+        {
+          "aussage": "Geschäftsbauten — kumafa_ende",
+          "wert": 680000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[3].kumafa_ende"
+          }
+        },
+        {
+          "aussage": "Geschäftsbauten — bw_gj",
+          "wert": 520000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[3].bw_gj"
+          }
+        },
+        {
+          "aussage": "Geschäftsbauten — bw_vj",
+          "wert": 545000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[3].bw_vj"
+          }
+        },
+        {
+          "aussage": "technische Anlagen und Maschinen — ahk_anf",
+          "wert": 340000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[4].ahk_anf"
+          }
+        },
+        {
+          "aussage": "technische Anlagen und Maschinen — zugang",
+          "wert": 150000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[4].zugang"
+          }
+        },
+        {
+          "aussage": "technische Anlagen und Maschinen — abgang_ahk",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[4].abgang_ahk"
+          }
+        },
+        {
+          "aussage": "technische Anlagen und Maschinen — umbuchung",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[4].umbuchung"
+          }
+        },
+        {
+          "aussage": "technische Anlagen und Maschinen — ahk_ende",
+          "wert": 490000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[4].ahk_ende"
+          }
+        },
+        {
+          "aussage": "technische Anlagen und Maschinen — kumafa_anf",
+          "wert": 170000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[4].kumafa_anf"
+          }
+        },
+        {
+          "aussage": "technische Anlagen und Maschinen — afa_jahr",
+          "wert": 25000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[4].afa_jahr"
+          }
+        },
+        {
+          "aussage": "technische Anlagen und Maschinen — abgang_afa",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[4].abgang_afa"
+          }
+        },
+        {
+          "aussage": "technische Anlagen und Maschinen — kumafa_ende",
+          "wert": 195000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[4].kumafa_ende"
+          }
+        },
+        {
+          "aussage": "technische Anlagen und Maschinen — bw_gj",
+          "wert": 295000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[4].bw_gj"
+          }
+        },
+        {
+          "aussage": "technische Anlagen und Maschinen — bw_vj",
+          "wert": 170000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[4].bw_vj"
+          }
+        },
+        {
+          "aussage": "Maschinen (Ofen Bestand) — ahk_anf",
+          "wert": 270000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[5].ahk_anf"
+          }
+        },
+        {
+          "aussage": "Maschinen (Ofen Bestand) — zugang",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[5].zugang"
+          }
+        },
+        {
+          "aussage": "Maschinen (Ofen Bestand) — abgang_ahk",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[5].abgang_ahk"
+          }
+        },
+        {
+          "aussage": "Maschinen (Ofen Bestand) — umbuchung",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[5].umbuchung"
+          }
+        },
+        {
+          "aussage": "Maschinen (Ofen Bestand) — ahk_ende",
+          "wert": 270000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[5].ahk_ende"
+          }
+        },
+        {
+          "aussage": "Maschinen (Ofen Bestand) — kumafa_anf",
+          "wert": 142000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[5].kumafa_anf"
+          }
+        },
+        {
+          "aussage": "Maschinen (Ofen Bestand) — afa_jahr",
+          "wert": 18000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[5].afa_jahr"
+          }
+        },
+        {
+          "aussage": "Maschinen (Ofen Bestand) — abgang_afa",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[5].abgang_afa"
+          }
+        },
+        {
+          "aussage": "Maschinen (Ofen Bestand) — kumafa_ende",
+          "wert": 160000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[5].kumafa_ende"
+          }
+        },
+        {
+          "aussage": "Maschinen (Ofen Bestand) — bw_gj",
+          "wert": 110000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[5].bw_gj"
+          }
+        },
+        {
+          "aussage": "Maschinen (Ofen Bestand) — bw_vj",
+          "wert": 128000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[5].bw_vj"
+          }
+        },
+        {
+          "aussage": "Maschinen (Ofen Zugang 2025) — ahk_anf",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[6].ahk_anf"
+          }
+        },
+        {
+          "aussage": "Maschinen (Ofen Zugang 2025) — zugang",
+          "wert": 150000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[6].zugang"
+          }
+        },
+        {
+          "aussage": "Maschinen (Ofen Zugang 2025) — abgang_ahk",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[6].abgang_ahk"
+          }
+        },
+        {
+          "aussage": "Maschinen (Ofen Zugang 2025) — umbuchung",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[6].umbuchung"
+          }
+        },
+        {
+          "aussage": "Maschinen (Ofen Zugang 2025) — ahk_ende",
+          "wert": 150000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[6].ahk_ende"
+          }
+        },
+        {
+          "aussage": "Maschinen (Ofen Zugang 2025) — kumafa_anf",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[6].kumafa_anf"
+          }
+        },
+        {
+          "aussage": "Maschinen (Ofen Zugang 2025) — afa_jahr",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[6].afa_jahr"
+          }
+        },
+        {
+          "aussage": "Maschinen (Ofen Zugang 2025) — abgang_afa",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[6].abgang_afa"
+          }
+        },
+        {
+          "aussage": "Maschinen (Ofen Zugang 2025) — kumafa_ende",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[6].kumafa_ende"
+          }
+        },
+        {
+          "aussage": "Maschinen (Ofen Zugang 2025) — bw_gj",
+          "wert": 150000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[6].bw_gj"
+          }
+        },
+        {
+          "aussage": "Maschinen (Ofen Zugang 2025) — bw_vj",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[6].bw_vj"
+          }
+        },
+        {
+          "aussage": "Maschinen (Knetmaschine) — ahk_anf",
+          "wert": 70000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[7].ahk_anf"
+          }
+        },
+        {
+          "aussage": "Maschinen (Knetmaschine) — zugang",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[7].zugang"
+          }
+        },
+        {
+          "aussage": "Maschinen (Knetmaschine) — abgang_ahk",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[7].abgang_ahk"
+          }
+        },
+        {
+          "aussage": "Maschinen (Knetmaschine) — umbuchung",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[7].umbuchung"
+          }
+        },
+        {
+          "aussage": "Maschinen (Knetmaschine) — ahk_ende",
+          "wert": 70000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[7].ahk_ende"
+          }
+        },
+        {
+          "aussage": "Maschinen (Knetmaschine) — kumafa_anf",
+          "wert": 28000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[7].kumafa_anf"
+          }
+        },
+        {
+          "aussage": "Maschinen (Knetmaschine) — afa_jahr",
+          "wert": 7000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[7].afa_jahr"
+          }
+        },
+        {
+          "aussage": "Maschinen (Knetmaschine) — abgang_afa",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[7].abgang_afa"
+          }
+        },
+        {
+          "aussage": "Maschinen (Knetmaschine) — kumafa_ende",
+          "wert": 35000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[7].kumafa_ende"
+          }
+        },
+        {
+          "aussage": "Maschinen (Knetmaschine) — bw_gj",
+          "wert": 35000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[7].bw_gj"
+          }
+        },
+        {
+          "aussage": "Maschinen (Knetmaschine) — bw_vj",
+          "wert": 42000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[7].bw_vj"
+          }
+        },
+        {
+          "aussage": "andere Anlagen, Betriebs- und Geschäftsausstattung — ahk_anf",
+          "wert": 293000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[8].ahk_anf"
+          }
+        },
+        {
+          "aussage": "andere Anlagen, Betriebs- und Geschäftsausstattung — zugang",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[8].zugang"
+          }
+        },
+        {
+          "aussage": "andere Anlagen, Betriebs- und Geschäftsausstattung — abgang_ahk",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[8].abgang_ahk"
+          }
+        },
+        {
+          "aussage": "andere Anlagen, Betriebs- und Geschäftsausstattung — umbuchung",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[8].umbuchung"
+          }
+        },
+        {
+          "aussage": "andere Anlagen, Betriebs- und Geschäftsausstattung — ahk_ende",
+          "wert": 293000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[8].ahk_ende"
+          }
+        },
+        {
+          "aussage": "andere Anlagen, Betriebs- und Geschäftsausstattung — kumafa_anf",
+          "wert": 131500.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[8].kumafa_anf"
+          }
+        },
+        {
+          "aussage": "andere Anlagen, Betriebs- und Geschäftsausstattung — afa_jahr",
+          "wert": 33500.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[8].afa_jahr"
+          }
+        },
+        {
+          "aussage": "andere Anlagen, Betriebs- und Geschäftsausstattung — abgang_afa",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[8].abgang_afa"
+          }
+        },
+        {
+          "aussage": "andere Anlagen, Betriebs- und Geschäftsausstattung — kumafa_ende",
+          "wert": 165000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[8].kumafa_ende"
+          }
+        },
+        {
+          "aussage": "andere Anlagen, Betriebs- und Geschäftsausstattung — bw_gj",
+          "wert": 128000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[8].bw_gj"
+          }
+        },
+        {
+          "aussage": "andere Anlagen, Betriebs- und Geschäftsausstattung — bw_vj",
+          "wert": 161500.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[8].bw_vj"
+          }
+        },
+        {
+          "aussage": "Fuhrpark (Fahrzeug 1) — ahk_anf",
+          "wert": 33000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[9].ahk_anf"
+          }
+        },
+        {
+          "aussage": "Fuhrpark (Fahrzeug 1) — zugang",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[9].zugang"
+          }
+        },
+        {
+          "aussage": "Fuhrpark (Fahrzeug 1) — abgang_ahk",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[9].abgang_ahk"
+          }
+        },
+        {
+          "aussage": "Fuhrpark (Fahrzeug 1) — umbuchung",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[9].umbuchung"
+          }
+        },
+        {
+          "aussage": "Fuhrpark (Fahrzeug 1) — ahk_ende",
+          "wert": 33000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[9].ahk_ende"
+          }
+        },
+        {
+          "aussage": "Fuhrpark (Fahrzeug 1) — kumafa_anf",
+          "wert": 10500.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[9].kumafa_anf"
+          }
+        },
+        {
+          "aussage": "Fuhrpark (Fahrzeug 1) — afa_jahr",
+          "wert": 5500.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[9].afa_jahr"
+          }
+        },
+        {
+          "aussage": "Fuhrpark (Fahrzeug 1) — abgang_afa",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[9].abgang_afa"
+          }
+        },
+        {
+          "aussage": "Fuhrpark (Fahrzeug 1) — kumafa_ende",
+          "wert": 16000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[9].kumafa_ende"
+          }
+        },
+        {
+          "aussage": "Fuhrpark (Fahrzeug 1) — bw_gj",
+          "wert": 17000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[9].bw_gj"
+          }
+        },
+        {
+          "aussage": "Fuhrpark (Fahrzeug 1) — bw_vj",
+          "wert": 22500.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[9].bw_vj"
+          }
+        },
+        {
+          "aussage": "Fuhrpark (Fahrzeug 2) — ahk_anf",
+          "wert": 30000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[10].ahk_anf"
+          }
+        },
+        {
+          "aussage": "Fuhrpark (Fahrzeug 2) — zugang",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[10].zugang"
+          }
+        },
+        {
+          "aussage": "Fuhrpark (Fahrzeug 2) — abgang_ahk",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[10].abgang_ahk"
+          }
+        },
+        {
+          "aussage": "Fuhrpark (Fahrzeug 2) — umbuchung",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[10].umbuchung"
+          }
+        },
+        {
+          "aussage": "Fuhrpark (Fahrzeug 2) — ahk_ende",
+          "wert": 30000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[10].ahk_ende"
+          }
+        },
+        {
+          "aussage": "Fuhrpark (Fahrzeug 2) — kumafa_anf",
+          "wert": 5000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[10].kumafa_anf"
+          }
+        },
+        {
+          "aussage": "Fuhrpark (Fahrzeug 2) — afa_jahr",
+          "wert": 5000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[10].afa_jahr"
+          }
+        },
+        {
+          "aussage": "Fuhrpark (Fahrzeug 2) — abgang_afa",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[10].abgang_afa"
+          }
+        },
+        {
+          "aussage": "Fuhrpark (Fahrzeug 2) — kumafa_ende",
+          "wert": 10000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[10].kumafa_ende"
+          }
+        },
+        {
+          "aussage": "Fuhrpark (Fahrzeug 2) — bw_gj",
+          "wert": 20000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[10].bw_gj"
+          }
+        },
+        {
+          "aussage": "Fuhrpark (Fahrzeug 2) — bw_vj",
+          "wert": 25000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[10].bw_vj"
+          }
+        },
+        {
+          "aussage": "Betriebs- und Geschäftsausstattung — ahk_anf",
+          "wert": 230000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[11].ahk_anf"
+          }
+        },
+        {
+          "aussage": "Betriebs- und Geschäftsausstattung — zugang",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[11].zugang"
+          }
+        },
+        {
+          "aussage": "Betriebs- und Geschäftsausstattung — abgang_ahk",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[11].abgang_ahk"
+          }
+        },
+        {
+          "aussage": "Betriebs- und Geschäftsausstattung — umbuchung",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[11].umbuchung"
+          }
+        },
+        {
+          "aussage": "Betriebs- und Geschäftsausstattung — ahk_ende",
+          "wert": 230000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[11].ahk_ende"
+          }
+        },
+        {
+          "aussage": "Betriebs- und Geschäftsausstattung — kumafa_anf",
+          "wert": 116000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[11].kumafa_anf"
+          }
+        },
+        {
+          "aussage": "Betriebs- und Geschäftsausstattung — afa_jahr",
+          "wert": 23000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[11].afa_jahr"
+          }
+        },
+        {
+          "aussage": "Betriebs- und Geschäftsausstattung — abgang_afa",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[11].abgang_afa"
+          }
+        },
+        {
+          "aussage": "Betriebs- und Geschäftsausstattung — kumafa_ende",
+          "wert": 139000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[11].kumafa_ende"
+          }
+        },
+        {
+          "aussage": "Betriebs- und Geschäftsausstattung — bw_gj",
+          "wert": 91000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[11].bw_gj"
+          }
+        },
+        {
+          "aussage": "Betriebs- und Geschäftsausstattung — bw_vj",
+          "wert": 114000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.positionen[11].bw_vj"
+          }
+        },
+        {
+          "aussage": "Summe — ahk_anf",
+          "wert": 1833000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.summe.ahk_anf"
+          }
+        },
+        {
+          "aussage": "Summe — zugang",
+          "wert": 150000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.summe.zugang"
+          }
+        },
+        {
+          "aussage": "Summe — abgang_ahk",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.summe.abgang_ahk"
+          }
+        },
+        {
+          "aussage": "Summe — umbuchung",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.summe.umbuchung"
+          }
+        },
+        {
+          "aussage": "Summe — ahk_ende",
+          "wert": 1983000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.summe.ahk_ende"
+          }
+        },
+        {
+          "aussage": "Summe — kumafa_anf",
+          "wert": 956500.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.summe.kumafa_anf"
+          }
+        },
+        {
+          "aussage": "Summe — afa_jahr",
+          "wert": 83500.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.summe.afa_jahr"
+          }
+        },
+        {
+          "aussage": "Summe — abgang_afa",
+          "wert": 0.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.summe.abgang_afa"
+          }
+        },
+        {
+          "aussage": "Summe — kumafa_ende",
+          "wert": 1040000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.summe.kumafa_ende"
+          }
+        },
+        {
+          "aussage": "Summe — bw_gj",
+          "wert": 943000.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.summe.bw_gj"
+          }
+        },
+        {
+          "aussage": "Summe — bw_vj",
+          "wert": 876500.0,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.summe.bw_vj"
+          }
+        }
+      ]
+    }
+  ],
+  "confidence": "hoch",
+  "escalation_flag": false,
+  "escalation_grund": null,
+  "offene_punkte": [],
+  "_validierung": {
+    "phase3": "ok",
+    "claims_geprueft": 143,
+    "fehler": 0,
+    "warnungen": 0,
+    "geerdet_gegen": "Saldenliste.xlsx + sachverhaltsblatt.json",
+    "datum": "2026-09-24"
+  }
+}

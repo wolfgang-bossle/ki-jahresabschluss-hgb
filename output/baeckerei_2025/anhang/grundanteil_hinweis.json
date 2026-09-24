@@ -1,0 +1,42 @@
+{
+  "section_id": "grundanteil_hinweis",
+  "norm_refs": [
+    "§ 284 Abs. 2 Nr. 1 HGB"
+  ],
+  "blocks": [
+    {
+      "typ": "prosa",
+      "text": "Im Posten Grundstücke und Bauten ist ein nicht abschreibbarer Grund-und-Boden-Anteil von 200.000 EUR enthalten. AfA nur auf den Gebäudeanteil 1.000.000 EUR, linear 40 Jahre = 25.000 EUR/Jahr.",
+      "claims": [
+        {
+          "aussage": "Hinweis-Text wörtlich aus Anlagenspiegel",
+          "wert": "Im Posten Grundstücke und Bauten ist ein nicht abschreibbarer Grund-und-Boden-Anteil von 200.000 EUR enthalten. AfA nur auf den Gebäudeanteil 1.000.000 EUR, linear 40 Jahre = 25.000 EUR/Jahr.",
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.hinweise[0].hinweis"
+          }
+        },
+        {
+          "aussage": "Betroffene Gruppe",
+          "wert": "Grundstücke und Bauten (Konto 0210)",
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "anlagenspiegel.hinweise[0].gruppe"
+          }
+        }
+      ]
+    }
+  ],
+  "confidence": "hoch",
+  "escalation_flag": false,
+  "escalation_grund": null,
+  "offene_punkte": [],
+  "_validierung": {
+    "phase3": "ok",
+    "claims_geprueft": 2,
+    "fehler": 0,
+    "warnungen": 0,
+    "geerdet_gegen": "Saldenliste.xlsx + sachverhaltsblatt.json",
+    "datum": "2026-09-24"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "section_id": "verbindlichkeiten_restlaufzeiten_sicherheiten",
+  "norm_refs": [
+    "§ 285 Nr. 1 HGB"
+  ],
+  "blocks": [
+    {
+      "typ": "prosa",
+      "text": "Verbindlichkeiten gegenüber Kreditinstituten: Gesamtbetrag 900.000 EUR, davon 60.000 EUR mit einer Restlaufzeit bis zu einem Jahr, 90.000 EUR mit einer Restlaufzeit zwischen einem und fünf Jahren, 750.000 EUR mit einer Restlaufzeit über fünf Jahre. Gesichert durch: Grundschuld auf dem Betriebsgrundstück Hauptstraße; Sicherungsübereignung von Anlagevermögen (Industrieofen, Fahrzeuge). Verbindlichkeiten aus Lieferungen und Leistungen: Gesamtbetrag 120.000 EUR, davon 120.000 EUR mit einer Restlaufzeit bis zu einem Jahr, 0 EUR mit einer Restlaufzeit zwischen einem und fünf Jahren, 0 EUR mit einer Restlaufzeit über fünf Jahre. Ohne Sicherheiten. sonstige Verbindlichkeiten: Gesamtbetrag 64.000 EUR, davon 64.000 EUR mit einer Restlaufzeit bis zu einem Jahr, 0 EUR mit einer Restlaufzeit zwischen einem und fünf Jahren, 0 EUR mit einer Restlaufzeit über fünf Jahre. Ohne Sicherheiten.",
+      "claims": [
+        {
+          "aussage": "Gesamtbetrag Verbindlichkeiten gegenüber Kreditinstituten",
+          "wert": 900000,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "bilanz.passiva[konzept=de-gaap-ci_bs.eqLiab.liab.bank].wert_gj"
+          }
+        },
+        {
+          "aussage": "RLZ bis 1 Jahr Verbindlichkeiten gegenüber Kreditinstituten",
+          "wert": 60000,
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "verbindlichkeiten_detail.davon[0].rlz_bis_1j"
+          }
+        },
+        {
+          "aussage": "RLZ 1-5 Jahre Verbindlichkeiten gegenüber Kreditinstituten",
+          "wert": 90000,
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "verbindlichkeiten_detail.davon[0].rlz_1_bis_5j"
+          }
+        },
+        {
+          "aussage": "RLZ über 5 Jahre Verbindlichkeiten gegenüber Kreditinstituten",
+          "wert": 750000,
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "verbindlichkeiten_detail.davon[0].rlz_ueber_5j"
+          }
+        },
+        {
+          "aussage": "Sicherheiten Verbindlichkeiten gegenüber Kreditinstituten",
+          "wert": "Grundschuld auf dem Betriebsgrundstück Hauptstraße; Sicherungsübereignung von Anlagevermögen (Industrieofen, Fahrzeuge)",
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "verbindlichkeiten_detail.davon[0].gesichert_durch"
+          }
+        },
+        {
+          "aussage": "Gesamtbetrag Verbindlichkeiten aus Lieferungen und Leistungen",
+          "wert": 120000,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "bilanz.passiva[konzept=de-gaap-ci_bs.eqLiab.liab.trade].wert_gj"
+          }
+        },
+        {
+          "aussage": "RLZ bis 1 Jahr Verbindlichkeiten aus Lieferungen und Leistungen",
+          "wert": 120000,
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "verbindlichkeiten_detail.davon[1].rlz_bis_1j"
+          }
+        },
+        {
+          "aussage": "RLZ 1-5 Jahre Verbindlichkeiten aus Lieferungen und Leistungen",
+          "wert": 0,
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "verbindlichkeiten_detail.davon[1].rlz_1_bis_5j"
+          }
+        },
+        {
+          "aussage": "RLZ über 5 Jahre Verbindlichkeiten aus Lieferungen und Leistungen",
+          "wert": 0,
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "verbindlichkeiten_detail.davon[1].rlz_ueber_5j"
+          }
+        },
+        {
+          "aussage": "Gesamtbetrag sonstige Verbindlichkeiten",
+          "wert": 64000,
+          "quelle": {
+            "art": "datenmodell",
+            "pfad": "bilanz.passiva[konzept=de-gaap-ci_bs.eqLiab.liab.other].wert_gj"
+          }
+        },
+        {
+          "aussage": "RLZ bis 1 Jahr sonstige Verbindlichkeiten",
+          "wert": 64000,
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "verbindlichkeiten_detail.davon[2].rlz_bis_1j"
+          }
+        },
+        {
+          "aussage": "RLZ 1-5 Jahre sonstige Verbindlichkeiten",
+          "wert": 0,
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "verbindlichkeiten_detail.davon[2].rlz_1_bis_5j"
+          }
+        },
+        {
+          "aussage": "RLZ über 5 Jahre sonstige Verbindlichkeiten",
+          "wert": 0,
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "verbindlichkeiten_detail.davon[2].rlz_ueber_5j"
+          }
+        }
+      ]
+    }
+  ],
+  "confidence": "hoch",
+  "escalation_flag": false,
+  "escalation_grund": null,
+  "offene_punkte": [],
+  "_validierung": {
+    "phase3": "ok",
+    "claims_geprueft": 13,
+    "fehler": 0,
+    "warnungen": 0,
+    "geerdet_gegen": "Saldenliste.xlsx + sachverhaltsblatt.json",
+    "datum": "2026-09-24"
+  }
+}

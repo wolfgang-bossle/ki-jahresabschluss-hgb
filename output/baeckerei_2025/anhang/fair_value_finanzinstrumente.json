@@ -1,0 +1,34 @@
+{
+  "section_id": "fair_value_finanzinstrumente",
+  "norm_refs": [
+    "§ 285 Nr. 20 HGB"
+  ],
+  "blocks": [
+    {
+      "typ": "prosa",
+      "text": "Keine mit dem beizulegenden Zeitwert bewerteten Finanzinstrumente (keine Derivate, keine Wertpapiere).",
+      "claims": [
+        {
+          "aussage": "Fair-Value-Finanzinstrumente",
+          "wert": "Keine mit dem beizulegenden Zeitwert bewerteten Finanzinstrumente (keine Derivate, keine Wertpapiere).",
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "finanzinstrumente_fair_value.begruendung"
+          }
+        }
+      ]
+    }
+  ],
+  "confidence": "hoch",
+  "escalation_flag": false,
+  "escalation_grund": null,
+  "offene_punkte": [],
+  "_validierung": {
+    "phase3": "ok",
+    "claims_geprueft": 1,
+    "fehler": 0,
+    "warnungen": 0,
+    "geerdet_gegen": "Saldenliste.xlsx + sachverhaltsblatt.json",
+    "datum": "2026-09-24"
+  }
+}

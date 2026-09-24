@@ -1,0 +1,239 @@
+[
+  {
+    "id": "allgemeine_angaben",
+    "label": "Allgemeine Angaben zum Unternehmen",
+    "typ": "B",
+    "geltung": { "klein": "pflicht", "mittelgross": "pflicht", "gross": "pflicht" },
+    "render": "prosa",
+    "norm": { "refs": [ { "paragraph": "264", "absatz": "1a", "zitat": "§ 264 Abs. 1a HGB" } ] },
+    "quellen": { "datenmodell": ["metadata"], "sachverhalt": ["stammdaten"] },
+    "aufgabe": "Formuliere die einleitenden allgemeinen Angaben: Firma, Sitz, Rechtsform, Registergericht, Handelsregisternummer, Geschäftsjahr, Größenklasse und angewandtes GuV-Verfahren. Verwende ausschließlich die übergebenen Stammdaten. Nenne keine Angabe, die nicht im Kontext steht; fehlt eine, lass sie weg und vermerke sie in offene_punkte.",
+    "escalation": { "moeglich": false, "grund": null }
+  },
+  {
+    "id": "bilanzierungs_bewertungsmethoden",
+    "label": "Bilanzierungs- und Bewertungsmethoden",
+    "typ": "B",
+    "geltung": { "klein": "pflicht", "mittelgross": "pflicht", "gross": "pflicht" },
+    "render": "prosa",
+    "norm": { "refs": [ { "paragraph": "284", "absatz": "2", "zitat": "§ 284 Abs. 2 Nr. 1 HGB" } ] },
+    "quellen": { "datenmodell": ["anlagenspiegel.positionen"], "sachverhalt": [] },
+    "aufgabe": "Beschreibe die auf das Anlagevermögen angewandten Bewertungsmethoden: Ansatz zu Anschaffungskosten, planmäßige lineare Abschreibung, und die je Anlagegruppe verwendeten Nutzungsdauern. Verwende ausschließlich die im Kontext übergebenen Methoden/Nutzungsdauern (Felder 'methode', 'nd'). Erfinde keine Nutzungsdauer.",
+    "escalation": { "moeglich": false, "grund": null }
+  },
+  {
+    "id": "anlagenspiegel",
+    "label": "Entwicklung des Anlagevermögens (Anlagenspiegel)",
+    "typ": "A",
+    "geltung": { "klein": "freiwillig", "mittelgross": "pflicht", "gross": "pflicht" },
+    "render": "tabelle",
+    "norm": { "refs": [ { "paragraph": "284", "absatz": "3", "zitat": "§ 284 Abs. 3 HGB" } ] },
+    "quellen": { "datenmodell": ["anlagenspiegel"], "sachverhalt": [] },
+    "aufgabe": "Stelle die Entwicklung des Anlagevermögens nach § 284 Abs. 3 HGB tabellarisch dar (Bruttomethode). Spalten: AHK Anfang | Zugänge | Abgänge | Umbuchungen | AHK Ende | Kum. AfA Anfang | AfA des Geschäftsjahres | Abgänge AfA | Kum. AfA Ende | Buchwert Ende | Buchwert Vorjahr. Übernimm jeden Wert unverändert aus dem Kontext; rechne nichts hinzu.",
+    "escalation": { "moeglich": false, "grund": null }
+  },
+  {
+    "id": "grundanteil_hinweis",
+    "label": "Hinweis zum nicht abschreibbaren Grund- und Boden-Anteil",
+    "typ": "B",
+    "geltung": { "klein": "pflicht", "mittelgross": "pflicht", "gross": "pflicht" },
+    "render": "prosa",
+    "norm": { "refs": [ { "paragraph": "284", "absatz": "2", "zitat": "§ 284 Abs. 2 Nr. 1 HGB" } ] },
+    "quellen": { "datenmodell": ["anlagenspiegel.hinweise"], "sachverhalt": [] },
+    "aufgabe": "Formuliere den Hinweis, dass im Posten Grundstücke und Bauten ein nicht abschreibbarer Grund-und-Boden-Anteil enthalten ist; übernimm Betrag und Beschreibung wörtlich aus dem übergebenen Hinweis. Die Aufteilung Grund und Boden zu Gebäude folgt aus den Buchwerten der getrennt geführten Konten.",
+    "escalation": { "moeglich": false, "grund": null }
+  },
+  {
+    "id": "mitarbeiter",
+    "label": "Durchschnittliche Zahl der Arbeitnehmer",
+    "typ": "B",
+    "geltung": { "klein": "pflicht", "mittelgross": "pflicht", "gross": "pflicht" },
+    "render": "prosa",
+    "norm": { "refs": [ { "paragraph": "285", "nummer": "7", "zitat": "§ 285 Nr. 7 HGB" } ] },
+    "quellen": { "datenmodell": [], "sachverhalt": ["mitarbeiter"] },
+    "aufgabe": "Nenne die durchschnittliche Zahl der während des Geschäftsjahres beschäftigten Arbeitnehmer sowie den Vorjahreswert. Verwende ausschließlich die übergebenen Zahlen. Steht keine Zahl im Kontext, setze confidence auf 'unclear' und vermerke dies in offene_punkte.",
+    "escalation": { "moeglich": false, "grund": null }
+  },
+  {
+    "id": "organbezuege",
+    "label": "Bezüge der Geschäftsführung",
+    "typ": "B",
+    "geltung": { "klein": "entfaellt", "mittelgross": "pflicht", "gross": "pflicht" },
+    "render": "prosa",
+    "norm": {
+      "refs": [
+        { "paragraph": "285", "nummer": "9", "zitat": "§ 285 Nr. 9a HGB" },
+        { "paragraph": "286", "absatz": "4", "zitat": "§ 286 Abs. 4 HGB" }
+      ]
+    },
+    "quellen": { "datenmodell": [], "sachverhalt": ["organbezuege"] },
+    "schutzklausel": { "feld": "organbezuege.schutzklausel_286_4", "norm": "§ 286 Abs. 4 HGB" },
+    "aufgabe": "Prüfe zuerst die Schutzklausel: Ist 'organbezuege.schutzklausel_286_4' wahr, gib NICHT die Höhe der Bezüge an, sondern formuliere den Weglassungs-Hinweis nach § 286 Abs. 4 HGB unter wörtlicher Verwendung der übergebenen 'begruendung'. Andernfalls nenne die Gesamtbezüge. Erfinde keine Beträge.",
+    "escalation": { "moeglich": false, "grund": null }
+  },
+  {
+    "id": "nachtragsereignisse",
+    "label": "Vorgänge von besonderer Bedeutung nach dem Bilanzstichtag",
+    "typ": "B",
+    "geltung": { "klein": "entfaellt", "mittelgross": "pflicht", "gross": "pflicht" },
+    "render": "prosa",
+    "norm": { "refs": [ { "paragraph": "285", "nummer": "33", "zitat": "§ 285 Nr. 33 HGB" } ] },
+    "quellen": { "datenmodell": [], "sachverhalt": ["nachtragsereignisse"] },
+    "aufgabe": "Berichte über Vorgänge von besonderer Bedeutung nach dem Bilanzstichtag (§ 285 Nr. 33 HGB). Ist die übergebene Liste leer, formuliere die Standardaussage, dass keine Vorgänge von besonderer Bedeutung eingetreten sind. Andernfalls fasse die übergebenen Ereignisse zusammen, ohne sie zu bewerten.",
+    "escalation": { "moeglich": false, "grund": null }
+  },
+  {
+    "id": "erlaeuterung_bilanz_guv",
+    "label": "Allgemeine Erläuterung zu Bilanz und Gewinn- und Verlustrechnung",
+    "typ": "B",
+    "showcase": true,
+    "geltung": { "klein": "pflicht", "mittelgross": "pflicht", "gross": "pflicht" },
+    "render": "prosa",
+    "norm": { "refs": [ { "paragraph": "284", "absatz": "1", "zitat": "§ 284 Abs. 1 HGB" } ] },
+    "quellen": { "datenmodell": [], "sachverhalt": ["bilanz_guv_erlaeuterung"] },
+    "aufgabe": "Prüfe 'bilanz_guv_erlaeuterung.besonderheiten_vorhanden'. Ist es falsch, formuliere die Standardaussage, dass Bilanz und Gewinn- und Verlustrechnung unverändert dem gesetzlichen Gliederungsschema folgen, unter wörtlicher Verwendung der übergebenen 'begruendung'. Andernfalls fasse die übergebenen Besonderheiten zusammen, ohne sie zu bewerten. Erfinde keine Angabe.",
+    "escalation": { "moeglich": false, "grund": null }
+  },
+  {
+    "id": "methodenaenderung",
+    "label": "Abweichung von Bewertungsmethoden gegenüber dem Vorjahr",
+    "typ": "B",
+    "showcase": true,
+    "geltung": { "klein": "pflicht", "mittelgross": "pflicht", "gross": "pflicht" },
+    "render": "prosa",
+    "norm": { "refs": [ { "paragraph": "284", "absatz": "2", "zitat": "§ 284 Abs. 2 Nr. 2 HGB" } ] },
+    "quellen": { "datenmodell": [], "sachverhalt": ["methodenaenderung"] },
+    "aufgabe": "Prüfe 'methodenaenderung.abweichung_vorhanden'. Ist es falsch, formuliere die Standardaussage, dass die Bewertungsmethoden gegenüber dem Vorjahr unverändert beibehalten wurden, unter wörtlicher Verwendung der übergebenen 'begruendung'. Ist es wahr, beschreibe NUR den Sachverhalt wörtlich aus dem Kontext; beurteile NICHT die Wesentlichkeit oder die Auswirkung der Änderung auf die Vermögens-, Finanz- und Ertragslage — das ist fachliches Ermessen und eskaliert.",
+    "escalation": { "moeglich": true, "grund": "Latent Typ C — für den aktuellen Datensatz liegt keine Methodenänderung vor (geerdete Negativ-Aussage). Träte künftig eine echte Abweichung ein, würde die Beurteilung ihrer Wesentlichkeit und Darstellung des Effekts auf Vermögens-, Finanz- und Ertragslage zur Fachaufgabe des Rechnungslegungsexperten (§ 284 Abs. 2 Nr. 2 HGB)." }
+  },
+  {
+    "id": "verbindlichkeiten_restlaufzeiten_sicherheiten",
+    "label": "Restlaufzeiten und Sicherheiten der Verbindlichkeiten",
+    "typ": "B",
+    "showcase": true,
+    "geltung": { "klein": "pflicht", "mittelgross": "pflicht", "gross": "pflicht" },
+    "render": "prosa",
+    "norm": { "refs": [ { "paragraph": "285", "nummer": "1", "zitat": "§ 285 Nr. 1 HGB" } ] },
+    "quellen": {
+      "datenmodell": [
+        "bilanz.passiva[konzept=de-gaap-ci_bs.eqLiab.liab.bank].wert_gj",
+        "bilanz.passiva[konzept=de-gaap-ci_bs.eqLiab.liab.trade].wert_gj",
+        "bilanz.passiva[konzept=de-gaap-ci_bs.eqLiab.liab.other].wert_gj"
+      ],
+      "sachverhalt": ["verbindlichkeiten_detail"]
+    },
+    "aufgabe": "Beschreibe für jede Verbindlichkeiten-Kategorie aus 'verbindlichkeiten_detail.davon' in Fließtext den Gesamtbetrag, die Restlaufzeit-Aufteilung (bis 1 Jahr / 1 bis 5 Jahre / über 5 Jahre) und gewährte Sicherheiten. Der Gesamtbetrag je Kategorie muss dem passenden Datenmodell-Wert entsprechen. Verwende ausschließlich die übergebenen Zahlen und Sicherheiten-Beschreibungen; erfinde nichts.",
+    "escalation": { "moeglich": false, "grund": null }
+  },
+  {
+    "id": "sonstige_finanzielle_verpflichtungen",
+    "label": "Sonstige finanzielle Verpflichtungen",
+    "typ": "B",
+    "showcase": true,
+    "geltung": { "klein": "pflicht", "mittelgross": "pflicht", "gross": "pflicht" },
+    "render": "prosa",
+    "norm": { "refs": [ { "paragraph": "285", "nummer": "3a", "zitat": "§ 285 Nr. 3a HGB" } ] },
+    "quellen": { "datenmodell": [], "sachverhalt": ["sonstige_finanzielle_verpflichtungen"] },
+    "aufgabe": "Nenne den Gesamtbetrag der sonstigen finanziellen Verpflichtungen sowie die Aufschlüsselung nach den übergebenen Einzelposten ('posten'). Verwende ausschließlich die übergebenen Beträge und Beschreibungen; erfinde keine weiteren Verpflichtungen.",
+    "escalation": { "moeglich": false, "grund": null }
+  },
+  {
+    "id": "organkredite",
+    "label": "Vorschüsse und Kredite an Mitglieder der Geschäftsführung",
+    "typ": "B",
+    "showcase": true,
+    "geltung": { "klein": "pflicht", "mittelgross": "pflicht", "gross": "pflicht" },
+    "render": "prosa",
+    "norm": { "refs": [ { "paragraph": "285", "nummer": "9", "zitat": "§ 285 Nr. 9 Buchst. c HGB" } ] },
+    "quellen": { "datenmodell": [], "sachverhalt": ["organbezuege.vorschuesse_kredite_9c"] },
+    "aufgabe": "Prüfe 'organbezuege.vorschuesse_kredite_9c.gewaehrt'. Ist es falsch, formuliere die Standardaussage, dass keine Vorschüsse oder Kredite an Mitglieder der Geschäftsführung gewährt wurden und keine zu ihren Gunsten eingegangenen Haftungsverhältnisse bestehen, unter wörtlicher Verwendung der übergebenen 'begruendung'. Andernfalls nenne Betrag, Zinssatz und wesentliche Bedingungen aus dem Kontext. Erfinde keine Beträge.",
+    "escalation": { "moeglich": false, "grund": null }
+  },
+  {
+    "id": "goodwill_abschreibungszeitraum",
+    "label": "Abschreibungszeitraum entgeltlich erworbener Geschäfts- oder Firmenwert",
+    "typ": "B",
+    "showcase": true,
+    "geltung": { "klein": "pflicht", "mittelgross": "pflicht", "gross": "pflicht" },
+    "render": "prosa",
+    "norm": { "refs": [ { "paragraph": "285", "nummer": "13", "zitat": "§ 285 Nr. 13 HGB" } ] },
+    "quellen": { "datenmodell": [], "sachverhalt": ["goodwill"] },
+    "aufgabe": "Prüfe 'goodwill.vorhanden'. Ist es falsch, formuliere die Standardaussage, dass kein entgeltlich erworbener Geschäfts- oder Firmenwert bilanziert ist, unter wörtlicher Verwendung der übergebenen 'begruendung'. Andernfalls erläutere den angewandten Abschreibungszeitraum aus dem Kontext. Erfinde nichts.",
+    "escalation": { "moeglich": false, "grund": null }
+  },
+  {
+    "id": "konzernzugehoerigkeit",
+    "label": "Konzernzugehörigkeit — Mutterunternehmen des kleinsten Kreises",
+    "typ": "B",
+    "showcase": true,
+    "geltung": { "klein": "pflicht", "mittelgross": "pflicht", "gross": "pflicht" },
+    "render": "prosa",
+    "norm": { "refs": [ { "paragraph": "285", "nummer": "14a", "zitat": "§ 285 Nr. 14a HGB" } ] },
+    "quellen": { "datenmodell": [], "sachverhalt": ["konzernzugehoerigkeit"] },
+    "aufgabe": "Prüfe 'konzernzugehoerigkeit.mutterunternehmen_vorhanden'. Ist es falsch, formuliere die Standardaussage, dass keine Einbeziehung in den Konzernabschluss eines Mutterunternehmens besteht, unter wörtlicher Verwendung der übergebenen 'begruendung'. Andernfalls nenne Name und Sitz des Mutterunternehmens aus dem Kontext (die Ortsangabe zum Konzernabschluss entfällt für kleine Kapitalgesellschaften, § 288 Abs. 1 HGB). Erfinde nichts.",
+    "escalation": { "moeglich": false, "grund": null }
+  },
+  {
+    "id": "entsprechenserklaerung_161_aktg",
+    "label": "Entsprechenserklärung nach § 161 AktG",
+    "typ": "B",
+    "showcase": true,
+    "geltung": { "klein": "pflicht", "mittelgross": "pflicht", "gross": "pflicht" },
+    "render": "prosa",
+    "norm": { "refs": [ { "paragraph": "285", "nummer": "16", "zitat": "§ 285 Nr. 16 HGB" } ] },
+    "quellen": { "datenmodell": [], "sachverhalt": ["stammdaten.rechtsform"] },
+    "aufgabe": "Prüfe 'stammdaten.rechtsform'. Enthält der Wert nicht 'Aktiengesellschaft', formuliere die Standardaussage, dass § 285 Nr. 16 HGB i. V. m. § 161 AktG mangels Aktiengesellschafts-Rechtsform nicht einschlägig ist, unter Nennung der übergebenen Rechtsform. Erfinde nichts.",
+    "escalation": { "moeglich": false, "grund": null }
+  },
+  {
+    "id": "fair_value_finanzinstrumente",
+    "label": "Mit dem beizulegenden Zeitwert bewertete Finanzinstrumente",
+    "typ": "B",
+    "showcase": true,
+    "geltung": { "klein": "pflicht", "mittelgross": "pflicht", "gross": "pflicht" },
+    "render": "prosa",
+    "norm": { "refs": [ { "paragraph": "285", "nummer": "20", "zitat": "§ 285 Nr. 20 HGB" } ] },
+    "quellen": { "datenmodell": [], "sachverhalt": ["finanzinstrumente_fair_value"] },
+    "aufgabe": "Prüfe 'finanzinstrumente_fair_value.vorhanden'. Ist es falsch, formuliere die Standardaussage, dass keine mit dem beizulegenden Zeitwert bewerteten Finanzinstrumente bestehen, unter wörtlicher Verwendung der übergebenen 'begruendung'. Andernfalls beschreibe Grundlage und Umfang der Bewertung aus dem Kontext. Erfinde nichts.",
+    "escalation": { "moeglich": false, "grund": null }
+  },
+  {
+    "id": "bewertungseinheiten_254",
+    "label": "Bewertungseinheiten nach § 254 HGB",
+    "typ": "B",
+    "showcase": true,
+    "geltung": { "klein": "pflicht", "mittelgross": "pflicht", "gross": "pflicht" },
+    "render": "prosa",
+    "norm": { "refs": [ { "paragraph": "285", "nummer": "23", "zitat": "§ 285 Nr. 23 HGB" } ] },
+    "quellen": { "datenmodell": [], "sachverhalt": ["bewertungseinheiten_254"] },
+    "aufgabe": "Prüfe 'bewertungseinheiten_254.vorhanden'. Ist es falsch, formuliere die Standardaussage, dass keine Bewertungseinheiten nach § 254 HGB gebildet wurden, unter wörtlicher Verwendung der übergebenen 'begruendung'. Andernfalls beschreibe die Bewertungseinheiten aus dem Kontext. Erfinde nichts.",
+    "escalation": { "moeglich": false, "grund": null }
+  },
+  {
+    "id": "verrechnung_246_abs2",
+    "label": "Verrechnung von Vermögensgegenständen und Schulden",
+    "typ": "B",
+    "showcase": true,
+    "geltung": { "klein": "pflicht", "mittelgross": "pflicht", "gross": "pflicht" },
+    "render": "prosa",
+    "norm": { "refs": [ { "paragraph": "285", "nummer": "25", "zitat": "§ 285 Nr. 25 HGB" } ] },
+    "quellen": {
+      "datenmodell": ["bilanz.passiva[konzept=de-gaap-ci_bs.eqLiab.accruals.tax].label"],
+      "sachverhalt": ["verrechnung_246_abs2"]
+    },
+    "aufgabe": "Prüfe 'verrechnung_246_abs2.vorhanden'. Ist es falsch, formuliere die Standardaussage, dass keine Verrechnung von Vermögensgegenständen mit Schulden nach § 246 Abs. 2 Satz 2 HGB vorliegt, unter wörtlicher Verwendung der übergebenen 'begruendung' (die Rückstellungen bestehen laut Datenmodell ausschließlich aus Steuerrückstellungen, kein Deckungsvermögen für Altersversorgungsverpflichtungen). Andernfalls beschreibe die verrechneten Posten aus dem Kontext. Erfinde nichts.",
+    "escalation": { "moeglich": false, "grund": null }
+  },
+  {
+    "id": "aussergewoehnliche_posten",
+    "label": "Erträge und Aufwendungen von außergewöhnlicher Größenordnung oder Bedeutung",
+    "typ": "B",
+    "showcase": true,
+    "geltung": { "klein": "pflicht", "mittelgross": "pflicht", "gross": "pflicht" },
+    "render": "prosa",
+    "norm": { "refs": [ { "paragraph": "285", "nummer": "31", "zitat": "§ 285 Nr. 31 HGB" } ] },
+    "quellen": { "datenmodell": [], "sachverhalt": ["aussergewoehnliche_ertraege_aufwendungen"] },
+    "aufgabe": "Prüfe 'aussergewoehnliche_ertraege_aufwendungen.vorhanden'. Ist es falsch, formuliere die Standardaussage, dass keine Erträge oder Aufwendungen von außergewöhnlicher Größenordnung oder Bedeutung angefallen sind, unter wörtlicher Verwendung der übergebenen 'begruendung'. Andernfalls nenne Betrag und Art aus dem Kontext. Erfinde nichts.",
+    "escalation": { "moeglich": false, "grund": null }
+  }
+]

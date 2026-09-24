@@ -1,0 +1,98 @@
+{
+  "section_id": "allgemeine_angaben",
+  "norm_refs": [
+    "§ 264 Abs. 1a HGB"
+  ],
+  "blocks": [
+    {
+      "typ": "prosa",
+      "text": "Die Muster Bäckerei GmbH mit Sitz in Musterstadt ist eine Gesellschaft mit beschränkter Haftung. Das Unternehmen ist beim Amtsgericht Musterstadt unter der Handelsregisternummer HRB 12345 eingetragen. Der Geschäftsbericht bezieht sich auf das Geschäftsjahr 2025, das am 31.12.2025 endete. Die Gesellschaft ist als kleine Kapitalgesellschaft gemäß § 267 Abs. 1 HGB klassifiziert. Die Gewinn- und Verlustrechnung wurde nach dem Gesamtkostenverfahren gemäß § 275 Abs. 2 HGB aufgestellt.",
+      "claims": [
+        {
+          "aussage": "Firmenname",
+          "wert": "Muster Bäckerei GmbH",
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "stammdaten.firma"
+          }
+        },
+        {
+          "aussage": "Sitz",
+          "wert": "Musterstadt",
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "stammdaten.sitz"
+          }
+        },
+        {
+          "aussage": "Rechtsform",
+          "wert": "Gesellschaft mit beschränkter Haftung",
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "stammdaten.rechtsform"
+          }
+        },
+        {
+          "aussage": "Registergericht",
+          "wert": "Amtsgericht Musterstadt",
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "stammdaten.registergericht"
+          }
+        },
+        {
+          "aussage": "Handelsregisternummer",
+          "wert": "HRB 12345",
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "stammdaten.handelsregister_nr"
+          }
+        },
+        {
+          "aussage": "Geschäftsjahr",
+          "wert": "2025",
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "stammdaten.geschaeftsjahr"
+          }
+        },
+        {
+          "aussage": "Bilanzstichtag",
+          "wert": "31.12.2025",
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "stammdaten.stichtag"
+          }
+        },
+        {
+          "aussage": "Größenklasse",
+          "wert": "kleine Kapitalgesellschaft (§ 267 Abs. 1 HGB)",
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "stammdaten.groessenklasse"
+          }
+        },
+        {
+          "aussage": "GuV-Verfahren",
+          "wert": "Gesamtkostenverfahren (§ 275 Abs. 2 HGB)",
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "stammdaten.guv_verfahren"
+          }
+        }
+      ]
+    }
+  ],
+  "confidence": "hoch",
+  "escalation_flag": false,
+  "escalation_grund": null,
+  "offene_punkte": [],
+  "_validierung": {
+    "phase3": "ok",
+    "claims_geprueft": 9,
+    "fehler": 0,
+    "warnungen": 0,
+    "geerdet_gegen": "Saldenliste.xlsx + sachverhaltsblatt.json",
+    "datum": "2026-09-24"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Anhang-Section-Output",
+  "description": "Ausgabe-Vertrag für Phase 2 (LLM-Formulierung). Phase 3 (pruefe_section) validiert Struktur + Grounding.",
+  "type": "object",
+  "required": ["section_id", "norm_refs", "blocks", "confidence", "escalation_flag", "offene_punkte"],
+  "additionalProperties": false,
+  "properties": {
+    "section_id": {
+      "type": "string",
+      "description": "ID der angeforderten Section (== section_id aus dem Kontext)"
+    },
+    "norm_refs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Mind. 1 HGB-Normzitat, z. B. '§ 284 Abs. 3 HGB'"
+    },
+    "blocks": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/Block" }
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["hoch", "mittel", "unclear"]
+    },
+    "escalation_flag": { "type": "boolean" },
+    "escalation_grund": { "type": ["string", "null"] },
+    "offene_punkte": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Felder, die mangels Quelle als unclear geliefert wurden"
+    }
+  },
+  "$defs": {
+    "Claim": {
+      "type": "object",
+      "required": ["aussage", "wert", "quelle"],
+      "additionalProperties": false,
+      "properties": {
+        "aussage": { "type": "string" },
+        "wert": { "type": ["number", "string"] },
+        "quelle": {
+          "type": "object",
+          "required": ["art", "pfad"],
+          "additionalProperties": false,
+          "properties": {
+            "art": { "type": "string", "enum": ["datenmodell", "sachverhalt"] },
+            "pfad": { "type": "string" }
+          }
+        }
+      }
+    },
+    "Block": {
+      "type": "object",
+      "required": ["typ", "claims"],
+      "additionalProperties": false,
+      "properties": {
+        "typ": { "type": "string", "enum": ["prosa", "tabelle"] },
+        "text": { "type": "string" },
+        "spalten": { "type": "array", "items": { "type": "string" } },
+        "zeilen": { "type": "array", "items": { "type": "array" } },
+        "claims": { "type": "array", "items": { "$ref": "#/$defs/Claim" } }
+      }
+    }
+  }
+}

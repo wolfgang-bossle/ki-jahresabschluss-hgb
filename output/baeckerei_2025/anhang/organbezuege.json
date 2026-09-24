@@ -1,0 +1,43 @@
+{
+  "section_id": "organbezuege",
+  "norm_refs": [
+    "§ 285 Nr. 9a HGB",
+    "§ 286 Abs. 4 HGB"
+  ],
+  "blocks": [
+    {
+      "typ": "prosa",
+      "text": "Die Gesellschaft hat einen einzigen Geschäftsführer. Die Angabe der Gesamtbezüge der Geschäftsführung würde unmittelbar Rückschlüsse auf die Bezüge dieser einzelnen Person zulassen; sie unterbleibt daher gemäß § 286 Abs. 4 HGB.",
+      "claims": [
+        {
+          "aussage": "Schutzklausel greift",
+          "wert": "True",
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "organbezuege.schutzklausel_286_4"
+          }
+        },
+        {
+          "aussage": "Weglassungsbegruendung woertlich",
+          "wert": "Die Gesellschaft hat einen einzigen Geschäftsführer. Die Angabe der Gesamtbezüge der Geschäftsführung würde unmittelbar Rückschlüsse auf die Bezüge dieser einzelnen Person zulassen; sie unterbleibt daher gemäß § 286 Abs. 4 HGB.",
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "organbezuege.begruendung"
+          }
+        }
+      ]
+    }
+  ],
+  "confidence": "hoch",
+  "escalation_flag": false,
+  "escalation_grund": null,
+  "offene_punkte": [],
+  "_validierung": {
+    "phase3": "ok",
+    "claims_geprueft": 2,
+    "fehler": 0,
+    "warnungen": 0,
+    "geerdet_gegen": "Saldenliste.xlsx + sachverhaltsblatt.json",
+    "datum": "2026-09-24"
+  }
+}

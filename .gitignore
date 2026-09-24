@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Logs
+*.log
+
+# Anhang-Demo-/Test-Nebenprodukte (regenerierbar via scripts/anhang_demo.py).
+# Die validierten Sections unter output/**/anhang/ (ohne anhang_-Präfix) werden
+# bewusst getrackt: Sie sind Ergebnisse des Sprachmodells, nicht regenerierbar.
+output/**/anhang_*.json

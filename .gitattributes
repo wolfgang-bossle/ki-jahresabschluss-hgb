@@ -1,0 +1,4 @@
+# Binärdateien: keine Zeilenende-Konvertierung (sonst korrumpiert autocrlf sie).
+*.pdf binary
+*.png binary
+*.xlsx binary

@@ -1,0 +1,32 @@
+{
+  "_hinweis": "Branchen-Profil: Einzelhandelsgesellschaft. Hoher Warenbestand, hohe Lieferantenverbindlichkeiten, duenne Marge. Gewinnvortrag (balance_konto) wird automatisch berechnet.",
+  "branche": "Einzelhandelsgesellschaft",
+  "balance_konto": "0860",
+  "balance_konto_bezeichnung": "Gewinnvortrag",
+  "konten": {
+    "0520": {"bezeichnung": "Fuhrpark (Lieferwagen)",             "gj":  20000, "vj":  25000},
+    "0650": {"bezeichnung": "Betriebs- und Geschaeftsausstattung","gj":  80000, "vj":  95000},
+    "1000": {"bezeichnung": "Kasse",                             "gj":   8000, "vj":   7000},
+    "1140": {"bezeichnung": "Waren (Vorraete)",                  "gj": 250000, "vj": 220000},
+    "1200": {"bezeichnung": "Bank",                              "gj": 120000, "vj":  95000},
+    "1400": {"bezeichnung": "Forderungen aus Lieferungen und Leistungen","gj": 15000,"vj": 12000},
+    "0800": {"bezeichnung": "Gezeichnetes Kapital (Stammkapital)","gj":  25000, "vj":  25000},
+    "0670": {"bezeichnung": "Verbindlichkeiten Kreditinstitute (langfristig)","gj": 50000,"vj": 60000},
+    "0671": {"bezeichnung": "Verbindlichkeiten Kreditinstitute (kurzfristig)","gj": 30000,"vj": 35000},
+    "0950": {"bezeichnung": "Steuerrueckstellungen",             "gj":  20000, "vj":  18000},
+    "1600": {"bezeichnung": "Verbindlichkeiten aus Lieferungen und Leistungen","gj": 120000,"vj": 100000},
+    "1740": {"bezeichnung": "Sonstige Verbindlichkeiten",        "gj":  25000, "vj":  22000},
+    "8400": {"bezeichnung": "Erloese Ladenverkauf",              "gj": 980000, "vj": 870000},
+    "3300": {"bezeichnung": "Aufwendungen fuer Rohstoffe",       "gj": 520000, "vj": 460000},
+    "3310": {"bezeichnung": "Aufwendungen Hilfs-/Verpackungsstoffe","gj": 30000,"vj": 27000},
+    "4100": {"bezeichnung": "Gehaelter",                         "gj": 180000, "vj": 160000},
+    "4130": {"bezeichnung": "Gesetzliche soziale Aufwendungen",  "gj":  36000, "vj":  32000},
+    "4210": {"bezeichnung": "Miete Ladenflaeche",                "gj":  72000, "vj":  72000},
+    "4240": {"bezeichnung": "Energiekosten",                     "gj":  15000, "vj":  14000},
+    "4360": {"bezeichnung": "Werbe- und Reisekosten",            "gj":  25000, "vj":  22000},
+    "4900": {"bezeichnung": "Sonstige betriebliche Aufwendungen","gj":  30000, "vj":  28000},
+    "4830": {"bezeichnung": "Abschreibungen auf Sachanlagen",    "gj":  25000, "vj":  23000},
+    "2100": {"bezeichnung": "Zinsaufwendungen",                  "gj":   5000, "vj":   6000},
+    "7610": {"bezeichnung": "Steuern vom Einkommen und vom Ertrag","gj": 22000,"vj": 16000}
+  }
+}

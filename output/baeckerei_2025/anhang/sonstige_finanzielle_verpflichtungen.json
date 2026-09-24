@@ -1,0 +1,66 @@
+{
+  "section_id": "sonstige_finanzielle_verpflichtungen",
+  "norm_refs": [
+    "§ 285 Nr. 3a HGB"
+  ],
+  "blocks": [
+    {
+      "typ": "prosa",
+      "text": "Die sonstigen finanziellen Verpflichtungen belaufen sich auf insgesamt 186.000 EUR. Sie bestehen aus Mietverträge Filialflächen (3 Filialen, Restlaufzeit 1–4 Jahre) in Höhe von 126.000 EUR sowie Leasing Auslieferungsfahrzeuge (2 Fahrzeuge, Restlaufzeit bis 2027) in Höhe von 60.000 EUR.",
+      "claims": [
+        {
+          "aussage": "Gesamtbetrag",
+          "wert": 186000,
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "sonstige_finanzielle_verpflichtungen.gesamtbetrag"
+          }
+        },
+        {
+          "aussage": "Posten 1 Beschreibung",
+          "wert": "Mietverträge Filialflächen (3 Filialen, Restlaufzeit 1–4 Jahre)",
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "sonstige_finanzielle_verpflichtungen.posten[0].art"
+          }
+        },
+        {
+          "aussage": "Posten 1 Betrag",
+          "wert": 126000,
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "sonstige_finanzielle_verpflichtungen.posten[0].betrag"
+          }
+        },
+        {
+          "aussage": "Posten 2 Beschreibung",
+          "wert": "Leasing Auslieferungsfahrzeuge (2 Fahrzeuge, Restlaufzeit bis 2027)",
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "sonstige_finanzielle_verpflichtungen.posten[1].art"
+          }
+        },
+        {
+          "aussage": "Posten 2 Betrag",
+          "wert": 60000,
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "sonstige_finanzielle_verpflichtungen.posten[1].betrag"
+          }
+        }
+      ]
+    }
+  ],
+  "confidence": "hoch",
+  "escalation_flag": false,
+  "escalation_grund": null,
+  "offene_punkte": [],
+  "_validierung": {
+    "phase3": "ok",
+    "claims_geprueft": 5,
+    "fehler": 0,
+    "warnungen": 0,
+    "geerdet_gegen": "Saldenliste.xlsx + sachverhaltsblatt.json",
+    "datum": "2026-09-24"
+  }
+}

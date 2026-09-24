@@ -1,0 +1,27 @@
+{
+  "_hinweis": "Branchen-Profil: IT-Beratungsgesellschaft. Kein Warenbestand, kein Anlagevermögen außer BGA/Fahrzeug. Gewinnvortrag (balance_konto) wird automatisch berechnet.",
+  "branche": "IT-Beratungsgesellschaft",
+  "balance_konto": "0860",
+  "balance_konto_bezeichnung": "Gewinnvortrag",
+  "konten": {
+    "0520": {"bezeichnung": "Firmenwagen",                        "gj": 25000,  "vj": 35000},
+    "0650": {"bezeichnung": "Betriebs- und Geschaeftsausstattung","gj": 40000,  "vj": 50000},
+    "1000": {"bezeichnung": "Kasse",                             "gj":  5000,  "vj":  5000},
+    "1200": {"bezeichnung": "Bank",                              "gj": 340000, "vj": 295000},
+    "1400": {"bezeichnung": "Forderungen aus Lieferungen und Leistungen","gj": 180000,"vj": 145000},
+    "0800": {"bezeichnung": "Gezeichnetes Kapital (Stammkapital)","gj": 25000,  "vj": 25000},
+    "0950": {"bezeichnung": "Steuerrueckstellungen",             "gj": 25000,  "vj": 20000},
+    "1600": {"bezeichnung": "Verbindlichkeiten aus Lieferungen und Leistungen","gj": 30000,"vj": 25000},
+    "1740": {"bezeichnung": "Sonstige Verbindlichkeiten",        "gj": 60000,  "vj": 55000},
+    "8400": {"bezeichnung": "Erloese Beratungsleistungen",       "gj": 650000, "vj": 580000},
+    "4100": {"bezeichnung": "Gehaelter",                         "gj": 350000, "vj": 315000},
+    "4130": {"bezeichnung": "Gesetzliche soziale Aufwendungen",  "gj": 70000,  "vj": 63000},
+    "4210": {"bezeichnung": "Miete Bueroflaeche",                "gj": 48000,  "vj": 48000},
+    "4240": {"bezeichnung": "Energiekosten",                     "gj":  8000,  "vj":  7000},
+    "4360": {"bezeichnung": "Werbe- und Reisekosten",            "gj": 12000,  "vj": 10000},
+    "4900": {"bezeichnung": "Sonstige betriebliche Aufwendungen","gj": 25000,  "vj": 22000},
+    "4830": {"bezeichnung": "Abschreibungen auf Sachanlagen",    "gj": 15000,  "vj": 15000},
+    "2100": {"bezeichnung": "Zinsaufwendungen",                  "gj":  2000,  "vj":  2000},
+    "7610": {"bezeichnung": "Steuern vom Einkommen und vom Ertrag","gj": 40000,"vj": 33000}
+  }
+}

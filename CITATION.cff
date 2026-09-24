@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+title: KI-Jahresabschluss nach HGB
+message: >-
+  Bitte wie unten angegeben zitieren.
+type: software
+authors:
+  - family-names: Bossle
+    given-names: Wolfgang
+abstract: >-
+  KI-Jahresabschluss nach HGB: an einem erfundenen Musterfall der Weg von der
+  Saldenliste zu Bilanz, Gewinn- und Verlustrechnung und Anhang einer kleinen
+  GmbH. Die Werkzeuge rechnen, Claude von Anthropic formuliert die Anhangtexte,
+  jede Zahl und jede Tatsachenbehauptung wird centgenau gegen das Datenmodell
+  geprüft und ist bis auf das Konto zurückverfolgbar.
+# Keine keywords: Owner der Schlagwörter sind die GitHub-Topics des Repositoriums.
+license:
+  - MIT
+  - CC-BY-ND-4.0
+version: "1.0"
+url: https://github.com/wolfgang-bossle/ki-jahresabschluss-hgb
+repository-code: https://github.com/wolfgang-bossle/ki-jahresabschluss-hgb
