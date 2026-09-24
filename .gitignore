@@ -10,3 +10,6 @@ __pycache__/
 # Die validierten Sections unter output/**/anhang/ (ohne anhang_-Präfix) werden
 # bewusst getrackt: Sie sind Ergebnisse des Sprachmodells, nicht regenerierbar.
 output/**/anhang_*.json
+
+# Lokale Claude-Code-Konfiguration (Hooks, Befehle, Skill), nicht Teil der Veröffentlichung
+.claude/
