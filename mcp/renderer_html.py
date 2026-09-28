@@ -214,13 +214,14 @@ def _anlagenspiegel(asp):
 # --------------------------------------------------------------------------- #
 # Anhang (geerdete Sections aus output/**/anhang/*.json)
 # --------------------------------------------------------------------------- #
-def _anhang(sections):
+def _anhang(sections, sections_config=None):
     if not sections:
         return ""
     bloecke = []
     for sec in sections:
         norm = ", ".join(sec.get("norm_refs", []))
-        titel = sec.get("section_id", "").replace("_", " ").title()
+        titel = ((sections_config or {}).get(sec.get("section_id"), {}).get("label")
+                 or sec.get("section_id", "").replace("_", " ").title())
         prosa = []
         belege = []
         for blk in sec.get("blocks", []):
@@ -346,7 +347,7 @@ _JS = """
 
 
 def render_html(datenmodell, konten=None, anhang_sections=None,
-                titel=None, stichtag=None, gliederung=None):
+                titel=None, stichtag=None, gliederung=None, anhang_sections_config=None):
     """Erzeugt das eigenständige HTML-Dokument als String (kein Plattenschreiben).
 
     datenmodell: Rückgabe von jahresabschluss.generate().
@@ -398,7 +399,7 @@ def render_html(datenmodell, konten=None, anhang_sections=None,
             gliedere(guv.get("positionen", []), "guv", gliederung), konten,
         ),
         _anlagenspiegel(asp),
-        _anhang(anhang_sections),
+        _anhang(anhang_sections, anhang_sections_config),
     ]
 
     return f"""<!DOCTYPE html>

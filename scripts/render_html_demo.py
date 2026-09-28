@@ -17,7 +17,7 @@ from pathlib import Path
 BASE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(BASE / "mcp"))
 
-from anhang import anhang_fuer_groessenklasse            # noqa: E402
+from anhang import anhang_fuer_groessenklasse, lade_sections  # noqa: E402
 from hgb_size_classes import pruefe_groessenklasse      # noqa: E402
 from jahresabschluss import generate, read_saldenliste  # noqa: E402
 from renderer_html import render_html                    # noqa: E402
@@ -42,7 +42,9 @@ def _lade_anhang_sections():
             sections.append(json.loads(f.read_text(encoding="utf-8")))
         except (json.JSONDecodeError, OSError):
             continue
-    return sections
+    # Reihenfolge des Gesetzes = Reihenfolge in anhang_sections.json, nicht alphabetisch
+    folge = {s["id"]: i for i, s in enumerate(lade_sections())}
+    return sorted(sections, key=lambda s: folge.get(s.get("section_id"), len(folge)))
 
 
 def _kopfangaben():
@@ -69,6 +71,7 @@ def main():
         dm, konten=konten,
         anhang_sections=anhang_fuer_groessenklasse(_lade_anhang_sections(), groessenklasse),
         titel=titel, stichtag=stichtag,
+        anhang_sections_config={s["id"]: s for s in lade_sections()},
     )
     ziel = OUT / "jahresabschluss.html"
     ziel.write_text(htmltext, encoding="utf-8")

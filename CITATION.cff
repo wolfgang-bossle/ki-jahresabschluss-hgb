@@ -13,7 +13,7 @@ abstract: >-
   jede belegte Zahl und Tatsachenbehauptung wird centgenau gegen das
   Datenmodell geprüft, eine unbelegte Zahl wird gemeldet. Jede Zahl aus der
   Saldenliste ist bis auf das Konto zurückverfolgbar.
-# Keine keywords: Owner der Schlagwörter sind die GitHub-Topics des Repositoriums.
+# Keine keywords: Die Schlagwörter stehen in den GitHub-Topics des Repositorys.
 license:
   - MIT
   - CC-BY-ND-4.0

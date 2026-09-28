@@ -229,7 +229,8 @@ def _anhang_flow(sections, S, sections_config=None, groessenklasse=None):
     if groessenklasse == "klein":
         flow.append(Paragraph(_BANNER_KLEIN, S["note"]))
     for sec in sections:
-        titel = sec.get("section_id", "").replace("_", " ").title()
+        titel = (sections_config.get(sec.get("section_id"), {}).get("label")
+                 or sec.get("section_id", "").replace("_", " ").title())
         norm = ", ".join(sec.get("norm_refs", []))
         tag = (' <font size=7 color="#57606a">[Showcase — über Mindestangabe hinaus]</font>'
                if sections_config.get(sec.get("section_id"), {}).get("showcase") else "")

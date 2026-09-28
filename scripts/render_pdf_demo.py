@@ -42,7 +42,9 @@ def _lade_anhang_sections():
             sections.append(json.loads(f.read_text(encoding="utf-8")))
         except (json.JSONDecodeError, OSError):
             continue
-    return sections
+    # Reihenfolge des Gesetzes = Reihenfolge in anhang_sections.json, nicht alphabetisch
+    folge = {s["id"]: i for i, s in enumerate(lade_sections())}
+    return sorted(sections, key=lambda s: folge.get(s.get("section_id"), len(folge)))
 
 
 def _kopfangaben():
