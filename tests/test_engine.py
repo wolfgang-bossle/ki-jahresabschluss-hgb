@@ -5,6 +5,7 @@ Deckt den bisher nur von verify.py abgedeckten Happy-Path als echte Tests ab UND
 neu — die Negativpfade (der eiserne Grundsatz muss LAUT scheitern, nie still):
   * fehlende Tabelle-B-Zuordnung  -> ValueError
   * unausgeglichene Bilanz        -> ValueError (Bilanzprobe != 0)
+  * Bilanzkonto mit Gegenvorzeichen -> ValueError mit Kontonummer (§ 246 Abs. 2)
 Datenagnostisch: die Synthetik-Konten hier sind Testdaten, kein Engine-Code.
 """
 from pathlib import Path
@@ -107,3 +108,15 @@ def test_unausgeglichene_bilanz_wirft(tmp_path):
         lambda: generate(sl, MAPPING, TAXONOMIE),
         "nicht ausgeglichen",
     )
+
+
+def test_bilanzkonto_mit_gegenvorzeichen_wirft(tmp_path):
+    # Bank im Haben (-50k) würde sonst die Aktiva mindern statt als Verbindlichkeit
+    # zu erscheinen -> harter Fehler mit Kontonummer, keine automatische Umgliederung.
+    sl = tmp_path / "saldenliste_gegenvorzeichen.xlsx"
+    _write_saldenliste(sl, [
+        ("0210", "Grundstücke", 500_000.0, 0.0),
+        ("1200", "Bank", -50_000.0, 0.0),
+        ("8400", "Umsatzerlöse", 450_000.0, 0.0),
+    ])
+    _expect_value_error(lambda: generate(sl, MAPPING, TAXONOMIE), "Gegenvorzeichen: ['1200']")

@@ -173,6 +173,15 @@ def generate(saldenliste, mapping_file, taxonomy_dir, anlagenbuchhaltung=None):
     if fehlend:
         raise ValueError(f"Konten ohne Tabelle-B-Zuordnung: {fehlend}")
 
+    # Vorzeichenkonvention: Bilanzsalden positiv auf ihrer Seite (Aktiva Soll, Passiva
+    # Haben). Gegenvorzeichen (z. B. Bank im Haben) würde mit der eigenen Seite
+    # verrechnet (§ 246 Abs. 2 HGB) → harter Fehler, keine automatische Umgliederung.
+    gegen = [k for k, (_, gj, vj) in konten.items()
+             if konto2concept[k].startswith("de-gaap-ci_bs.") and (gj < 0 or vj < 0)]
+    if gegen:
+        raise ValueError(f"Bilanzkonten mit Gegenvorzeichen: {gegen} — nicht verrechnen "
+                         f"(§ 246 Abs. 2 HGB); Saldo auf die Gegenseite umgliedern.")
+
     # Leaf-Aggregation getrennt nach Bilanz / GuV
     bs_leaf = defaultdict(lambda: [0.0, 0.0, []])
     is_leaf = defaultdict(lambda: [0.0, 0.0, []])
