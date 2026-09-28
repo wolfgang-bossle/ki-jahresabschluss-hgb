@@ -8,7 +8,6 @@ Status: am erfundenen Musterfall gebaut, nicht im Mandantenbetrieb erprobt (READ
 Abhängigkeiten: Datenmodell aus jahresabschluss.generate(), sachverhaltsblatt.json
 Datenagnostisch: KEINE Kontonummern/Mandant. Schwellen = Gesetzeswerte (§267),
        Umsatz-Konzept = Taxonomie-Konstante (de-gaap-ci) — analog NETINCOME_CONCEPT.
-Letzte Änderung: 2026-06-28
 """
 
 # Schwellenwerte § 267 Abs. 1 HGB (Stand BEG IV 2024, Geschäftsjahre ab 31.12.2023).

@@ -10,7 +10,6 @@ Abhängigkeiten: data/<mandant>/Anlagenbuchhaltung.xlsx, mcp/config/skr03_mappin
 Datenagnostisch: KEINE Kontonummern/Mandant im Code. Werte aus der
                 Anlagenbuchhaltung, Zuordnung aus Tabelle B, Gliederung aus der
                 Taxonomie. Bilanz/GuV werden NICHT angefasst (additiver Block).
-Letzte Änderung: 2026-06-18
 """
 import json
 from collections import defaultdict

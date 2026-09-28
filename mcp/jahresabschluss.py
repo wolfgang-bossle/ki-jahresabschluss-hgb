@@ -7,7 +7,6 @@ Abhängigkeiten: mcp/config/skr03_mapping.json, taxonomy/*-presentation-*.xml,
                 taxonomy/*-label-de.xml, openpyxl
 Datenagnostisch: KEINE Kontonummern/Mandant im Code. Werte aus Saldenliste,
                 Zuordnung aus Tabelle B, Gliederung aus der Taxonomie.
-Letzte Änderung: 2026-06-18
 """
 import json
 import xml.etree.ElementTree as ET

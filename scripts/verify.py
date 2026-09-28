@@ -7,7 +7,7 @@ Zweck: Seiteneffektfreier Verifikations-Lauf der Jahresabschluss-Engine (= der b
        ANKER. Abweichung oder Exception -> stderr + Exit 1. Sonst "OK" + Exit 0.
 Genutzt von: CI (.github/workflows/ci.yml).
 Aufruf:  python scripts/verify.py
-Status: ✅ 2026-06-19
+Status: am erfundenen Musterfall gebaut, nicht im Mandantenbetrieb erprobt (README, Einordnung)
 """
 import sys
 from pathlib import Path

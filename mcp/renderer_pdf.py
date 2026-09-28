@@ -9,10 +9,9 @@ Zweck: Print-Renderer — nimmt das geerdete Datenmodell (aus generate()) und er
 Hinweis Scope: sauberes, druckfähiges PDF. ECHTE PDF/A-3-Archivkonformität
        (eingebettetes XBRL, XMP/ICC) ist hier NICHT zertifiziert — bewusster
        Default-Scope, als Ausblick dokumentiert.
-Status: ✅ 2026-06-23
+Status: am erfundenen Musterfall gebaut, nicht im Mandantenbetrieb erprobt (README, Einordnung)
 Abhängigkeiten: reportlab (pure-Python). Eingaben wie beim HTML-Renderer.
 Datenagnostisch: KEINE Kontonummern/Mandant im Code. Eiserner Grundsatz: übernimmt Modellwerte unverändert, rechnet nichts nach.
-Letzte Änderung: 2026-06-23
 """
 from datetime import date
 from io import BytesIO

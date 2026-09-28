@@ -6,7 +6,7 @@ Zweck: Renderer — nimmt das geerdete Datenmodell (aus jahresabschluss.generate
        (§284 Abs. 3 HGB) und – falls vorhanden – die geerdeten Anhang-Sections.
        Kernfeature: klickbares Drill-down je Position entlang der
        Rückverfolgbarkeit Position → Taxonomie-Konzept → Konto → Saldenliste-Saldo.
-Status: ✅ 2026-06-23
+Status: am erfundenen Musterfall gebaut, nicht im Mandantenbetrieb erprobt (README, Einordnung)
 Abhängigkeiten: keine (reine Standardbibliothek). Eingaben sind das Datenmodell
        und optional die Saldenliste-Konten (Konto → (bez, gj, vj)) für die
        Konto-Ebene im Drill-down.
@@ -14,7 +14,6 @@ Datenagnostisch: KEINE Kontonummern/Mandant im Code. Alles, was angezeigt
        wird, kommt aus dem übergebenen Datenmodell bzw. den Konten. Der Renderer
        LIEST nur und rechnet NICHTS nach (eiserner Grundsatz): er übernimmt
        die Werte des Modells unverändert, erfindet keine Zahl.
-Letzte Änderung: 2026-06-23
 """
 import html
 from datetime import date

@@ -6,7 +6,7 @@ Zweck: Mandantenfragebogen (Word) für die Anhang-Sachverhalte, die NICHT aus de
        Bereits aus der Saldenliste ableitbare Angaben (GuV-Verfahren, Geschäftsjahr,
        Bilanzstichtag, Größenklasse) werden bewusst NICHT abgefragt.
 Aufruf: python scripts/generate_fragebogen_docx.py
-Status: ✅ 2026-07-03
+Status: am erfundenen Musterfall gebaut, nicht im Mandantenbetrieb erprobt (README, Einordnung)
 Abhängigkeiten: python-docx
 """
 import sys

@@ -8,7 +8,7 @@ Zweck: Showcase-/Bau-Skript — erzeugt aus der Muster-Bäckerei-Demo das intera
        bindet – falls vorhanden – die geerdeten Anhang-Sections aus output/**/anhang/
        sowie Firma/Stichtag aus dem Sachverhaltsblatt (rein kosmetisch) ein.
 Aufruf:  python scripts/render_html_demo.py
-Status: ✅ 2026-06-23
+Status: am erfundenen Musterfall gebaut, nicht im Mandantenbetrieb erprobt (README, Einordnung)
 """
 import json
 import sys

@@ -8,8 +8,6 @@ Status: am erfundenen Musterfall gebaut, nicht im Mandantenbetrieb erprobt (READ
 Abhängigkeiten: fastmcp, jsonschema, jahresabschluss.py, anhang.py, sachverhalt.py,
                 hgb_size_classes.py
 Start: python mcp/server.py   (stdio-Transport)
-Letzte Änderung: 2026-06-28 (Größenklassen-Gate §267: Tool groessenklasse_pruefen +
-                 vorgeschaltet in jahresabschluss_erstellen)
 """
 from functools import lru_cache
 from pathlib import Path

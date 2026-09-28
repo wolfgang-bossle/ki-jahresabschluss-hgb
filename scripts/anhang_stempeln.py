@@ -7,7 +7,7 @@ Zweck: Persistiert den Phase-3-Validierungsstempel auf allen kanonischen
        (eiserner Grundsatz), stempelt jede Datei einzeln, schreibt sie zurück.
        Exit 1, wenn eine Section fehlschlägt (phase3='fehler').
 Aufruf: python scripts/anhang_stempeln.py
-Status: ✅ 2026-07-03
+Status: am erfundenen Musterfall gebaut, nicht im Mandantenbetrieb erprobt (README, Einordnung)
 """
 import json
 import sys

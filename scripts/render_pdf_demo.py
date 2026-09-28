@@ -9,7 +9,7 @@ Zweck: Showcase-/Bau-Skript — erzeugt aus der Muster-Bäckerei-Demo das PDF de
        falls vorhanden – die geerdeten Anhang-Sections sowie Firma/Stichtag/
        Geschäftsführer/Feststellungsdatum aus dem Sachverhaltsblatt (kosmetisch) ein.
 Aufruf:  python scripts/render_pdf_demo.py [--release]
-Status: ✅ 2026-06-23, Unterschrift/Feststellung 2026-07-03
+Status: am erfundenen Musterfall gebaut, nicht im Mandantenbetrieb erprobt (README, Einordnung)
 """
 import json
 import sys
