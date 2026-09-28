@@ -352,17 +352,20 @@ def stempel_section(section_obj: dict, datenmodell: dict, sachverhalt: dict,
     from datetime import date
     sauber = {k: v for k, v in section_obj.items() if k != "_validierung"}
     ergebnis = pruefe_section(sauber, datenmodell, sachverhalt, sections, chunks)
-    return {
-        **sauber,
-        "_validierung": {
-            "phase3": "ok" if ergebnis["ok"] else "fehler",
-            "claims_geprueft": ergebnis["geprueft"].get("claims", 0),
-            "fehler": len(ergebnis["fehler"]),
-            "warnungen": len(ergebnis["warnungen"]),
-            "geerdet_gegen": geerdet_gegen,
-            "datum": datum or date.today().isoformat(),
-        },
+    stempel = {
+        "phase3": "ok" if ergebnis["ok"] else "fehler",
+        "claims_geprueft": ergebnis["geprueft"].get("claims", 0),
+        "fehler": len(ergebnis["fehler"]),
+        "warnungen": len(ergebnis["warnungen"]),
+        "geerdet_gegen": geerdet_gegen,
+        "datum": datum or date.today().isoformat(),
     }
+    # Herkunft des KI-Texts (Modell, Zeitpunkt) wird beim Formulieren gesetzt und
+    # beim Neustempeln nur übernommen, nie erzeugt.
+    formuliert = (section_obj.get("_validierung") or {}).get("formuliert")
+    if formuliert:
+        stempel["formuliert"] = formuliert
+    return {**sauber, "_validierung": stempel}
 
 
 # --------------------------------------------------------------------------- #

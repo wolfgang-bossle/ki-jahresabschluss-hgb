@@ -238,6 +238,8 @@ def _anhang(sections):
         if val.get("phase3") == "ok":
             badge = (f'<span class="vbadge ok">✓ geerdet · {val.get("claims_geprueft","?")} '
                      f'Claims · 0 Fehler</span>')
+        ki = ('<p class="sub">Text KI-formuliert (Claude), gegen Datenmodell abgeglichen</p>'
+              if val.get("formuliert") else "")
         beleg_tab = ""
         if belege:
             beleg_tab = (
@@ -250,7 +252,7 @@ def _anhang(sections):
         bloecke.append(
             f'<div class="anhang-sec"><h3>{_esc(titel)} '
             f'<span class="norm">{_esc(norm)}</span> {badge}</h3>'
-            + "".join(prosa) + beleg_tab + '</div>'
+            + "".join(prosa) + ki + beleg_tab + '</div>'
         )
     return ('<section><h2>Anhang <span class="norm">§§ 284 / 285 HGB</span></h2>'
             + "".join(bloecke) + '</section>')

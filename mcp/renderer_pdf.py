@@ -217,6 +217,9 @@ _BANNER_KLEIN = (
 )
 
 
+_KI_VERMERK = "Text KI-formuliert (Claude), gegen Datenmodell abgeglichen"
+
+
 def _anhang_flow(sections, S, sections_config=None, groessenklasse=None):
     if not sections:
         return []
@@ -239,6 +242,8 @@ def _anhang_flow(sections, S, sections_config=None, groessenklasse=None):
             flow.append(Paragraph(
                 f'Geerdet · {val.get("claims_geprueft","?")} Claims gegen die Wahrheit '
                 f'geprüft · 0 Fehler', S["note"]))
+        if val.get("formuliert"):
+            flow.append(Paragraph(_KI_VERMERK, S["note"]))
     return flow
 
 
