@@ -118,6 +118,8 @@ def pruefe_groessenklasse(datenmodell: dict, sachverhalt: dict) -> dict:
                 "überschritten (§ 267 Abs. 4). Größenabhängige Erleichterungen "
                 "(§ 288 Abs. 1, § 326) sind unzulässig — außerhalb des Scopes "
                 "(kleine Kapitalgesellschaft).")
+    begr += (" Annahme: Einstufung im Vorjahresabschluss = klein (§ 267 Abs. 4); "
+             "nicht geprüft.")
 
     return {
         "ok": ist_klein,

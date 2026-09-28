@@ -33,10 +33,6 @@ def _mandant_dir(mandant: str) -> Path:
     return BASE / "data" / mandant
 
 
-_DEFAULT_DIR = _mandant_dir(DEFAULT_MANDANT)
-DEFAULT_SALDENLISTE = _DEFAULT_DIR / "Saldenliste.xlsx"
-DEFAULT_ANLAGENBUCHHALTUNG = _DEFAULT_DIR / "Anlagenbuchhaltung.xlsx"
-
 mcp = FastMCP("jahresabschluss-hgb")
 
 _KONTEXT_SCHEMA = {
@@ -86,6 +82,7 @@ def bilanz_guv_ableiten(
     mapping: str = "",
     taxonomie: str = "",
     anlagenbuchhaltung: str = "",
+    mandant: str = "",
 ) -> dict:
     """Leitet aus einer Saldenliste Bilanz (§266 HGB) und GuV (§275 HGB) ab, als
     vollständiges Datenmodell mit Rückverfolgbarkeit je
@@ -100,14 +97,18 @@ def bilanz_guv_ableiten(
 
     Ohne Argumente läuft die Muster-Bäckerei-Demo (SKR03). Alle Pfade lassen
     sich überschreiben, um andere Mandanten oder Kontenrahmen-Mappings zu fahren.
+    Eine eigene Saldenliste verlangt `mandant`: Das Gate braucht die Arbeitnehmerzahl
+    aus dem Sachverhaltsblatt desselben Mandanten; fehlt es, bricht der Aufruf ab.
 
     Args:
+        mandant: Ordner unter data/ mit sachverhaltsblatt.json (Standard ohne eigene
+            Saldenliste: baeckerei_2025). Pflicht, sobald `saldenliste` gesetzt ist.
         saldenliste: Pfad zur Saldenlisten-Excel (.xlsx, 4-Spalten-Format
-            Konto/Bezeichnung/Saldo-GJ/Saldo-VJ). Leer = Demo.
+            Konto/Bezeichnung/Saldo-GJ/Saldo-VJ). Leer = Saldenliste des Mandanten.
         mapping: Pfad zur Tabelle-B-JSON (Konto → XBRL-Konzept). Leer = SKR03-Demo.
         taxonomie: Pfad zum Taxonomie-Ordner (de-gaap-ci Linkbasen). Leer = Demo.
         anlagenbuchhaltung: Pfad zur Anlagenbuchhaltungs-Excel (Brutto-Format) für
-            den Anlagenspiegel (§284 Abs. 3 HGB). Leer = Bäckerei-Demo. Wird die
+            den Anlagenspiegel (§284 Abs. 3 HGB). Leer = die des Mandanten. Wird die
             Datei eingebunden, prüft die Engine hart gegen die Saldenliste
             (BW Ende = Anlagekonten, Σ AfA = AfA-Aufwandskonto); Abweichung = Fehler.
 
@@ -122,16 +123,26 @@ def bilanz_guv_ableiten(
         Bei Fehler: {"isError": true, "errorCategory": ..., "isRetryable": ..., "message": ...}
     """
     try:
-        # Anlagenbuchhaltung-Default nur im reinen Demo-Modus (keine eigene Saldenliste)
-        # und nur wenn sachverhaltsblatt.json → anlagenspiegel.erstellen = true.
+        # Eigene Saldenliste ohne Mandant: das Gate würde die Arbeitnehmerzahl eines
+        # fremden Sachverhaltsblatts nehmen → hart abbrechen statt still mischen.
+        if saldenliste and not mandant:
+            return {"isError": True, "errorCategory": "validation", "isRetryable": True,
+                    "message": "Eigene Saldenliste ohne 'mandant': ohne das passende "
+                               "Sachverhaltsblatt ist die Größenklasse (§ 267 HGB) nicht "
+                               "prüfbar. 'mandant' = Ordner unter data/ mit "
+                               "sachverhaltsblatt.json angeben."}
+        d = _mandant_dir(mandant or DEFAULT_MANDANT)
+        sv = get_sachverhalt(d / "sachverhaltsblatt.json")
+        # Anlagenbuchhaltung-Default nur ohne eigene Saldenliste und nur wenn
+        # sachverhaltsblatt.json → anlagenspiegel.erstellen = true.
         # Explizit übergebener Pfad überschreibt den Flag immer.
-        sv = get_sachverhalt()
         anlagen_flag = sv.get("anlagenspiegel", {}).get("erstellen", False)
+        ab = d / "Anlagenbuchhaltung.xlsx"
         _anlagen = anlagenbuchhaltung or (
-            DEFAULT_ANLAGENBUCHHALTUNG if (not saldenliste and anlagen_flag) else None
+            ab if (not saldenliste and anlagen_flag and ab.exists()) else None
         )
         modell = generate(
-            saldenliste or DEFAULT_SALDENLISTE,
+            saldenliste or d / "Saldenliste.xlsx",
             mapping or DEFAULT_MAPPING,
             taxonomie or DEFAULT_TAXONOMIE,
             anlagenbuchhaltung=_anlagen,
