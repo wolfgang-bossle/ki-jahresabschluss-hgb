@@ -37,7 +37,7 @@
     "_befreiungshinweis": "Kleine Kapitalgesellschaften sind nach § 288 Abs. 1 i. V. m. § 284 Abs. 3 HGB von der Pflicht zur Erstellung und Veröffentlichung eines Anlagenspiegels im Jahresabschluss befreit. Eine freiwillige Erstellung kann dennoch sinnvoll sein, wenn Kreditinstitute oder das Finanzamt (E-Bilanz nach § 5b EStG) ihn als Nachweis anfordern.",
     "erstellen": true
   },
-  "_hinweis_showcase": "Ab hier: Sachverhalte für den §288-Abs.1-Vollkatalog-Showcase — zeigt den vollständigen, für eine kleine Kapitalgesellschaft NICHT befreiten Angabenkatalog, inkl. ehrlicher 'nicht einschlägig'-Aussagen dort, wo der Sachverhalt bei der Bäckerei nicht vorliegt.",
+  "_hinweis_showcase": "Ab hier: Sachverhalte für Angaben, von denen § 288 Abs. 1 Nr. 1 HGB eine kleine Kapitalgesellschaft nicht befreit, inkl. 'nicht einschlägig'-Aussagen dort, wo der Sachverhalt bei der Bäckerei nicht vorliegt.",
   "bilanz_guv_erlaeuterung": {
     "besonderheiten_vorhanden": false,
     "begruendung": "Bilanz und Gewinn- und Verlustrechnung folgen unverändert dem gesetzlichen Gliederungsschema (§ 266 Abs. 2/3, § 275 Abs. 2 HGB); keine Postenzusammenfassung (§ 265 Abs. 7 HGB), kein Wechsel des GuV-Verfahrens."
