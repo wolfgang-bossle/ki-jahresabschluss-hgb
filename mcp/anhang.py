@@ -414,7 +414,9 @@ def baue_anlagenspiegel_tabelle(datenmodell: dict) -> dict:
     return {
         "section_id": "anlagenspiegel",
         "norm_refs": ["§ 284 Abs. 3 HGB"],
-        "blocks": [{"typ": "tabelle", "spalten": spalten, "zeilen": zeilen, "claims": claims}],
+        # Die Tabelle rendert vor dem Anhang; im Anhang steht nur der Verweis.
+        "blocks": [{"typ": "prosa", "text": "Der Anlagenspiegel steht vor dem Anhang.", "claims": []},
+                   {"typ": "tabelle", "spalten": spalten, "zeilen": zeilen, "claims": claims}],
         "confidence": "hoch",
         "escalation_flag": False,
         "escalation_grund": None,

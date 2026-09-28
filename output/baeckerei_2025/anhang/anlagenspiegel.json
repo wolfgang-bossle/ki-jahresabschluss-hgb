@@ -5,6 +5,11 @@
   ],
   "blocks": [
     {
+      "typ": "prosa",
+      "text": "Der Anlagenspiegel steht vor dem Anhang.",
+      "claims": []
+    },
+    {
       "typ": "tabelle",
       "spalten": [
         "Posten",
