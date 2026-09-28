@@ -20,7 +20,7 @@
   "mitarbeiter": {
     "durchschnitt_gj": 38,
     "durchschnitt_vj": 35,
-    "methode": "Durchschnitt der Beschäftigtenzahlen zu den vier Quartalsenden (§ 285 Nr. 7 HGB)"
+    "methode": "Durchschnitt der Beschäftigtenzahlen zu den vier Quartalsstichtagen, ohne Auszubildende (Methode in Anlehnung an § 267 Abs. 5 HGB)"
   },
   "organbezuege": {
     "geschaeftsfuehrer_anzahl": 1,

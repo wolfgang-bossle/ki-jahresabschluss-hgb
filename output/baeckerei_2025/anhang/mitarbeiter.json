@@ -6,7 +6,7 @@
   "blocks": [
     {
       "typ": "prosa",
-      "text": "Die durchschnittliche Zahl der während des Geschäftsjahres beschäftigten Arbeitnehmer betrug 38 (Vorjahr: 35). Berechnung: Durchschnitt der Beschäftigtenzahlen zu den vier Quartalsenden (§ 285 Nr. 7 HGB)",
+      "text": "Die durchschnittliche Zahl der während des Geschäftsjahres beschäftigten Arbeitnehmer betrug 38 (Vorjahr: 35). Berechnung: Durchschnitt der Beschäftigtenzahlen zu den vier Quartalsstichtagen, ohne Auszubildende (Methode in Anlehnung an § 267 Abs. 5 HGB).",
       "claims": [
         {
           "aussage": "Durchschnittliche Arbeitnehmer GJ",
@@ -26,7 +26,7 @@
         },
         {
           "aussage": "Berechnungsmethode",
-          "wert": "Durchschnitt der Beschäftigtenzahlen zu den vier Quartalsenden (§ 285 Nr. 7 HGB)",
+          "wert": "Durchschnitt der Beschäftigtenzahlen zu den vier Quartalsstichtagen, ohne Auszubildende (Methode in Anlehnung an § 267 Abs. 5 HGB)",
           "quelle": {
             "art": "sachverhalt",
             "pfad": "mitarbeiter.methode"
