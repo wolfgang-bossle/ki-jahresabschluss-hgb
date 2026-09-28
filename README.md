@@ -6,6 +6,8 @@ Wolfgang Bossle, Registered CPA · Claude Certified Architect – Professional
 
 **→ [Demo-Abschluss herunterladen](https://github.com/wolfgang-bossle/ki-jahresabschluss-hgb/releases/latest).** Am Release hängt das PDF des Musterfalls.
 
+![Bilanz der Muster Bäckerei GmbH aus dem Demo-Abschluss](output/baeckerei_2025/bilanz.png)
+
 ## Ausgangspunkt
 
 Für Steuerberater, Wirtschaftsprüfer und Buchhaltung: wie Claude (Anthropic) über einen MCP-Server aus einer Saldenliste Bilanz, GuV und Anhang einer kleinen GmbH nach HGB ableitet, am erfundenen Musterfall. Das Repository zeigt an einem erfundenen Musterfall, wie der Jahresabschluss einer kleinen GmbH nach HGB mit KI-Unterstützung entstehen kann. Jede belegte Zahl im Anhang wird gegen das Datenmodell geprüft, jede unbelegte gemeldet. Eingang ist die Saldenliste, Ausgang sind Bilanz, Gewinn- und Verlustrechnung und Anhang als PDF. Jede Zahl aus der Saldenliste lässt sich bis auf das Konto zurückverfolgen.
