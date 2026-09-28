@@ -17,7 +17,7 @@ abstract: >-
 license:
   - MIT
   - CC-BY-ND-4.0
-version: "1.0"
-date-released: "2026-09-24"
+version: "1.1"
+date-released: "2026-09-28"
 url: https://github.com/wolfgang-bossle/ki-jahresabschluss-hgb
 repository-code: https://github.com/wolfgang-bossle/ki-jahresabschluss-hgb
