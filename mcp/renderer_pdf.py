@@ -191,14 +191,14 @@ def _anlagenspiegel_flow(asp, S, avail):
     for h in asp.get("hinweise", []):
         flow.append(Spacer(1, 4))
         flow.append(Paragraph(
-            f'<b>Hinweis ({h.get("typ","")}) – {h.get("gruppe","")}:</b> {h.get("hinweis","")}',
+            f'<b>Hinweis zu {h.get("gruppe","")}:</b> {h.get("hinweis","")}',
             S["note"]))
     rc = asp.get("reconciliation")
     if rc:
         ok = rc.get("abgestimmt")
         flow.append(Spacer(1, 4))
         flow.append(Paragraph(
-            f'Reconciliation {"abgestimmt" if ok else "nicht abgestimmt"}: Summe AfA Jahr {_eur(rc.get("afa_jahr"))} EUR '
+            f'Abstimmung mit der Saldenliste: {"abgestimmt" if ok else "nicht abgestimmt"}. Summe AfA Jahr {_eur(rc.get("afa_jahr"))} EUR '
             f'= AfA-Aufwand Saldenliste {_eur(rc.get("afa_aufwand_saldenliste"))} EUR; '
             f'Buchwert Ende {_eur(rc.get("bw_gj"))} EUR = Bilanz Sachanlagen.', S["note"]))
     return flow
@@ -232,7 +232,7 @@ def _anhang_flow(sections, S, sections_config=None, groessenklasse=None):
         titel = (sections_config.get(sec.get("section_id"), {}).get("label")
                  or sec.get("section_id", "").replace("_", " ").title())
         norm = ", ".join(sec.get("norm_refs", []))
-        tag = (' <font size=7 color="#57606a">[Showcase — über Mindestangabe hinaus]</font>'
+        tag = (' <font size=7 color="#57606a">[über die Mindestangabe hinaus]</font>'
                if sections_config.get(sec.get("section_id"), {}).get("showcase") else "")
         flow.append(Paragraph(f"{titel} <font size=8 color='#57606a'>{norm}</font>{tag}", S["h2"]))
         for blk in sec.get("blocks", []):
@@ -241,8 +241,8 @@ def _anhang_flow(sections, S, sections_config=None, groessenklasse=None):
         val = sec.get("_validierung", {})
         if val.get("phase3") == "ok":
             flow.append(Paragraph(
-                f'Geerdet · {val.get("claims_geprueft","?")} Claims gegen die Wahrheit '
-                f'geprüft · 0 Fehler', S["note"]))
+                f'{val.get("claims_geprueft","?")} Angaben gegen Saldenliste und '
+                f'Sachverhaltsblatt geprüft, 0 Abweichungen', S["note"]))
         if val.get("formuliert"):
             flow.append(Paragraph(_KI_VERMERK, S["note"]))
     return flow
@@ -398,9 +398,9 @@ def render_pdf(datenmodell, konten=None, anhang_sections=None,
         canvas.setFillColor(_GREY)
         breite = canvas._pagesize[0]
         canvas.drawString(margin, 8 * mm,
-                          f"Generiert aus dem geerdeten Datenmodell ({meta.get('quelle','')}) "
-                          f"am {date.today().strftime('%d.%m.%Y')} · eiserner Grundsatz: "
-                          f"Werte aus der Saldenliste, nicht nachgerechnet.")
+                          f"Erzeugt aus {meta.get('quelle','')} am "
+                          f"{date.today().strftime('%d.%m.%Y')}. Alle Beträge unverändert "
+                          f"aus der Saldenliste übernommen.")
         canvas.drawRightString(breite - margin, 8 * mm, f"Seite {d.page}")
         canvas.restoreState()
 

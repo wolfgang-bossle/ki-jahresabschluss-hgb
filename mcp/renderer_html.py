@@ -187,7 +187,7 @@ def _anlagenspiegel(asp):
     for h in asp.get("hinweise", []):
         hinweise += (
             f'<div class="hinweis hinweis-{_esc(h.get("typ","")).lower()}">'
-            f'<b>Hinweis ({_esc(h.get("typ",""))}) – {_esc(h.get("gruppe",""))}:</b> '
+            f'<b>Hinweis zu {_esc(h.get("gruppe",""))}:</b> '
             f'{_esc(h.get("hinweis",""))}</div>'
         )
 
@@ -197,7 +197,8 @@ def _anlagenspiegel(asp):
         ok = rc.get("abgestimmt")
         abst = (
             f'<div class="recon {"ok" if ok else "bad"}">'
-            f'{"✓" if ok else "✗"} Reconciliation: Σ AfA Jahr {_eur(rc.get("afa_jahr"))} € '
+            f'Abstimmung mit der Saldenliste: {"abgestimmt" if ok else "nicht abgestimmt"}. '
+            f'Summe AfA Jahr {_eur(rc.get("afa_jahr"))} € '
             f'= AfA-Aufwand Saldenliste {_eur(rc.get("afa_aufwand_saldenliste"))} €; '
             f'Buchwert Ende {_eur(rc.get("bw_gj"))} € = Bilanz Sachanlagen.</div>'
         )
@@ -237,15 +238,15 @@ def _anhang(sections, sections_config=None):
         val = sec.get("_validierung", {})
         badge = ""
         if val.get("phase3") == "ok":
-            badge = (f'<span class="vbadge ok">✓ geerdet · {val.get("claims_geprueft","?")} '
-                     f'Claims · 0 Fehler</span>')
+            badge = (f'<span class="vbadge ok">{val.get("claims_geprueft","?")} Angaben gegen '
+                     f'Saldenliste und Sachverhaltsblatt geprüft, 0 Abweichungen</span>')
         ki = ('<p class="sub">Text KI-formuliert (Claude), gegen Datenmodell abgeglichen</p>'
               if val.get("formuliert") else "")
         beleg_tab = ""
         if belege:
             beleg_tab = (
-                '<details class="belege"><summary>Belege / Grounding '
-                f'({len(belege)} Claims gegen die Wahrheit geprüft)</summary>'
+                '<details class="belege"><summary>Belege '
+                f'({len(belege)} Angaben gegen Saldenliste und Sachverhaltsblatt geprüft)</summary>'
                 '<table class="rt"><thead><tr><th>Aussage</th><th>Wert</th>'
                 '<th>Quelle (Pfad im Datenmodell / Sachverhalt)</th></tr></thead><tbody>'
                 + "".join(belege) + '</tbody></table></details>'
@@ -419,9 +420,8 @@ def render_html(datenmodell, konten=None, anhang_sections=None,
 </div>
 {"".join(teile)}
 <footer>
-  Generiert aus dem geerdeten Datenmodell ({_esc(meta.get("quelle",""))}) am
-  {date.today().strftime("%d.%m.%Y")}. Eiserner Grundsatz: alle Werte leiten sich
-  aus der Saldenliste ab; dieser Renderer liest nur und rechnet nichts nach.
+  Erzeugt aus {_esc(meta.get("quelle",""))} am {date.today().strftime("%d.%m.%Y")}.
+  Alle Beträge unverändert aus der Saldenliste übernommen.
 </footer>
 <script>{_JS}</script>
 </body></html>"""
