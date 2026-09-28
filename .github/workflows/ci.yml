@@ -1,4 +1,4 @@
-# CI — spiegelt das lokale Commit-Gate serverseitig: erst die Wahrheits-Verifikation
+# CI — erst die Wahrheits-Verifikation
 # (Anker/Bilanzprobe, scripts/verify.py), dann das dependency-freie Testnetz (tests/run.py).
 # Eines rot -> Build rot. Kein pytest/Framework nötig; openpyxl (Engine) + reportlab
 # (PDF-Renderer-Tests; fehlt es, überspringen jene Tests sauber statt zu crashen).

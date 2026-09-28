@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "jahresabschluss.schema.json",
   "title": "HGB-Jahresabschluss-Datenmodell",
-  "description": "Formales Schema für den Engine-Output (jahresabschluss.py). Bilanzprobe = 0,00 ist hartes Kriterium (§2.7 PROJECT.md).",
+  "description": "Formales Schema für den Engine-Output (jahresabschluss.py). Bilanzprobe = 0,00 ist hartes Kriterium.",
   "type": "object",
   "required": ["bilanz", "guv", "metadata"],
   "additionalProperties": false,
@@ -14,7 +14,7 @@
   },
   "$defs": {
     "Position": {
-      "description": "Wiederverwendbare Kerneinheit — trägt Wert + Herkunft + Normbezug (§4 PROJECT.md).",
+      "description": "Wiederverwendbare Kerneinheit — trägt Wert + Herkunft + Normbezug.",
       "type": "object",
       "required": ["ebene", "konzept", "label", "quelle"],
       "additionalProperties": false,

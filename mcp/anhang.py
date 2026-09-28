@@ -3,11 +3,11 @@ anhang.py
 Zweck: Anhang-Generierung — Phase 1 (Kontext-Assembly) + Phase 3 (Grounding-Validator)
        + Validierungs-Stempel (persistiert das Phase-3-Ergebnis auf der Section-JSON
        für den PDF-Beleg). Deterministisch, datenagnostisch, KEINE Buchhaltungslogik,
-       KEINE Kontonummern im Code. Phase 2 (LLM-Formulierung) läuft außerhalb
-       (LLM-Seam §2.3, Desktop-now/API-ready).
+       KEINE Kontonummern im Code. Phase 2 (LLM-Formulierung) läuft außerhalb,
+       im Client (Claude).
 Status: am erfundenen Musterfall gebaut, nicht im Mandantenbetrieb erprobt (README, Einordnung)
-Bezug: docs/ANHANG.md — die KI formuliert nur, sie behauptet nichts, was nicht aus
-       dem Datenmodell (Wahrheit) oder dem Sachverhaltsblatt stammt (eiserner Grundsatz §2.5/§2.7).
+Grundsatz: die KI formuliert nur, sie behauptet nichts, was nicht aus
+       dem Datenmodell (Wahrheit) oder dem Sachverhaltsblatt stammt (eiserner Grundsatz).
 """
 from __future__ import annotations
 
@@ -22,7 +22,7 @@ CHUNKS = BASE / "rag/chunks.json"
 _SCHEMA_PATH = BASE / "mcp/config/section_output.schema.json"
 
 # Vertrag für die LLM-Ausgabe (Phase 2). Wird im Kontext mitgegeben und in Phase 3
-# hart nachgeprüft: erst Strukturvalidierung (jsonschema), dann Grounding. ⟦D4⟧
+# hart nachgeprüft: erst Strukturvalidierung (jsonschema), dann Grounding.
 with open(_SCHEMA_PATH, encoding="utf-8") as _f:
     SECTION_OUTPUT_SCHEMA: dict = json.load(_f)
 
@@ -86,7 +86,7 @@ def finde_section(section_id: str, sections=None) -> dict:
 # erhalten — welche davon in den Anhang einer konkreten Größenklasse gehören, ist
 # DATEN (Feld 'geltung'), nicht Code. Bei 'klein' fällt z.B. der Anlagenspiegel
 # (freiwillig) und entfallene Pflichten heraus; bei 'gross' lässt derselbe Filter
-# sie wieder durch — null Code-Änderung, nur Input wechselt (§2.4).
+# sie wieder durch — null Code-Änderung, nur Input wechselt.
 GELTUNG_WERTE = ("pflicht", "freiwillig", "entfaellt")
 
 

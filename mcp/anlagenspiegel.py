@@ -7,9 +7,9 @@ Zweck: Engine — Anlagenbuchhaltung (Brutto) + Tabelle B + XBRL-Taxonomie
 Status: am erfundenen Musterfall gebaut, nicht im Mandantenbetrieb erprobt (README, Einordnung)
 Abhängigkeiten: data/<mandant>/Anlagenbuchhaltung.xlsx, mcp/config/skr03_mapping.json,
                 taxonomy/*-presentation-balanceSheet.xml, *-label-de.xml, openpyxl
-Datenagnostisch (§2.1): KEINE Kontonummern/Mandant im Code. Werte aus der
+Datenagnostisch: KEINE Kontonummern/Mandant im Code. Werte aus der
                 Anlagenbuchhaltung, Zuordnung aus Tabelle B, Gliederung aus der
-                Taxonomie (§2.8). Bilanz/GuV werden NICHT angefasst (additiver Block).
+                Taxonomie. Bilanz/GuV werden NICHT angefasst (additiver Block).
 Letzte Änderung: 2026-06-18
 """
 import json
@@ -81,7 +81,7 @@ def generate_anlagenspiegel(anlagenbuchhaltung, saldenliste, mapping_file, taxon
     if fehlend:
         raise ValueError(f"Anlagen-Konten ohne Tabelle-B-Zuordnung: {fehlend}")
 
-    # (2) Harte Reconciliation gegen die Saldenliste (eiserner Grundsatz §2.7)
+    # (2) Harte Reconciliation gegen die Saldenliste (eiserner Grundsatz)
     for konto, rec in anlagen.items():
         sl = konten_sl.get(konto)
         if sl is None:

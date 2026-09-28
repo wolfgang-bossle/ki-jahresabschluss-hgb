@@ -1,12 +1,12 @@
 """
 test_schema_datenmodell.py
 Prüft den Engine-Output gegen das formale JSON Schema
-(mcp/config/jahresabschluss.schema.json, Draft 2020-12) — macht die PROJECT-§11-
-Behauptung „gegen Datenmodell validiert" zum dauerhaften Gate statt Einmal-Ereignis:
+(mcp/config/jahresabschluss.schema.json, Draft 2020-12) — macht die Aussage
+„gegen Datenmodell validiert" zum dauerhaften Gate statt Einmal-Ereignis:
   * Bäckerei (mit Anlagenspiegel)        -> schema-konform
   * Beratung + Einzelhandel (ohne)       -> schema-konform
   * manipuliertes Modell (Feld/Typ)      -> Validierung schlägt an (Schema beißt)
-Läuft über tests/run.py (Commit-Gate) und pytest gleichermaßen.
+Läuft über tests/run.py (CI) und pytest gleichermaßen.
 """
 import json
 from pathlib import Path

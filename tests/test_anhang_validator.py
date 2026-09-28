@@ -107,8 +107,8 @@ def test_pruefe_section_geisterzahl_warnung():
 
 def test_pruefe_section_typ_c_ohne_flag_fehler():
     # Der Katalog hat keinen Typ-C-Fall; künstliche Section, damit die Regel getestet bleibt.
-    typ_c = {**finde_section("grundanteil_hinweis"), "typ": "C"}
-    sec = {"section_id": "grundanteil_hinweis", "norm_refs": ["§ 284 Abs. 2 Nr. 1 HGB"],
+    typ_c = {**finde_section("bilanzierungs_bewertungsmethoden"), "typ": "C"}
+    sec = {"section_id": "bilanzierungs_bewertungsmethoden", "norm_refs": ["§ 284 Abs. 2 Nr. 1 HGB"],
            "blocks": [], "confidence": "hoch", "escalation_flag": False, "offene_punkte": []}
     res = pruefe_section(sec, {}, {}, sections=[typ_c])
     assert res["ok"] is False

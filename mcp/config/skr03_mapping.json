@@ -5,7 +5,7 @@
     "taxonomie": "de-gaap-ci-2025-04-01",
     "erstellt": "2026-06-18",
     "konten": 31,
-    "hinweis": "KEINE Werte hier — die kommen aus der Saldenliste. Reine Struktur-Zuordnung, gilt fuer ALLE SKR03-Mandanten.",
+    "hinweis": "KEINE Werte hier — die kommen aus der Saldenliste. Zuordnung für die Musterkonten dieses Repos; nicht gegen SKR 03 abgeglichen.",
     "verifikation": "alle 31 Konzepte gegen Taxonomie geprueft; Bilanzprobe GJ+VJ = 0,00 EUR (2026-06-18)"
   },
   "mapping": {

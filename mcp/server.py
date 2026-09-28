@@ -24,7 +24,7 @@ from sachverhalt import get_sachverhalt
 # Repo-Wurzel = ein Ordner über mcp/ — damit der Server von überall startbar ist.
 BASE = Path(__file__).resolve().parent.parent
 # Demo-Mandant als überschreibbarer Default — KEINE Anpinnung: jeder Ordner unter
-# data/ ist als Mandant wählbar (datenagnostisch §2.1). Die Muster-Bäckerei ist
+# data/ ist als Mandant wählbar (datenagnostisch). Die Muster-Bäckerei ist
 # nur Komfort-Einstieg, gleichberechtigt mit Muster Consulting / Muster Stadtmarkt.
 DEFAULT_MANDANT = "baeckerei_2025"
 DEFAULT_MAPPING = BASE / "mcp/config/skr03_mapping.json"

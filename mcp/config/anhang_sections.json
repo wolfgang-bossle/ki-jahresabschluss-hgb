@@ -33,17 +33,6 @@
     "escalation": { "moeglich": false, "grund": null }
   },
   {
-    "id": "grundanteil_hinweis",
-    "label": "Hinweis zum nicht abschreibbaren Grund- und Boden-Anteil",
-    "typ": "B",
-    "geltung": { "klein": "pflicht", "mittelgross": "pflicht", "gross": "pflicht" },
-    "render": "prosa",
-    "norm": { "refs": [ { "paragraph": "284", "absatz": "2", "zitat": "§ 284 Abs. 2 Nr. 1 HGB" } ] },
-    "quellen": { "datenmodell": ["anlagenspiegel.hinweise"], "sachverhalt": [] },
-    "aufgabe": "Formuliere den Hinweis, dass im Posten Grundstücke und Bauten ein nicht abschreibbarer Grund-und-Boden-Anteil enthalten ist; übernimm Betrag und Beschreibung wörtlich aus dem übergebenen Hinweis. Die Aufteilung Grund und Boden zu Gebäude folgt aus den Buchwerten der getrennt geführten Konten.",
-    "escalation": { "moeglich": false, "grund": null }
-  },
-  {
     "id": "mitarbeiter",
     "label": "Durchschnittliche Zahl der Arbeitnehmer",
     "typ": "B",

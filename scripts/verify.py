@@ -5,7 +5,7 @@ Zweck: Seiteneffektfreier Verifikations-Lauf der Jahresabschluss-Engine (= der b
        wodurch die harten Checks der Engine laufen (Bilanzprobe = 0,00, JÜ-Abstimmung,
        Anlagenspiegel-Reconciliation), und vergleicht zusätzlich die centgenau verifizierten
        ANKER. Abweichung oder Exception -> stderr + Exit 1. Sonst "OK" + Exit 0.
-Genutzt von: .claude/hooks/{verify_on_change,session_anchors}.py und dem Commit-Gate.
+Genutzt von: CI (.github/workflows/ci.yml).
 Aufruf:  python scripts/verify.py
 Status: ✅ 2026-06-19
 """

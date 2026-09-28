@@ -1,13 +1,14 @@
 """
 render_pdf_demo.py
 Zweck: Showcase-/Bau-Skript — erzeugt aus der Muster-Bäckerei-Demo das PDF des
-       Jahresabschlusses und schreibt es nach
-       output/baeckerei_2025/jahresabschluss.pdf.
+       Jahresabschlusses und schreibt es nach output/local/jahresabschluss.pdf
+       (nicht eingecheckt); nur mit --release wird das eingecheckte PDF unter
+       output/baeckerei_2025/ überschrieben.
        Holt das Datenmodell frisch aus generate() (eiserner Grundsatz), reicht die
        Saldenliste-Konten für den Rückverfolgbarkeits-Anhang durch und bindet –
        falls vorhanden – die geerdeten Anhang-Sections sowie Firma/Stichtag/
        Geschäftsführer/Feststellungsdatum aus dem Sachverhaltsblatt (kosmetisch) ein.
-Aufruf:  python scripts/render_pdf_demo.py
+Aufruf:  python scripts/render_pdf_demo.py [--release]
 Status: ✅ 2026-06-23, Unterschrift/Feststellung 2026-07-03
 """
 import json
@@ -70,7 +71,8 @@ def main():
     pdf = render_pdf(dm, konten=konten, anhang_sections=_lade_anhang_sections(),
                      titel=titel, stichtag=stichtag, anhang_sections_config=sections_config,
                      geschaeftsfuehrer=geschaeftsfuehrer, feststellung=feststellung)
-    ziel = OUT / "jahresabschluss.pdf"
+    ziel = OUT / "jahresabschluss.pdf" if "--release" in sys.argv[1:]         else BASE / "output/local/jahresabschluss.pdf"
+    ziel.parent.mkdir(parents=True, exist_ok=True)
     ziel.write_bytes(pdf)
     print(f"OK: {ziel} ({len(pdf):,} Bytes)")
 

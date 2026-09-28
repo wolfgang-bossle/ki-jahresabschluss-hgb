@@ -3,7 +3,7 @@ anhang_demo.py
 Zweck: End-to-End-Nachweis des Anhang-Schritts ohne Live-LLM. Fährt Phase 1
        (Kontext-Assembly) für alle Sections und Phase 3 (Grounding-Validator)
        gegen das echte Datenmodell. Beweist: grün bei Wahrheit, ROT bei
-       manipulierter Zahl (eiserner Grundsatz §2.5/§2.7).
+       manipulierter Zahl (eiserner Grundsatz).
        Zugleich der TEST des Anhang-Moduls (Exit 1 bei unerwartetem Ergebnis).
 Aufruf: python scripts/anhang_demo.py
 """
@@ -40,7 +40,7 @@ def main() -> int:
     sections = lade_sections()
     fehlgeschlagen = []
 
-    # ---- Phase 1: Kontext für alle 7 Sections ---------------------------- #
+    # ---- Phase 1: Kontext für alle Sections ---------------------------- #
     hr("PHASE 1 — Kontext-Assembly (alle Sections)")
     for s in sections:
         k = baue_kontext(s["id"], datenmodell, sachverhalt, sections)

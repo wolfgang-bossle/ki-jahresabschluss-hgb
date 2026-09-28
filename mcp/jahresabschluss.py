@@ -5,8 +5,8 @@ Zweck: Engine — Saldenliste + Tabelle B (Konto->Konzept) + XBRL-Taxonomie
 Status: am erfundenen Musterfall gebaut, nicht im Mandantenbetrieb erprobt (README, Einordnung)
 Abhängigkeiten: mcp/config/skr03_mapping.json, taxonomy/*-presentation-*.xml,
                 taxonomy/*-label-de.xml, openpyxl
-Datenagnostisch (§2.1): KEINE Kontonummern/Mandant im Code. Werte aus Saldenliste,
-                Zuordnung aus Tabelle B, Gliederung aus der Taxonomie (§2.8).
+Datenagnostisch: KEINE Kontonummern/Mandant im Code. Werte aus Saldenliste,
+                Zuordnung aus Tabelle B, Gliederung aus der Taxonomie.
 Letzte Änderung: 2026-06-18
 """
 import json
@@ -31,9 +31,9 @@ def _lname(tag):
 
 def is_revenue(concept, balance):
     """GuV-Ertrag (+) vs. Aufwand (−) — aus dem XBRL-balance-Attribut der amtlichen
-    Taxonomie (credit = Ertrag, debit = Aufwand), NICHT geraten (§2.8). Fehlt das
+    Taxonomie (credit = Ertrag, debit = Aufwand), NICHT geraten. Fehlt das
     balance für ein GuV-Konzept, ist das Vorzeichen nicht ableitbar → harter Fehler
-    statt stiller Annahme (§2.7)."""
+    statt stiller Annahme."""
     b = balance.get(concept)
     if b is None:
         raise ValueError(
@@ -115,7 +115,7 @@ def load_mapping(map_path):
 
 def load_balance(balance_path):
     """concept_id -> 'credit'|'debit' aus dem schlanken, einmalig aus dem de-gaap-ci-
-    Schema (xbrli:balance) extrahierten Katalog. Liefert das GuV-Vorzeichen (§2.8)."""
+    Schema (xbrli:balance) extrahierten Katalog. Liefert das GuV-Vorzeichen."""
     return json.loads(Path(balance_path).read_text(encoding="utf-8"))["balance"]
 
 
@@ -182,7 +182,7 @@ def generate(saldenliste, mapping_file, taxonomy_dir, anlagenbuchhaltung=None):
         if c.startswith("de-gaap-ci_bs."):
             bs_leaf[c][0] += gj; bs_leaf[c][1] += vj; bs_leaf[c][2].append(konto)
         elif c.startswith("de-gaap-ci_is."):
-            s = 1 if is_revenue(c, balance) else -1   # GuV signiert (credit/debit, §2.8)
+            s = 1 if is_revenue(c, balance) else -1   # GuV signiert (credit/debit)
             is_leaf[c][0] += s * gj; is_leaf[c][1] += s * vj; is_leaf[c][2].append(konto)
 
     # Jahresüberschuss aus der GuV ableiten -> in die Bilanz (§266 A.V)
@@ -207,7 +207,7 @@ def generate(saldenliste, mapping_file, taxonomy_dir, anlagenbuchhaltung=None):
     is_node, is_q = _rollup(is_leaf, is_c2p)
     if not is_node:
         raise ValueError("Keine GuV-Konten in der Saldenliste — GuV und "
-                         "Jahresüberschuss nicht ableitbar (§2.7).")
+                         "Jahresüberschuss nicht ableitbar.")
     is_root = next(c for c in is_node if is_c2p.get(c) not in is_node)
     guv = _render(is_root, is_node, is_p2c, labels, is_q)
 
@@ -216,7 +216,7 @@ def generate(saldenliste, mapping_file, taxonomy_dir, anlagenbuchhaltung=None):
     probe_vj = round(summe_aktiva[1] - summe_passiva[1], 2)
     if probe_gj != 0.0 or probe_vj != 0.0:
         raise ValueError(f"BILANZ NICHT AUSGEGLICHEN: GJ {probe_gj}, VJ {probe_vj} "
-                         f"-> Konto in der Saldenliste falsch angesetzt (§2.7)")
+                         f"-> Konto in der Saldenliste falsch angesetzt")
     if round(is_node[is_root][0], 2) != jue_gj:
         raise ValueError("JÜ aus GuV-Rollup != abgeleitetem JÜ — Abstimmung verletzt")
 
@@ -235,7 +235,7 @@ def generate(saldenliste, mapping_file, taxonomy_dir, anlagenbuchhaltung=None):
         },
     }
 
-    # Anlagenspiegel — additiver Block, ändert Bilanz/GuV NICHT (§2.7). Lazy-Import
+    # Anlagenspiegel — additiver Block, ändert Bilanz/GuV NICHT. Lazy-Import
     # vermeidet Zirkularität (anlagenspiegel.py importiert aus diesem Modul).
     if anlagenbuchhaltung is not None:
         from anlagenspiegel import generate_anlagenspiegel

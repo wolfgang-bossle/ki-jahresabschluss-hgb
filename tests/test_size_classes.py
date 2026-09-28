@@ -7,7 +7,7 @@ Prüft, dass "klein" aus den Daten ABGELEITET wird (nicht geglaubt) und das Gate
   * eine Grenze GJ+VJ gerissen             -> nicht ok (Erleichterungen unzulässig)
   * Wechseljahr (nur ein Jahr reißt)        -> bleibt klein (§ 267 Abs. 4)
   * höchstens eins von drei Merkmalen über -> noch klein (mind. zwei eingehalten)
-  * fehlende AN-Angabe / fehlender Umsatz   -> harter Fehler (§2.7, keine stille 0)
+  * fehlende AN-Angabe / fehlender Umsatz   -> harter Fehler (keine stille 0)
 Plus: Live-Lauf gegen die echte Bäckerei-Saldenliste (Bilanzsumme = Anker 1.700.000).
 """
 from pathlib import Path

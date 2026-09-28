@@ -1,7 +1,6 @@
 {
  "_meta": {
   "quelle": "de-gaap-ci-2025-04-01.xsd (xbrli:balance je xsd:element)",
-  "commit": "29503f780c5d4c8dd75f01e20322e56913e2e65b",
   "extrahiert": "2026-06-20",
   "konzepte": 1232,
   "bedeutung": "credit = Ertrag (+), debit = Aufwand (-). Vorzeichen der GuV-Aggregation, aus der Taxonomie abgeleitet (nicht geraten)."

@@ -1,7 +1,7 @@
 """
 test_guv_vorzeichen.py
 Das GuV-Vorzeichen kommt aus dem XBRL-balance-Attribut der amtlichen Taxonomie
-(credit = Ertrag (+), debit = Aufwand (−)) — NICHT aus einer String-Heuristik (§2.8).
+(credit = Ertrag (+), debit = Aufwand (−)) — NICHT aus einer String-Heuristik.
 Diese Tests pinnen die Klassifikation über die ECHTEN Ertrags-/Aufwandskonzepte; die
 Bäckerei-Demo hat nur Umsatzerlöse, sonst bliebe eine Regression bei sonstigen
 Erträgen/Zinserträgen unbemerkt. Plus ein End-to-End-Beweis: ein Mandant mit

@@ -1,5 +1,5 @@
 {
-  "_hinweis": "Case-Facts-Block (Sachverhaltsblatt) für die Anhang-Texte. Fiktiver Demo-Mandant. Numerische Wahrheiten (Bilanz/GuV/Anlagenspiegel) stehen NICHT hier, sondern leiten sich aus der Saldenliste ab (eiserner Grundsatz §2.7). Hier nur Sachverhalte, die NICHT in der Saldenliste stehen (Stammdaten, Mitarbeiter, Organbezüge, Nachtragsereignisse).",
+  "_hinweis": "Case-Facts-Block (Sachverhaltsblatt) für die Anhang-Texte. Fiktiver Demo-Mandant. Numerische Wahrheiten (Bilanz/GuV/Anlagenspiegel) stehen NICHT hier, sondern leiten sich aus der Saldenliste ab (eiserner Grundsatz). Hier nur Sachverhalte, die NICHT in der Saldenliste stehen (Stammdaten, Mitarbeiter, Organbezüge, Nachtragsereignisse).",
   "stammdaten": {
     "firma": "Muster Bäckerei GmbH",
     "rechtsform": "Gesellschaft mit beschränkter Haftung",
@@ -13,7 +13,7 @@
     "guv_verfahren": "Gesamtkostenverfahren (§ 275 Abs. 2 HGB)"
   },
   "feststellung": {
-    "_hinweis": "PROPOSED — Platzhalter, austauschbar. Ergänzt nach docs/local/ANHANG_REALWELT_ABGLEICH.md: alle 32 echten Unternehmensregister-Auszüge haben Geschäftsführer-Nennung, Feststellungsvermerk und Unterschrift.",
+    "_hinweis": "PROPOSED — Platzhalter, austauschbar.",
     "datum": "14.03.2026",
     "ort": "Musterstadt"
   },
@@ -37,7 +37,7 @@
     "_befreiungshinweis": "Kleine Kapitalgesellschaften sind nach § 288 Abs. 1 i. V. m. § 284 Abs. 3 HGB von der Pflicht zur Erstellung und Veröffentlichung eines Anlagenspiegels im Jahresabschluss befreit. Eine freiwillige Erstellung kann dennoch sinnvoll sein, wenn Kreditinstitute oder das Finanzamt (E-Bilanz nach § 5b EStG) ihn als Nachweis anfordern.",
     "erstellen": true
   },
-  "_hinweis_showcase": "Ab hier: Sachverhalte für den §288-Abs.1-Vollkatalog-Showcase (Kandidat 3, 2026-07-03) — zeigt den vollständigen, für eine kleine Kapitalgesellschaft NICHT befreiten Angabenkatalog, inkl. ehrlicher 'nicht einschlägig'-Aussagen dort, wo der Sachverhalt bei der Bäckerei nicht vorliegt.",
+  "_hinweis_showcase": "Ab hier: Sachverhalte für den §288-Abs.1-Vollkatalog-Showcase — zeigt den vollständigen, für eine kleine Kapitalgesellschaft NICHT befreiten Angabenkatalog, inkl. ehrlicher 'nicht einschlägig'-Aussagen dort, wo der Sachverhalt bei der Bäckerei nicht vorliegt.",
   "bilanz_guv_erlaeuterung": {
     "besonderheiten_vorhanden": false,
     "begruendung": "Bilanz und Gewinn- und Verlustrechnung folgen unverändert dem gesetzlichen Gliederungsschema (§ 266 Abs. 2/3, § 275 Abs. 2 HGB); keine Postenzusammenfassung (§ 265 Abs. 7 HGB), kein Wechsel des GuV-Verfahrens."

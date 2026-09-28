@@ -5,9 +5,9 @@ nötig: gegen ein synthetisches Mini-Datenmodell. Sichert die zwei Eigenschaften
 die es ankommt:
   * Rückverfolgbarkeit: jede Position mit Quelle wird klickbar (drill) und das
     Detail-Panel zeigt Konzept + Konto + Saldenliste-Saldo (die Kette ist im HTML).
-  * Eiserner Grundsatz (§2.7): der Renderer übernimmt Modellwerte unverändert und
+  * Eiserner Grundsatz: der Renderer übernimmt Modellwerte unverändert und
     ERFINDET keine Zahl — eine Zahl, die nicht im Modell steht, darf nicht erscheinen.
-Datenagnostisch: die Konten hier sind Testdaten, kein Engine-Code (§2.1).
+Datenagnostisch: die Konten hier sind Testdaten, kein Engine-Code.
 """
 from renderer_html import render_html, _eur
 

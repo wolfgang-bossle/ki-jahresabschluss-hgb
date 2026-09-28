@@ -4,8 +4,8 @@ Tests des PDF-Renderers (renderer_pdf.py). Braucht reportlab; fehlt es (z. B. in
 einer minimalen Umgebung), überspringen die Tests sauber, statt den dependency-freien
 Runner zu sprengen. Sichert dieselben Eigenschaften wie beim HTML-Renderer:
 gültiges PDF, deutsche Formatierung mit ASCII-Minus (PDF-Standardfont-Glyphen),
-robust ohne Anlagenspiegel/Anhang, und der Renderer ERFINDET keine Zahl (§2.7).
-Datenagnostisch: synthetische Testkonten, kein Engine-Code (§2.1).
+robust ohne Anlagenspiegel/Anhang, und der Renderer ERFINDET keine Zahl.
+Datenagnostisch: synthetische Testkonten, kein Engine-Code.
 """
 try:
     from renderer_pdf import render_pdf, _eur

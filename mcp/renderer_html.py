@@ -10,9 +10,9 @@ Status: ✅ 2026-06-23
 Abhängigkeiten: keine (reine Standardbibliothek). Eingaben sind das Datenmodell
        und optional die Saldenliste-Konten (Konto → (bez, gj, vj)) für die
        Konto-Ebene im Drill-down.
-Datenagnostisch (§2.1): KEINE Kontonummern/Mandant im Code. Alles, was angezeigt
+Datenagnostisch: KEINE Kontonummern/Mandant im Code. Alles, was angezeigt
        wird, kommt aus dem übergebenen Datenmodell bzw. den Konten. Der Renderer
-       LIEST nur und rechnet NICHTS nach (eiserner Grundsatz §2.7): er übernimmt
+       LIEST nur und rechnet NICHTS nach (eiserner Grundsatz): er übernimmt
        die Werte des Modells unverändert, erfindet keine Zahl.
 Letzte Änderung: 2026-06-23
 """

@@ -1,5 +1,5 @@
 {
-  "_hinweis": "Case-Facts-Block für Muster Stadtmarkt GmbH (Demo-Mandant). Numerische Wahrheiten leiten sich aus der Saldenliste ab (eiserner Grundsatz §2.7). Generiert via profile_einzelhandel.json.",
+  "_hinweis": "Case-Facts-Block für Muster Stadtmarkt GmbH (Demo-Mandant). Numerische Wahrheiten leiten sich aus der Saldenliste ab (eiserner Grundsatz). Generiert via profile_einzelhandel.json.",
   "stammdaten": {
     "firma": "Muster Stadtmarkt GmbH",
     "rechtsform": "Gesellschaft mit beschränkter Haftung",

@@ -11,8 +11,7 @@ Hinweis Scope: sauberes, druckfähiges PDF. ECHTE PDF/A-3-Archivkonformität
        Default-Scope, als Ausblick dokumentiert.
 Status: ✅ 2026-06-23
 Abhängigkeiten: reportlab (pure-Python). Eingaben wie beim HTML-Renderer.
-Datenagnostisch (§2.1): KEINE Kontonummern/Mandant im Code. Eiserner Grundsatz
-       (§2.7): übernimmt Modellwerte unverändert, rechnet nichts nach.
+Datenagnostisch: KEINE Kontonummern/Mandant im Code. Eiserner Grundsatz: übernimmt Modellwerte unverändert, rechnet nichts nach.
 Letzte Änderung: 2026-06-23
 """
 from datetime import date
@@ -244,9 +243,7 @@ def _anhang_flow(sections, S, sections_config=None):
 
 
 # --------------------------------------------------------------------------- #
-# Unterschrift + Feststellungsvermerk — jeder reale Unternehmensregister-        #
-# Auszug hat das (32/32 Geschäftsführer-Nennung, 31/32 Feststellungsvermerk,   #
-# 31/32 Unterschriftsblock — s. docs/local/ANHANG_REALWELT_ABGLEICH.md).       #
+# Unterschrift + Feststellungsvermerk                                          #
 # --------------------------------------------------------------------------- #
 def _unterschrift_flow(geschaeftsfuehrer, feststellung, S):
     if not geschaeftsfuehrer:
@@ -321,7 +318,7 @@ def render_pdf(datenmodell, konten=None, anhang_sections=None,
     Argumente analog renderer_html.render_html. titel/stichtag sind kosmetisch
     (kommen nicht aus den Zahlen). anhang_sections_config ist optional ein
     {section_id: config_row}-Lookup aus anhang_sections.json — steuert nur die
-    Showcase-Kennzeichnung (§13 ANHANG.md), keine LLM-Prompt-Änderung.
+    Showcase-Kennzeichnung, keine LLM-Prompt-Änderung.
     geschaeftsfuehrer: Liste von Namen (str) oder {"name":..., "titel":...}-Dicts.
     feststellung: {"datum":..., "ort":...} — beide kosmetisch, kommen aus dem
     Sachverhaltsblatt, nicht aus dem Datenmodell.
@@ -398,7 +395,7 @@ def render_pdf(datenmodell, konten=None, anhang_sections=None,
     doc = BaseDocTemplate(
         buf, pagesize=A4, leftMargin=margin, rightMargin=margin,
         topMargin=14 * mm, bottomMargin=14 * mm,
-        title=titel, author="8_AI_Accounting")
+        title=titel, author="Wolfgang Bossle")
     doc.addPageTemplates([
         PageTemplate(id="portrait", pagesize=A4, onPage=_footer, frames=[
             Frame(margin, 14 * mm, A4[0] - 2 * margin, A4[1] - 28 * mm, id="p")]),

@@ -127,7 +127,7 @@ def write_excel(rows, path):
 
 
 # --------------------------------------------------------------------------- #
-# Profile mode — deterministic, industry-specific, taxonomy-grounded (§2.8)
+# Profile mode — deterministic, industry-specific, taxonomy-grounded
 # --------------------------------------------------------------------------- #
 def _tax_bal(td=None):
     p = Path(td or DEFAULT_TAXONOMY) / "de-gaap-ci-2025-04-01-balance-is.json"

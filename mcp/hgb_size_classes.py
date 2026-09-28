@@ -6,7 +6,7 @@ Zweck: Größenklassen-Gate (§ 267 Abs. 1 i. V. m. Abs. 4 HGB). Verifiziert aus
        Die Größenklasse wird damit ABGELEITET, nicht (wie bisher) als String geglaubt.
 Status: am erfundenen Musterfall gebaut, nicht im Mandantenbetrieb erprobt (README, Einordnung)
 Abhängigkeiten: Datenmodell aus jahresabschluss.generate(), sachverhaltsblatt.json
-Datenagnostisch (§2.1): KEINE Kontonummern/Mandant. Schwellen = Gesetzeswerte (§267),
+Datenagnostisch: KEINE Kontonummern/Mandant. Schwellen = Gesetzeswerte (§267),
        Umsatz-Konzept = Taxonomie-Konstante (de-gaap-ci) — analog NETINCOME_CONCEPT.
 Letzte Änderung: 2026-06-28
 """
@@ -24,7 +24,7 @@ NETSALES_SUFFIX = ".netSales"
 
 def _umsatzerloese(datenmodell: dict) -> tuple[float, float]:
     """Umsatzerlöse (GJ, VJ) aus der GuV des Datenmodells. Fehlt das Konzept, ist die
-    Größe nach § 267 nicht prüfbar → harter Fehler statt stiller 0-Annahme (§2.7)."""
+    Größe nach § 267 nicht prüfbar → harter Fehler statt stiller 0-Annahme."""
     for p in datenmodell.get("guv", {}).get("positionen", []):
         if p.get("konzept", "").endswith(NETSALES_SUFFIX):
             return float(p["wert_gj"]), float(p["wert_vj"])
@@ -66,7 +66,7 @@ def pruefe_groessenklasse(datenmodell: dict, sachverhalt: dict) -> dict:
     """Verifiziert die Größenklasse "klein" (§ 267 Abs. 1) über GJ und VJ und wendet
     die Zwei-Jahres-Regel (§ 267 Abs. 4) an.
 
-    Datenquellen (eiserner Grundsatz §2.7):
+    Datenquellen (eiserner Grundsatz):
       - Bilanzsumme: datenmodell.bilanz.summe_aktiva_gj/_vj (aus Saldenliste abgeleitet)
       - Umsatzerlöse: GuV-Konzept …netSales (aus Saldenliste abgeleitet)
       - Arbeitnehmer: sachverhalt.mitarbeiter.durchschnitt_gj/_vj (Sachverhaltsblatt)

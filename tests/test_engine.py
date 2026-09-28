@@ -5,7 +5,7 @@ Deckt den bisher nur von verify.py abgedeckten Happy-Path als echte Tests ab UND
 neu — die Negativpfade (der eiserne Grundsatz muss LAUT scheitern, nie still):
   * fehlende Tabelle-B-Zuordnung  -> ValueError
   * unausgeglichene Bilanz        -> ValueError (Bilanzprobe != 0)
-Datenagnostisch: die Synthetik-Konten hier sind Testdaten, kein Engine-Code (§2.1).
+Datenagnostisch: die Synthetik-Konten hier sind Testdaten, kein Engine-Code.
 """
 from pathlib import Path
 

@@ -1,10 +1,10 @@
 """
 anhang_retry_demo.py
-Zweck: CCA 4.4 Lernrtefakt — Validation/Retry-Loop mit pruefe_section() als
+Zweck: Lernartefakt — Validation/Retry-Loop mit pruefe_section() als
        deterministischem Validator. llm_fn = Platzhalter fuer echten LLM-Aufruf
        (API-Kontext). In Claude Code uebernimmt Claude den Loop selbst (liest
        Tool-Fehler, generiert neu) — kein Python-Code noetig.
-Status: Lernrtefakt (nicht produktiv)
+Status: Lernartefakt (nicht produktiv)
 Abhaengigkeiten: mcp/anhang.py, mcp/jahresabschluss.py
 Aufruf: python scripts/anhang_retry_demo.py
 Letzte Aenderung: 2026-06-25
@@ -30,7 +30,7 @@ DEFAULT_ANLAGENBUCHHALTUNG = BASE / "data/baeckerei_2025/Anlagenbuchhaltung.xlsx
 
 
 # ---------------------------------------------------------------------------
-# Kern-Muster: retry_loop (CCA 4.4 Referenzimplementierung)
+# Kern-Muster: retry_loop
 # ---------------------------------------------------------------------------
 def retry_loop(llm_fn, section_id, datenmodell, sachverhalt, max_retries=3):
     """Validation/Retry-Loop.
@@ -93,7 +93,7 @@ def make_demo_llm_fn(datenmodell):
 # Demo
 # ---------------------------------------------------------------------------
 def main():
-    print("=== CCA 4.4 — Validation/Retry-Loop Demo ===\n")
+    print("=== Validation/Retry-Loop Demo ===\n")
 
     dm = generate(DEFAULT_SALDENLISTE, DEFAULT_MAPPING, DEFAULT_TAXONOMIE,
                   anlagenbuchhaltung=DEFAULT_ANLAGENBUCHHALTUNG)
@@ -109,11 +109,11 @@ def main():
         print(f"\nFehlgeschlagen: {e}")
         sys.exit(1)
 
-    print("\n--- Muster (CCA 4.4) ---")
+    print("\n--- Muster ---")
     print("1. llm_fn generiert Output (tool_use + Schema)")
     print("2. pruefe_section() validiert deterministisch")
     print("3. Fehler strukturiert zurueck an llm_fn")
-    print("4. Nach MAX_RETRIES: RuntimeError + Human-Review (CCA 5.5)")
+    print("4. Nach MAX_RETRIES: RuntimeError + Human-Review")
 
 
 if __name__ == "__main__":

@@ -11,5 +11,8 @@ __pycache__/
 # bewusst getrackt: Sie sind Ergebnisse des Sprachmodells, nicht regenerierbar.
 output/**/anhang_*.json
 
+# Lokale PDF-Läufe von scripts/render_pdf_demo.py (ohne --release)
+output/local/
+
 # Lokale Claude-Code-Konfiguration (Hooks, Befehle, Skill), nicht Teil der Veröffentlichung
 .claude/

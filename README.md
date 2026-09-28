@@ -31,12 +31,12 @@ Die Anhangtexte des Musterfalls liegen formuliert und geprüft im Repositorium. 
 Voraussetzung ist Python 3.12 oder neuer.
 
 ```
-pip install fastmcp jsonschema openpyxl reportlab pdfplumber
+pip install fastmcp jsonschema openpyxl reportlab python-docx
 python scripts/verify.py
 python scripts/render_pdf_demo.py
 ```
 
-`verify.py` prüft die Bilanzprobe und die festen Werte des Musterfalls, `render_pdf_demo.py` erzeugt das PDF unter `output/baeckerei_2025/`.
+`verify.py` prüft die Bilanzprobe und die festen Werte des Musterfalls, `render_pdf_demo.py` erzeugt das PDF unter `output/local/`; das eingecheckte PDF unter `output/baeckerei_2025/` bleibt unverändert.
 
 ## Einordnung
 
