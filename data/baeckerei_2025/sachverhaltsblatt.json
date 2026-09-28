@@ -89,6 +89,14 @@
     "mutterunternehmen_vorhanden": false,
     "begruendung": "Alleiniger Gesellschafter-Geschäftsführer; keine Einbeziehung in den Konzernabschluss eines Mutterunternehmens."
   },
+  "haftungsverhaeltnisse_251": {
+    "vorhanden": false,
+    "begruendung": "Haftungsverhältnisse im Sinne des § 251 HGB bestehen nicht."
+  },
+  "gesellschafter_42_abs3": {
+    "vorhanden": false,
+    "begruendung": "Ausleihungen, Forderungen und Verbindlichkeiten gegenüber Gesellschaftern bestehen nicht."
+  },
   "finanzinstrumente_fair_value": {
     "vorhanden": false,
     "begruendung": "Keine mit dem beizulegenden Zeitwert bewerteten Finanzinstrumente (keine Derivate, keine Wertpapiere)."

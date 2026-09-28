@@ -18,9 +18,11 @@ from pathlib import Path
 BASE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(BASE / "mcp"))
 
-from anhang import lade_sections                         # noqa: E402
+from anhang import anhang_fuer_groessenklasse, lade_sections  # noqa: E402
+from hgb_size_classes import pruefe_groessenklasse       # noqa: E402
 from jahresabschluss import generate, read_saldenliste   # noqa: E402
 from renderer_pdf import render_pdf                       # noqa: E402
+from sachverhalt import get_sachverhalt                   # noqa: E402
 
 DATA = BASE / "data/baeckerei_2025"
 OUT = BASE / "output/baeckerei_2025"
@@ -68,9 +70,12 @@ def main():
     konten = read_saldenliste(SALDENLISTE)
     titel, stichtag, geschaeftsfuehrer, feststellung = _kopfangaben()
     sections_config = {s["id"]: s for s in lade_sections()}
-    pdf = render_pdf(dm, konten=konten, anhang_sections=_lade_anhang_sections(),
+    groessenklasse = pruefe_groessenklasse(dm, get_sachverhalt())["groessenklasse"]
+    anhang = anhang_fuer_groessenklasse(_lade_anhang_sections(), groessenklasse)
+    pdf = render_pdf(dm, konten=konten, anhang_sections=anhang,
                      titel=titel, stichtag=stichtag, anhang_sections_config=sections_config,
-                     geschaeftsfuehrer=geschaeftsfuehrer, feststellung=feststellung)
+                     geschaeftsfuehrer=geschaeftsfuehrer, feststellung=feststellung,
+                     groessenklasse=groessenklasse)
     ziel = OUT / "jahresabschluss.pdf" if "--release" in sys.argv[1:]         else BASE / "output/local/jahresabschluss.pdf"
     ziel.parent.mkdir(parents=True, exist_ok=True)
     ziel.write_bytes(pdf)

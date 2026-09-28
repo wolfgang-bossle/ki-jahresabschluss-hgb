@@ -111,6 +111,15 @@ def aktive_sections(groessenklasse: str, einschluss=("pflicht",), sections=None)
     return out
 
 
+def anhang_fuer_groessenklasse(section_objs: list[dict], groessenklasse: str,
+                               sections=None) -> list[dict]:
+    """Filtert fertige Section-Objekte (Phase 2/3) auf die Größenklasse, bevor ein
+    Renderer sie zeigt: 'entfaellt' fällt heraus (§ 288 Abs. 1), 'pflicht' und
+    'freiwillig' bleiben. Reihenfolge erhalten."""
+    ids = {s["id"] for s in aktive_sections(groessenklasse, ("pflicht", "freiwillig"), sections)}
+    return [o for o in section_objs if o.get("section_id") in ids]
+
+
 # --------------------------------------------------------------------------- #
 # Pfad-Resolver — adressiert Werte im Datenmodell / Sachverhaltsblatt          #
 #   "anlagenspiegel.summe.bw_gj"                                               #

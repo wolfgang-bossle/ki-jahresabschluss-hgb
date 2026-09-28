@@ -127,6 +127,28 @@
     "escalation": { "moeglich": false, "grund": null }
   },
   {
+    "id": "haftungsverhaeltnisse_268_abs7",
+    "label": "Haftungsverhältnisse",
+    "typ": "B",
+    "geltung": { "klein": "pflicht", "mittelgross": "pflicht", "gross": "pflicht" },
+    "render": "prosa",
+    "norm": { "refs": [ { "paragraph": "268", "absatz": "7", "zitat": "§ 268 Abs. 7 HGB" } ] },
+    "quellen": { "datenmodell": [], "sachverhalt": ["haftungsverhaeltnisse_251"] },
+    "aufgabe": "Prüfe 'haftungsverhaeltnisse_251.vorhanden'. Ist es falsch, übernimm die übergebene 'begruendung' wörtlich. Andernfalls nenne die Haftungsverhältnisse nach § 251 HGB jeweils gesondert mit den gewährten Pfandrechten und sonstigen Sicherheiten, ausschließlich aus dem Kontext. Erfinde nichts.",
+    "escalation": { "moeglich": false, "grund": null }
+  },
+  {
+    "id": "gesellschafter_42_abs3_gmbhg",
+    "label": "Ausleihungen, Forderungen und Verbindlichkeiten gegenüber Gesellschaftern",
+    "typ": "B",
+    "geltung": { "klein": "pflicht", "mittelgross": "pflicht", "gross": "pflicht" },
+    "render": "prosa",
+    "norm": { "refs": [ { "gesetz": "GmbHG", "paragraph": "42", "absatz": "3", "zitat": "§ 42 Abs. 3 GmbHG" } ] },
+    "quellen": { "datenmodell": [], "sachverhalt": ["gesellschafter_42_abs3"] },
+    "aufgabe": "Prüfe 'gesellschafter_42_abs3.vorhanden'. Ist es falsch, übernimm die übergebene 'begruendung' wörtlich. Andernfalls nenne Ausleihungen, Forderungen und Verbindlichkeiten gegenüber Gesellschaftern jeweils gesondert, ausschließlich aus dem Kontext. Erfinde nichts.",
+    "escalation": { "moeglich": false, "grund": null }
+  },
+  {
     "id": "organkredite",
     "label": "Vorschüsse und Kredite an Mitglieder der Geschäftsführung",
     "typ": "B",

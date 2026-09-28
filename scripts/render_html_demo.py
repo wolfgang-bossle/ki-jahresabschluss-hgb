@@ -17,8 +17,11 @@ from pathlib import Path
 BASE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(BASE / "mcp"))
 
+from anhang import anhang_fuer_groessenklasse            # noqa: E402
+from hgb_size_classes import pruefe_groessenklasse      # noqa: E402
 from jahresabschluss import generate, read_saldenliste  # noqa: E402
 from renderer_html import render_html                    # noqa: E402
+from sachverhalt import get_sachverhalt                  # noqa: E402
 
 DATA = BASE / "data/baeckerei_2025"
 OUT = BASE / "output/baeckerei_2025"
@@ -61,8 +64,10 @@ def main():
     dm = generate(SALDENLISTE, MAPPING, TAXONOMIE, anlagenbuchhaltung=ANLAGENBUCHHALTUNG)
     konten = read_saldenliste(SALDENLISTE)
     titel, stichtag = _kopfangaben()
+    groessenklasse = pruefe_groessenklasse(dm, get_sachverhalt())["groessenklasse"]
     htmltext = render_html(
-        dm, konten=konten, anhang_sections=_lade_anhang_sections(),
+        dm, konten=konten,
+        anhang_sections=anhang_fuer_groessenklasse(_lade_anhang_sections(), groessenklasse),
         titel=titel, stichtag=stichtag,
     )
     ziel = OUT / "jahresabschluss.html"

@@ -204,26 +204,24 @@ def _anlagenspiegel_flow(asp, S, avail):
 # --------------------------------------------------------------------------- #
 # Anhang + Rückverfolgbarkeits-Appendix
 # --------------------------------------------------------------------------- #
-_SHOWCASE_BANNER = (
-    "Hinweis: Dieser Anhang bildet bewusst den vollständigen, nach § 288 Abs. 1 HGB "
-    "für eine kleine Kapitalgesellschaft NICHT befreiten Pflichtangaben-Katalog ab — "
-    "über das für eine kleine GmbH übliche Mindestmaß hinaus, einschließlich rechtlich "
-    "einschlägiger, aber im konkreten Sachverhalt nicht erfüllter Tatbestände "
-    "(\"nicht einschlägig\"). Dies dient dem Nachweis, dass die KI keine Sachverhalte "
-    "erfindet, sondern ehrlich Fehlanzeige meldet."
+_BANNER_KLEIN = (
+    "Hinweis: Bis auf die als über die Mindestangabe hinaus gekennzeichneten Angaben "
+    "gehört jede Angabe dieses Anhangs zu denen, von denen § 288 Abs. 1 Nr. 1 HGB eine "
+    "kleine Kapitalgesellschaft nicht befreit. Sie steht auch dort, wo der Tatbestand im "
+    "Sachverhalt nicht vorliegt (\"nicht einschlägig\"): Die Fehlanzeige zeigt, dass die "
+    "KI keine Sachverhalte erfindet. Angaben, von denen § 288 Abs. 1 Nr. 1 HGB befreit, "
+    "etwa die Bezüge der Geschäftsführung nach § 285 Nr. 9 lit. a HGB, sind nicht enthalten."
 )
 
 
-def _anhang_flow(sections, S, sections_config=None):
+def _anhang_flow(sections, S, sections_config=None, groessenklasse=None):
     if not sections:
         return []
     sections_config = sections_config or {}
-    zeigt_showcase = any(
-        sections_config.get(sec.get("section_id"), {}).get("showcase") for sec in sections)
     flow = [PageBreak(), Paragraph("Anhang", S["h2"]),
             Paragraph("§§ 284 / 285 HGB", S["norm"])]
-    if zeigt_showcase:
-        flow.append(Paragraph(_SHOWCASE_BANNER, S["note"]))
+    if groessenklasse == "klein":
+        flow.append(Paragraph(_BANNER_KLEIN, S["note"]))
     for sec in sections:
         titel = sec.get("section_id", "").replace("_", " ").title()
         norm = ", ".join(sec.get("norm_refs", []))
@@ -311,7 +309,7 @@ def _rueckverfolgbarkeit_flow(positionen_gruppen, konten, S, avail):
 # --------------------------------------------------------------------------- #
 def render_pdf(datenmodell, konten=None, anhang_sections=None,
                titel=None, stichtag=None, anhang_sections_config=None,
-               geschaeftsfuehrer=None, feststellung=None):
+               geschaeftsfuehrer=None, feststellung=None, groessenklasse=None):
     """Erzeugt das PDF als bytes (kein Plattenschreiben — der Aufrufer speichert).
 
     Argumente analog renderer_html.render_html. titel/stichtag sind kosmetisch
@@ -321,6 +319,8 @@ def render_pdf(datenmodell, konten=None, anhang_sections=None,
     geschaeftsfuehrer: Liste von Namen (str) oder {"name":..., "titel":...}-Dicts.
     feststellung: {"datum":..., "ort":...} — beide kosmetisch, kommen aus dem
     Sachverhaltsblatt, nicht aus dem Datenmodell.
+    groessenklasse: abgeleitete Größenklasse; bei 'klein' steht über dem Anhang der
+    Hinweis zu § 288 Abs. 1 Nr. 1 HGB.
     """
     bilanz = datenmodell.get("bilanz", {})
     guv = datenmodell.get("guv", {})
@@ -371,7 +371,8 @@ def render_pdf(datenmodell, konten=None, anhang_sections=None,
         flow += [NextPageTemplate("landscape"), PageBreak()]
         flow += _anlagenspiegel_flow(asp, S, avail_ls)
         flow += [NextPageTemplate("portrait")]
-    flow += _anhang_flow(anhang_sections, S, sections_config=anhang_sections_config)
+    flow += _anhang_flow(anhang_sections, S, sections_config=anhang_sections_config,
+                         groessenklasse=groessenklasse)
     flow += _unterschrift_flow(geschaeftsfuehrer, feststellung, S)
     flow += _rueckverfolgbarkeit_flow(
         [("Bilanz – Aktiva", bilanz.get("aktiva", [])),

@@ -1,0 +1,34 @@
+{
+  "section_id": "haftungsverhaeltnisse_268_abs7",
+  "norm_refs": [
+    "§ 268 Abs. 7 HGB"
+  ],
+  "blocks": [
+    {
+      "typ": "prosa",
+      "text": "Haftungsverhältnisse im Sinne des § 251 HGB bestehen nicht.",
+      "claims": [
+        {
+          "aussage": "Haftungsverhältnisse",
+          "wert": "Haftungsverhältnisse im Sinne des § 251 HGB bestehen nicht.",
+          "quelle": {
+            "art": "sachverhalt",
+            "pfad": "haftungsverhaeltnisse_251.begruendung"
+          }
+        }
+      ]
+    }
+  ],
+  "confidence": "hoch",
+  "escalation_flag": false,
+  "escalation_grund": null,
+  "offene_punkte": [],
+  "_validierung": {
+    "phase3": "ok",
+    "claims_geprueft": 1,
+    "fehler": 0,
+    "warnungen": 0,
+    "geerdet_gegen": "Saldenliste.xlsx + sachverhaltsblatt.json",
+    "datum": "2026-09-28"
+  }
+}
