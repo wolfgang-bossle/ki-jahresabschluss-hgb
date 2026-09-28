@@ -137,7 +137,7 @@ def bilanz_guv_ableiten(
             anlagenbuchhaltung=_anlagen,
         )
         # Größenklassen-Gate (§ 267): die Erleichterungen des Scopes (verkürzte Bilanz,
-        # reduzierter Anhang, PDF-Offenlegung) setzen "klein" voraus. Nicht klein →
+        # reduzierter Anhang, verkürzte Offenlegung) setzen "klein" voraus. Nicht klein →
         # hart stoppen, nicht still mit unzulässigen Erleichterungen weiterlaufen.
         gk = pruefe_groessenklasse(modell, sv)
         if not gk["ok"]:
@@ -230,8 +230,8 @@ def anhang_section_pruefen(section: dict, mandant: str = DEFAULT_MANDANT) -> dic
 def groessenklasse_pruefen(mandant: str = DEFAULT_MANDANT) -> dict:
     """Vorgeschaltetes Gate: verifiziert, dass der Mandant eine KLEINE Kapitalgesellschaft
     nach § 267 Abs. 1 HGB ist — Voraussetzung für die größenabhängigen Erleichterungen
-    (verkürzte Bilanz § 266 Abs. 1, reduzierter Anhang § 288 Abs. 1, PDF-Offenlegung
-    § 326). Prüft die drei Merkmale (Bilanzsumme, Umsatzerlöse, Arbeitnehmer-Durchschnitt)
+    (verkürzte Bilanz § 266 Abs. 1, reduzierter Anhang § 288 Abs. 1, verkürzte
+    Offenlegung, nur Bilanz und Anhang (§ 326 Abs. 1)). Prüft die drei Merkmale (Bilanzsumme, Umsatzerlöse, Arbeitnehmer-Durchschnitt)
     für GJ und VJ und wendet die Zwei-Jahres-Regel (§ 267 Abs. 4) an.
 
     Die Größenklasse wird damit aus den Daten ABGELEITET (Bilanzsumme/Umsatz aus der

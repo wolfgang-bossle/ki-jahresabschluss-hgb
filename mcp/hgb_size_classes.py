@@ -10,15 +10,30 @@ Datenagnostisch: KEINE Kontonummern/Mandant. Schwellen = Gesetzeswerte (§267),
        Umsatz-Konzept = Taxonomie-Konstante (de-gaap-ci) — analog NETINCOME_CONCEPT.
 """
 
-# Schwellenwerte § 267 Abs. 1 HGB (Stand BEG IV 2024, Geschäftsjahre ab 31.12.2023).
+# Schwellenwerte § 267 Abs. 1 HGB i. d. F. ab 17.04.2024, erstmals für GJ, die nach dem
+# 31.12.2023 beginnen (Art. 93 Abs. 1 EGHGB; wahlweise schon für GJ, die nach dem
+# 31.12.2022 beginnen, nur insgesamt, Abs. 2).
 # "klein" = höchstens EINS der drei Merkmale überschritten (= mind. zwei eingehalten).
-BILANZSUMME_MAX = 7_500_000   # € nach Abzug Fehlbetrag § 268 Abs. 3
+BILANZSUMME_MAX = 7_500_000   # € ohne Fehlbetrag nach § 268 Abs. 3 (§ 267 Abs. 4a)
 UMSATZERLOESE_MAX = 15_000_000  # € in den 12 Monaten vor dem Stichtag (§ 277 Abs. 1)
 ARBEITNEHMER_MAX = 50           # Jahresdurchschnitt (§ 267 Abs. 5)
 
 # Umsatzerlöse-Konzept der de-gaap-ci: das GuV-Blatt, dessen Konzept-ID auf
 # ".netSales" endet (GKV wie UKV). Kein Pfad-Hardcoding → robust gegen das Verfahren.
 NETSALES_SUFFIX = ".netSales"
+# Nicht durch Eigenkapital gedeckter Fehlbetrag (Aktivseite, § 268 Abs. 3) — zählt nach
+# § 267 Abs. 4a Satz 2 nicht zur Bilanzsumme. Fehlt der Posten, ist nichts abzuziehen.
+FEHLBETRAG_KONZEPT = "de-gaap-ci_bs.ass.deficitNotCoveredByCapital"
+
+
+def _bilanzsumme(datenmodell: dict) -> tuple[float, float]:
+    """Bilanzsumme (GJ, VJ) nach § 267 Abs. 4a: Summe Aktiva ohne Fehlbetrag § 268 Abs. 3."""
+    bs = datenmodell.get("bilanz", {})
+    fb_gj = fb_vj = 0.0
+    for p in bs.get("aktiva", []):
+        if p.get("konzept") == FEHLBETRAG_KONZEPT:
+            fb_gj, fb_vj = float(p["wert_gj"]), float(p["wert_vj"])
+    return float(bs["summe_aktiva_gj"]) - fb_gj, float(bs["summe_aktiva_vj"]) - fb_vj
 
 
 def _umsatzerloese(datenmodell: dict) -> tuple[float, float]:
@@ -66,7 +81,8 @@ def pruefe_groessenklasse(datenmodell: dict, sachverhalt: dict) -> dict:
     die Zwei-Jahres-Regel (§ 267 Abs. 4) an.
 
     Datenquellen (eiserner Grundsatz):
-      - Bilanzsumme: datenmodell.bilanz.summe_aktiva_gj/_vj (aus Saldenliste abgeleitet)
+      - Bilanzsumme: datenmodell.bilanz.summe_aktiva_gj/_vj ohne Fehlbetrag § 268 Abs. 3
+        (§ 267 Abs. 4a; aus Saldenliste abgeleitet)
       - Umsatzerlöse: GuV-Konzept …netSales (aus Saldenliste abgeleitet)
       - Arbeitnehmer: sachverhalt.mitarbeiter.durchschnitt_gj/_vj (Sachverhaltsblatt)
 
@@ -79,9 +95,7 @@ def pruefe_groessenklasse(datenmodell: dict, sachverhalt: dict) -> dict:
     Returns: dict mit ok, groessenklasse, schwellen, merkmale{gj,vj}, begruendung.
     ok=False heißt: die Erleichterungen für kleine Gesellschaften sind unzulässig.
     """
-    bs = datenmodell.get("bilanz", {})
-    bs_gj = float(bs["summe_aktiva_gj"])
-    bs_vj = float(bs["summe_aktiva_vj"])
+    bs_gj, bs_vj = _bilanzsumme(datenmodell)
     um_gj, um_vj = _umsatzerloese(datenmodell)
     an_gj, an_vj = _arbeitnehmer(sachverhalt)
 

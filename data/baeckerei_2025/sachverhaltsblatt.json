@@ -34,7 +34,7 @@
   },
   "nachtragsereignisse": [],
   "anlagenspiegel": {
-    "_befreiungshinweis": "Kleine Kapitalgesellschaften sind nach § 288 Abs. 1 i. V. m. § 284 Abs. 3 HGB von der Pflicht zur Erstellung und Veröffentlichung eines Anlagenspiegels im Jahresabschluss befreit. Eine freiwillige Erstellung kann dennoch sinnvoll sein, wenn Kreditinstitute oder das Finanzamt (E-Bilanz nach § 5b EStG) ihn als Nachweis anfordern.",
+    "_befreiungshinweis": "Kleine Kapitalgesellschaften sind nach § 288 Abs. 1 i. V. m. § 284 Abs. 3 HGB von der Pflicht zur Erstellung und Veröffentlichung eines Anlagenspiegels im Jahresabschluss befreit. Eine freiwillige Erstellung kann dennoch sinnvoll sein, wenn Kreditinstitute oder das Finanzamt ihn als Nachweis anfordern.",
     "erstellen": true
   },
   "_hinweis_showcase": "Ab hier: Sachverhalte für Angaben, von denen § 288 Abs. 1 Nr. 1 HGB eine kleine Kapitalgesellschaft nicht befreit, inkl. 'nicht einschlägig'-Aussagen dort, wo der Sachverhalt bei der Bäckerei nicht vorliegt.",
