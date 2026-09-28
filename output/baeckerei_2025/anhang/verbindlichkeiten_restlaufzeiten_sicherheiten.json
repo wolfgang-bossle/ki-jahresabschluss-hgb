@@ -6,7 +6,7 @@
   "blocks": [
     {
       "typ": "prosa",
-      "text": "Verbindlichkeiten gegenüber Kreditinstituten: Gesamtbetrag 900.000 EUR, davon 60.000 EUR mit einer Restlaufzeit bis zu einem Jahr, 90.000 EUR mit einer Restlaufzeit zwischen einem und fünf Jahren, 750.000 EUR mit einer Restlaufzeit über fünf Jahre. Gesichert durch: Grundschuld auf dem Betriebsgrundstück Hauptstraße; Sicherungsübereignung von Anlagevermögen (Industrieofen, Fahrzeuge). Verbindlichkeiten aus Lieferungen und Leistungen: Gesamtbetrag 120.000 EUR, davon 120.000 EUR mit einer Restlaufzeit bis zu einem Jahr, 0 EUR mit einer Restlaufzeit zwischen einem und fünf Jahren, 0 EUR mit einer Restlaufzeit über fünf Jahre. Ohne Sicherheiten. sonstige Verbindlichkeiten: Gesamtbetrag 64.000 EUR, davon 64.000 EUR mit einer Restlaufzeit bis zu einem Jahr, 0 EUR mit einer Restlaufzeit zwischen einem und fünf Jahren, 0 EUR mit einer Restlaufzeit über fünf Jahre. Ohne Sicherheiten.",
+      "text": "Verbindlichkeiten gegenüber Kreditinstituten: Gesamtbetrag 900.000 EUR, davon 100.000 EUR mit einer Restlaufzeit bis zu einem Jahr, 400.000 EUR mit einer Restlaufzeit zwischen einem und fünf Jahren, 400.000 EUR mit einer Restlaufzeit über fünf Jahre. Gesichert durch: Grundschuld auf dem Betriebsgrundstück Hauptstraße; Sicherungsübereignung von Anlagevermögen (Industrieofen, Fahrzeuge). Verbindlichkeiten aus Lieferungen und Leistungen: Gesamtbetrag 120.000 EUR, davon 120.000 EUR mit einer Restlaufzeit bis zu einem Jahr, 0 EUR mit einer Restlaufzeit zwischen einem und fünf Jahren, 0 EUR mit einer Restlaufzeit über fünf Jahre. Ohne Sicherheiten. sonstige Verbindlichkeiten: Gesamtbetrag 64.000 EUR, davon 64.000 EUR mit einer Restlaufzeit bis zu einem Jahr, 0 EUR mit einer Restlaufzeit zwischen einem und fünf Jahren, 0 EUR mit einer Restlaufzeit über fünf Jahre. Ohne Sicherheiten.",
       "claims": [
         {
           "aussage": "Gesamtbetrag Verbindlichkeiten gegenüber Kreditinstituten",
@@ -18,7 +18,7 @@
         },
         {
           "aussage": "RLZ bis 1 Jahr Verbindlichkeiten gegenüber Kreditinstituten",
-          "wert": 60000,
+          "wert": 100000,
           "quelle": {
             "art": "sachverhalt",
             "pfad": "verbindlichkeiten_detail.davon[0].rlz_bis_1j"
@@ -26,7 +26,7 @@
         },
         {
           "aussage": "RLZ 1-5 Jahre Verbindlichkeiten gegenüber Kreditinstituten",
-          "wert": 90000,
+          "wert": 400000,
           "quelle": {
             "art": "sachverhalt",
             "pfad": "verbindlichkeiten_detail.davon[0].rlz_1_bis_5j"
@@ -34,7 +34,7 @@
         },
         {
           "aussage": "RLZ über 5 Jahre Verbindlichkeiten gegenüber Kreditinstituten",
-          "wert": 750000,
+          "wert": 400000,
           "quelle": {
             "art": "sachverhalt",
             "pfad": "verbindlichkeiten_detail.davon[0].rlz_ueber_5j"
@@ -125,6 +125,6 @@
     "fehler": 0,
     "warnungen": 0,
     "geerdet_gegen": "Saldenliste.xlsx + sachverhaltsblatt.json",
-    "datum": "2026-09-24"
+    "datum": "2026-09-28"
   }
 }
