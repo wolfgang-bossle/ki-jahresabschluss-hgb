@@ -38,6 +38,10 @@ DM = {
     "metadata": {"quelle": "Test.xlsx", "bilanzprobe_gj": 0.0, "bilanzprobe_vj": 0.0,
                  "jue_abgestimmt": True, "taxonomie": "x-2025"},
 }
+# Mini-Gliederung für die synthetischen Konzepte (die HGB-Gliederung kennt x_* nicht).
+GL = {"aktiva": [{"gliederung": "B.", "bezeichnung": "Kasse", "konzept": "x_bs.ass.cash"}],
+      "passiva": [{"gliederung": "A.", "bezeichnung": "Eigenkapital", "konzept": "x_bs.eqLiab"}],
+      "guv": [{"gliederung": "17.", "bezeichnung": "Jahresüberschuss", "konzept": "x_is"}]}
 KONTEN = {
     "9001": ("Kasse-Testkonto", 100000.0, 90000.0),
     "9100": ("Eigenkapital-Testkonto", 0.0, 0.0),
@@ -54,7 +58,7 @@ def test_eur_format_deutsch():
 
 
 def test_anker_und_formatierung_im_html():
-    h = render_html(DM, konten=KONTEN)
+    h = render_html(DM, gliederung=GL,konten=KONTEN)
     # Modellwerte erscheinen exakt im deutschen Format.
     assert "100.000,00" in h
     assert "12.345,67" in h
@@ -63,7 +67,7 @@ def test_anker_und_formatierung_im_html():
 
 
 def test_drilldown_kette_position_konzept_konto_saldo():
-    h = render_html(DM, konten=KONTEN)
+    h = render_html(DM, gliederung=GL,konten=KONTEN)
     # Klickbare Zeilen + Detailpanels existieren.
     assert "drill" in h and 'tr class="detail"' in h
     # Konzept-Anker steht im Panel.
@@ -76,13 +80,13 @@ def test_drilldown_kette_position_konzept_konto_saldo():
 
 def test_erfindet_keine_zahl():
     """Anti-Halluzination: eine Zahl, die im Modell nicht vorkommt, taucht nicht auf."""
-    h = render_html(DM, konten=KONTEN)
+    h = render_html(DM, gliederung=GL,konten=KONTEN)
     assert "999.999" not in h
     assert "777,77" not in h
 
 
 def test_robust_ohne_anlagenspiegel_und_anhang():
-    h = render_html(DM, konten=None, anhang_sections=None)
+    h = render_html(DM, gliederung=GL,konten=None, anhang_sections=None)
     assert "<html" in h and "</html>" in h
     # Ohne Konten bleibt das Panel da, nur ohne Saldenliste-Bezeichnung (kein Crash).
     assert "9200" in h

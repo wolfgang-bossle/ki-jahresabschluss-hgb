@@ -1,0 +1,44 @@
+{
+  "_hinweis": "Postenfolge und Bezeichnungen nach § 266 Abs. 2 und 3 HGB (Bilanz) und § 275 Abs. 2 HGB (GuV, Gesamtkostenverfahren), Wortlaut aus rag/chunks.json (hgb_266_abs2, hgb_266_abs3, hgb_275_abs2). Jeder Posten zeigt auf genau ein Taxonomie-Konzept des Datenmodells; Posten ohne Wert entfallen. Nur Posten, die die Konzepte dieses Repos tragen. Davon-Vermerke sind nicht dargestellt. Rohergebnis (§ 276) nicht verwendet: Nr. 1 bis 5 stehen einzeln.",
+  "aktiva": [
+    { "gliederung": "A.", "bezeichnung": "Anlagevermögen", "konzept": "de-gaap-ci_bs.ass.fixAss", "posten": [
+      { "gliederung": "II.", "bezeichnung": "Sachanlagen", "konzept": "de-gaap-ci_bs.ass.fixAss.tan", "posten": [
+        { "gliederung": "1.", "bezeichnung": "Grundstücke, grundstücksgleiche Rechte und Bauten einschließlich der Bauten auf fremden Grundstücken", "konzept": "de-gaap-ci_bs.ass.fixAss.tan.landBuildings" },
+        { "gliederung": "2.", "bezeichnung": "technische Anlagen und Maschinen", "konzept": "de-gaap-ci_bs.ass.fixAss.tan.machinery" },
+        { "gliederung": "3.", "bezeichnung": "andere Anlagen, Betriebs- und Geschäftsausstattung", "konzept": "de-gaap-ci_bs.ass.fixAss.tan.otherEquipm" }
+      ] }
+    ] },
+    { "gliederung": "B.", "bezeichnung": "Umlaufvermögen", "konzept": "de-gaap-ci_bs.ass.currAss", "posten": [
+      { "gliederung": "I.", "bezeichnung": "Vorräte", "konzept": "de-gaap-ci_bs.ass.currAss.inventory", "posten": [ { "gliederung": "1.", "bezeichnung": "Roh-, Hilfs- und Betriebsstoffe", "konzept": "de-gaap-ci_bs.ass.currAss.inventory.material" } ] },
+      { "gliederung": "II.", "bezeichnung": "Forderungen und sonstige Vermögensgegenstände", "konzept": "de-gaap-ci_bs.ass.currAss.receiv", "posten": [ { "gliederung": "1.", "bezeichnung": "Forderungen aus Lieferungen und Leistungen", "konzept": "de-gaap-ci_bs.ass.currAss.receiv.trade" } ] },
+      { "gliederung": "IV.", "bezeichnung": "Kassenbestand, Bundesbankguthaben, Guthaben bei Kreditinstituten und Schecks", "konzept": "de-gaap-ci_bs.ass.currAss.cashEquiv" }
+    ] }
+  ],
+  "passiva": [
+    { "gliederung": "A.", "bezeichnung": "Eigenkapital", "konzept": "de-gaap-ci_bs.eqLiab.equity", "posten": [
+      { "gliederung": "I.", "bezeichnung": "Gezeichnetes Kapital", "konzept": "de-gaap-ci_bs.eqLiab.equity.subscribed" },
+      { "gliederung": "IV.", "bezeichnung": "Gewinnvortrag/Verlustvortrag", "konzept": "de-gaap-ci_bs.eqLiab.equity.retainedEarnings" },
+      { "gliederung": "V.", "bezeichnung": "Jahresüberschuß/Jahresfehlbetrag", "konzept": "de-gaap-ci_bs.eqLiab.equity.netIncome" }
+    ] },
+    { "gliederung": "B.", "bezeichnung": "Rückstellungen", "konzept": "de-gaap-ci_bs.eqLiab.accruals", "posten": [ { "gliederung": "2.", "bezeichnung": "Steuerrückstellungen", "konzept": "de-gaap-ci_bs.eqLiab.accruals.tax" } ] },
+    { "gliederung": "C.", "bezeichnung": "Verbindlichkeiten", "konzept": "de-gaap-ci_bs.eqLiab.liab", "posten": [
+      { "gliederung": "2.", "bezeichnung": "Verbindlichkeiten gegenüber Kreditinstituten", "konzept": "de-gaap-ci_bs.eqLiab.liab.bank" },
+      { "gliederung": "4.", "bezeichnung": "Verbindlichkeiten aus Lieferungen und Leistungen", "konzept": "de-gaap-ci_bs.eqLiab.liab.trade" },
+      { "gliederung": "8.", "bezeichnung": "sonstige Verbindlichkeiten", "konzept": "de-gaap-ci_bs.eqLiab.liab.other" }
+    ] }
+  ],
+  "guv": [
+    { "gliederung": "1.", "bezeichnung": "Umsatzerlöse", "konzept": "de-gaap-ci_is.netIncome.regular.operatingTC.grossTradingProfit.totalOutput.netSales" },
+    { "gliederung": "5.", "bezeichnung": "Materialaufwand", "konzept": "de-gaap-ci_is.netIncome.regular.operatingTC.grossTradingProfit.materialServices", "posten": [ { "gliederung": "a)", "bezeichnung": "Aufwendungen für Roh-, Hilfs- und Betriebsstoffe und für bezogene Waren", "konzept": "de-gaap-ci_is.netIncome.regular.operatingTC.grossTradingProfit.materialServices.material" } ] },
+    { "gliederung": "6.", "bezeichnung": "Personalaufwand", "konzept": "de-gaap-ci_is.netIncome.regular.operatingTC.staff", "posten": [
+      { "gliederung": "a)", "bezeichnung": "Löhne und Gehälter", "konzept": "de-gaap-ci_is.netIncome.regular.operatingTC.staff.salaries" },
+      { "gliederung": "b)", "bezeichnung": "soziale Abgaben und Aufwendungen für Altersversorgung und für Unterstützung", "konzept": "de-gaap-ci_is.netIncome.regular.operatingTC.staff.social" }
+    ] },
+    { "gliederung": "7.", "bezeichnung": "Abschreibungen", "konzept": "de-gaap-ci_is.netIncome.regular.operatingTC.deprAmort", "posten": [ { "gliederung": "a)", "bezeichnung": "auf immaterielle Vermögensgegenstände des Anlagevermögens und Sachanlagen", "konzept": "de-gaap-ci_is.netIncome.regular.operatingTC.deprAmort.fixAss" } ] },
+    { "gliederung": "8.", "bezeichnung": "sonstige betriebliche Aufwendungen", "konzept": "de-gaap-ci_is.netIncome.regular.operatingTC.otherCost" },
+    { "gliederung": "13.", "bezeichnung": "Zinsen und ähnliche Aufwendungen", "konzept": "de-gaap-ci_is.netIncome.regular.fin.netInterest.expenses" },
+    { "gliederung": "14.", "bezeichnung": "Steuern vom Einkommen und vom Ertrag", "konzept": "de-gaap-ci_is.netIncome.tax" },
+    { "gliederung": "15.", "bezeichnung": "Ergebnis nach Steuern", "konzept": "de-gaap-ci_is.netIncome.eat" },
+    { "gliederung": "17.", "bezeichnung": "Jahresüberschuss/Jahresfehlbetrag", "konzept": "de-gaap-ci_is.netIncome" }
+  ]
+}

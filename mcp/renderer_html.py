@@ -7,7 +7,8 @@ Zweck: Renderer — nimmt das geerdete Datenmodell (aus jahresabschluss.generate
        Kernfeature: klickbares Drill-down je Position entlang der
        Rückverfolgbarkeit Position → Taxonomie-Konzept → Konto → Saldenliste-Saldo.
 Status: am erfundenen Musterfall gebaut, nicht im Mandantenbetrieb erprobt (README, Einordnung)
-Abhängigkeiten: keine (reine Standardbibliothek). Eingaben sind das Datenmodell
+Abhängigkeiten: gliederung.py (Postenfolge § 266/§ 275), sonst reine
+       Standardbibliothek. Eingaben sind das Datenmodell
        und optional die Saldenliste-Konten (Konto → (bez, gj, vj)) für die
        Konto-Ebene im Drill-down.
 Datenagnostisch: KEINE Kontonummern/Mandant im Code. Alles, was angezeigt
@@ -17,6 +18,8 @@ Datenagnostisch: KEINE Kontonummern/Mandant im Code. Alles, was angezeigt
 """
 import html
 from datetime import date
+
+from gliederung import gliedere
 
 # Einrückung je Gliederungsebene (px). ebene 0 = Summe, höhere = tiefer im Baum.
 _INDENT_PX = 18
@@ -341,7 +344,7 @@ _JS = """
 
 
 def render_html(datenmodell, konten=None, anhang_sections=None,
-                titel=None, stichtag=None):
+                titel=None, stichtag=None, gliederung=None):
     """Erzeugt das eigenständige HTML-Dokument als String (kein Plattenschreiben).
 
     datenmodell: Rückgabe von jahresabschluss.generate().
@@ -350,6 +353,7 @@ def render_html(datenmodell, konten=None, anhang_sections=None,
     anhang_sections: Liste geerdeter Anhang-Section-Dicts (optional).
     titel/stichtag: rein kosmetische Kopfangaben (kommen NICHT aus den Zahlen,
                  daher als Parameter – der Renderer rechnet nichts nach).
+    gliederung:  Postenfolge (Default mcp/config/gliederung_hgb.json), siehe gliederung.py.
     """
     bilanz = datenmodell.get("bilanz", {})
     guv = datenmodell.get("guv", {})
@@ -378,18 +382,18 @@ def render_html(datenmodell, konten=None, anhang_sections=None,
 
     teile = [
         _positionsliste(
-            "Bilanz – Aktiva", "§ 266 Abs. 2 HGB", bilanz.get("aktiva", []), konten,
+            "Bilanz – Aktiva", "§ 266 Abs. 2 HGB",
+            gliedere(bilanz.get("aktiva", []), "aktiva", gliederung), konten,
             summe=("Summe Aktiva", bilanz.get("summe_aktiva_gj"), bilanz.get("summe_aktiva_vj")),
         ),
         _positionsliste(
-            "Bilanz – Passiva", "§ 266 Abs. 3 HGB", bilanz.get("passiva", []), konten,
+            "Bilanz – Passiva", "§ 266 Abs. 3 HGB",
+            gliedere(bilanz.get("passiva", []), "passiva", gliederung), konten,
             summe=("Summe Passiva", bilanz.get("summe_passiva_gj"), bilanz.get("summe_passiva_vj")),
         ),
         _positionsliste(
             "Gewinn- und Verlustrechnung", "§ 275 Abs. 2 HGB (Gesamtkostenverfahren)",
-            guv.get("positionen", []), konten,
-            summe=("Jahresüberschuss", guv.get("jahresueberschuss_gj"),
-                   guv.get("jahresueberschuss_vj")),
+            gliedere(guv.get("positionen", []), "guv", gliederung), konten,
         ),
         _anlagenspiegel(asp),
         _anhang(anhang_sections),

@@ -39,6 +39,10 @@ DM = {
     "metadata": {"quelle": "Test.xlsx", "bilanzprobe_gj": 0.0, "bilanzprobe_vj": 0.0,
                  "jue_abgestimmt": True, "taxonomie": "x-2025"},
 }
+# Mini-Gliederung für die synthetischen Konzepte (die HGB-Gliederung kennt x_* nicht).
+GL = {"aktiva": [{"gliederung": "B.", "bezeichnung": "Kasse", "konzept": "x_bs.ass.cash"}],
+      "passiva": [{"gliederung": "A.", "bezeichnung": "Eigenkapital", "konzept": "x_bs.eqLiab"}],
+      "guv": [{"gliederung": "17.", "bezeichnung": "Jahresüberschuss", "konzept": "x_is"}]}
 KONTEN = {"9001": ("Kasse-Testkonto", 100000.0, 90000.0),
           "9100": ("EK-Testkonto", 0.0, 0.0),
           "9200": ("Ergebnis-Testkonto", 12345.67, -500.0)}
@@ -56,7 +60,7 @@ def test_eur_ascii_minus():
 def test_pdf_ist_gueltig_und_nichttrivial():
     if not HAVE_RL:
         return
-    pdf = render_pdf(DM, konten=KONTEN, titel="Test", stichtag="31.12.2025")
+    pdf = render_pdf(DM, gliederung=GL,konten=KONTEN, titel="Test", stichtag="31.12.2025")
     assert isinstance(pdf, (bytes, bytearray))
     assert pdf[:5] == b"%PDF-"          # gültiger PDF-Header
     assert pdf.rstrip()[-5:] == b"%%EOF"  # sauber terminiert
@@ -66,7 +70,7 @@ def test_pdf_ist_gueltig_und_nichttrivial():
 def test_pdf_robust_ohne_anlagenspiegel_und_anhang():
     if not HAVE_RL:
         return
-    pdf = render_pdf(DM, konten=None, anhang_sections=None)
+    pdf = render_pdf(DM, gliederung=GL,konten=None, anhang_sections=None)
     assert pdf[:5] == b"%PDF-"
 
 
@@ -90,5 +94,5 @@ def test_pdf_mit_anlagenspiegel_baut_durch():
         "reconciliation": {"bw_gj": 943000.0, "afa_jahr": 83500.0,
                            "afa_aufwand_saldenliste": 83500.0, "abgestimmt": True},
     }
-    pdf = render_pdf(dm, konten=KONTEN)
+    pdf = render_pdf(dm, gliederung=GL, konten=KONTEN)
     assert pdf[:5] == b"%PDF-" and len(pdf) > 3000

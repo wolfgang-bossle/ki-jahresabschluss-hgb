@@ -10,7 +10,8 @@ Hinweis Scope: sauberes, druckfähiges PDF. ECHTE PDF/A-3-Archivkonformität
        (eingebettetes XBRL, XMP/ICC) ist hier NICHT zertifiziert — bewusster
        Default-Scope, als Ausblick dokumentiert.
 Status: am erfundenen Musterfall gebaut, nicht im Mandantenbetrieb erprobt (README, Einordnung)
-Abhängigkeiten: reportlab (pure-Python). Eingaben wie beim HTML-Renderer.
+Abhängigkeiten: reportlab (pure-Python), gliederung.py (Postenfolge § 266/§ 275).
+       Eingaben wie beim HTML-Renderer.
 Datenagnostisch: KEINE Kontonummern/Mandant im Code. Eiserner Grundsatz: übernimmt Modellwerte unverändert, rechnet nichts nach.
 """
 from datetime import date
@@ -25,6 +26,8 @@ from reportlab.platypus import (
     BaseDocTemplate, Frame, NextPageTemplate, PageBreak, PageTemplate,
     Paragraph, Spacer, Table, TableStyle,
 )
+
+from gliederung import gliedere
 
 # Farbpalette (an den HTML-Renderer angelehnt).
 _GREEN = colors.HexColor("#1a7f37")
@@ -309,7 +312,8 @@ def _rueckverfolgbarkeit_flow(positionen_gruppen, konten, S, avail):
 # --------------------------------------------------------------------------- #
 def render_pdf(datenmodell, konten=None, anhang_sections=None,
                titel=None, stichtag=None, anhang_sections_config=None,
-               geschaeftsfuehrer=None, feststellung=None, groessenklasse=None):
+               geschaeftsfuehrer=None, feststellung=None, groessenklasse=None,
+               gliederung=None):
     """Erzeugt das PDF als bytes (kein Plattenschreiben — der Aufrufer speichert).
 
     Argumente analog renderer_html.render_html. titel/stichtag sind kosmetisch
@@ -321,9 +325,13 @@ def render_pdf(datenmodell, konten=None, anhang_sections=None,
     Sachverhaltsblatt, nicht aus dem Datenmodell.
     groessenklasse: abgeleitete Größenklasse; bei 'klein' steht über dem Anhang der
     Hinweis zu § 288 Abs. 1 Nr. 1 HGB.
+    gliederung: Postenfolge (Default mcp/config/gliederung_hgb.json), siehe gliederung.py.
     """
     bilanz = datenmodell.get("bilanz", {})
     guv = datenmodell.get("guv", {})
+    aktiva = gliedere(bilanz.get("aktiva", []), "aktiva", gliederung)
+    passiva = gliedere(bilanz.get("passiva", []), "passiva", gliederung)
+    guv_posten = gliedere(guv.get("positionen", []), "guv", gliederung)
     meta = datenmodell.get("metadata", {})
     asp = datenmodell.get("anlagenspiegel")
     S = _styles()
@@ -351,20 +359,18 @@ def render_pdf(datenmodell, konten=None, anhang_sections=None,
         Spacer(1, 6),
         Paragraph("Bilanz – Aktiva", S["h2"]),
         Paragraph("§ 266 Abs. 2 HGB (Beträge in EUR)", S["norm"]),
-        _positionstabelle(bilanz.get("aktiva", []), S, avail,
+        _positionstabelle(aktiva, S, avail,
                           summe=("Summe Aktiva", bilanz.get("summe_aktiva_gj"),
                                  bilanz.get("summe_aktiva_vj"))),
         Paragraph("Bilanz – Passiva", S["h2"]),
         Paragraph("§ 266 Abs. 3 HGB (Beträge in EUR)", S["norm"]),
-        _positionstabelle(bilanz.get("passiva", []), S, avail,
+        _positionstabelle(passiva, S, avail,
                           summe=("Summe Passiva", bilanz.get("summe_passiva_gj"),
                                  bilanz.get("summe_passiva_vj"))),
         PageBreak(),
         Paragraph("Gewinn- und Verlustrechnung", S["h2"]),
         Paragraph("§ 275 Abs. 2 HGB · Gesamtkostenverfahren (Beträge in EUR)", S["norm"]),
-        _positionstabelle(guv.get("positionen", []), S, avail,
-                          summe=("Jahresüberschuss", guv.get("jahresueberschuss_gj"),
-                                 guv.get("jahresueberschuss_vj"))),
+        _positionstabelle(guv_posten, S, avail),
         Spacer(1, 10),
     ]
     if asp:
@@ -375,9 +381,9 @@ def render_pdf(datenmodell, konten=None, anhang_sections=None,
                          groessenklasse=groessenklasse)
     flow += _unterschrift_flow(geschaeftsfuehrer, feststellung, S)
     flow += _rueckverfolgbarkeit_flow(
-        [("Bilanz – Aktiva", bilanz.get("aktiva", [])),
-         ("Bilanz – Passiva", bilanz.get("passiva", [])),
-         ("Gewinn- und Verlustrechnung", guv.get("positionen", []))],
+        [("Bilanz – Aktiva", aktiva),
+         ("Bilanz – Passiva", passiva),
+         ("Gewinn- und Verlustrechnung", guv_posten)],
         konten, S, avail)
 
     def _footer(canvas, d):
