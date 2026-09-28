@@ -4,7 +4,7 @@ Zweck: MCP-Wrapper (FastMCP) um die Jahresabschluss-Engine. Dünne Hülle —
        KEINE Buchhaltungslogik hier. Ruft generate() aus jahresabschluss.py auf
        und reicht das Datenmodell durch. Bilanzprobe-Fehler propagieren als
        Tool-Fehler (Governance: melden, nie still ausgleichen).
-Status: ✅ Produktiv 2026-06-27
+Status: am erfundenen Musterfall gebaut, nicht im Mandantenbetrieb erprobt (README, Einordnung)
 Abhängigkeiten: fastmcp, jsonschema, jahresabschluss.py, anhang.py, sachverhalt.py,
                 hgb_size_classes.py
 Start: python mcp/server.py   (stdio-Transport)

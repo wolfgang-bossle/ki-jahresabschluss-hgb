@@ -4,7 +4,7 @@ Zweck: Größenklassen-Gate (§ 267 Abs. 1 i. V. m. Abs. 4 HGB). Verifiziert aus
        geerdeten Datenmodell + Sachverhaltsblatt, dass die Gesellschaft "klein" ist —
        Voraussetzung für die größenabhängigen Erleichterungen (§ 288 Abs. 1, § 326).
        Die Größenklasse wird damit ABGELEITET, nicht (wie bisher) als String geglaubt.
-Status: ✅ Produktiv 2026-06-28
+Status: am erfundenen Musterfall gebaut, nicht im Mandantenbetrieb erprobt (README, Einordnung)
 Abhängigkeiten: Datenmodell aus jahresabschluss.generate(), sachverhaltsblatt.json
 Datenagnostisch (§2.1): KEINE Kontonummern/Mandant. Schwellen = Gesetzeswerte (§267),
        Umsatz-Konzept = Taxonomie-Konstante (de-gaap-ci) — analog NETINCOME_CONCEPT.

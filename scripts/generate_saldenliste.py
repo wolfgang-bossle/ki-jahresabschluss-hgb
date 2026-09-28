@@ -2,7 +2,7 @@
 generate_saldenliste.py
 Zweck: Synthese-Generator — erzeugt centgenaue, bilanzierte SKR03-Saldenlisten
        als Excel (4-Spalten-Format) für Engine-Stress-Tests.
-Status: ✅ Produktiv seit 2026-06-27
+Status: am erfundenen Musterfall gebaut, nicht im Mandantenbetrieb erprobt (README, Einordnung)
 Abhängigkeiten: mcp/config/skr03_mapping.json, openpyxl
 Letzte Änderung: 2026-06-27
 """

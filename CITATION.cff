@@ -10,8 +10,9 @@ abstract: >-
   KI-Jahresabschluss nach HGB: an einem erfundenen Musterfall der Weg von der
   Saldenliste zu Bilanz, Gewinn- und Verlustrechnung und Anhang einer kleinen
   GmbH. Die Werkzeuge rechnen, Claude von Anthropic formuliert die Anhangtexte,
-  jede Zahl und jede Tatsachenbehauptung wird centgenau gegen das Datenmodell
-  geprüft und ist bis auf das Konto zurückverfolgbar.
+  jede belegte Zahl und Tatsachenbehauptung wird centgenau gegen das
+  Datenmodell geprüft, eine unbelegte Zahl wird gemeldet. Jede Zahl aus der
+  Saldenliste ist bis auf das Konto zurückverfolgbar.
 # Keine keywords: Owner der Schlagwörter sind die GitHub-Topics des Repositoriums.
 license:
   - MIT

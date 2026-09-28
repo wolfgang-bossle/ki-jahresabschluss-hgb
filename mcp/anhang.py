@@ -5,7 +5,7 @@ Zweck: Anhang-Generierung — Phase 1 (Kontext-Assembly) + Phase 3 (Grounding-Va
        für den PDF-Beleg). Deterministisch, datenagnostisch, KEINE Buchhaltungslogik,
        KEINE Kontonummern im Code. Phase 2 (LLM-Formulierung) läuft außerhalb
        (LLM-Seam §2.3, Desktop-now/API-ready).
-Status: ✅ Produktiv 2026-06-27, Stempel-Funktion 2026-07-03
+Status: am erfundenen Musterfall gebaut, nicht im Mandantenbetrieb erprobt (README, Einordnung)
 Bezug: docs/ANHANG.md — die KI formuliert nur, sie behauptet nichts, was nicht aus
        dem Datenmodell (Wahrheit) oder dem Sachverhaltsblatt stammt (eiserner Grundsatz §2.5/§2.7).
 """

@@ -4,7 +4,7 @@ Zweck: Engine — Anlagenbuchhaltung (Brutto) + Tabelle B + XBRL-Taxonomie
        => Anlagenspiegel (§284 Abs. 3 / §268 Abs. 2 HGB) als Datenmodell-Block.
        Harte Reconciliation gegen die Saldenliste (BW Ende = Anlagekonten,
        Σ AfA Jahr = AfA-Aufwandskonto) — Abweichung = ValueError, nie still.
-Status: ✅ Produktiv 2026-06-18
+Status: am erfundenen Musterfall gebaut, nicht im Mandantenbetrieb erprobt (README, Einordnung)
 Abhängigkeiten: data/<mandant>/Anlagenbuchhaltung.xlsx, mcp/config/skr03_mapping.json,
                 taxonomy/*-presentation-balanceSheet.xml, *-label-de.xml, openpyxl
 Datenagnostisch (§2.1): KEINE Kontonummern/Mandant im Code. Werte aus der

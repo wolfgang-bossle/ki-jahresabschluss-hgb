@@ -8,7 +8,7 @@ Wolfgang Bossle, CPA · Claude Certified Architect
 
 ## Ausgangspunkt
 
-Das Repositorium zeigt an einem erfundenen Musterfall, wie der Jahresabschluss einer kleinen GmbH nach HGB mit KI-Unterstützung entstehen kann, ohne dass eine Zahl ungeprüft in das Dokument gelangt. Eingang ist die Saldenliste, Ausgang sind Bilanz, Gewinn- und Verlustrechnung und Anhang als PDF. Jede Zahl lässt sich bis auf das Konto zurückverfolgen.
+Das Repositorium zeigt an einem erfundenen Musterfall, wie der Jahresabschluss einer kleinen GmbH nach HGB mit KI-Unterstützung entstehen kann. Jede belegte Zahl im Anhang wird gegen das Datenmodell geprüft, jede unbelegte gemeldet. Eingang ist die Saldenliste, Ausgang sind Bilanz, Gewinn- und Verlustrechnung und Anhang als PDF. Jede Zahl aus der Saldenliste lässt sich bis auf das Konto zurückverfolgen.
 
 ## Was im Repositorium steckt
 
@@ -16,7 +16,7 @@ Das Repositorium zeigt an einem erfundenen Musterfall, wie der Jahresabschluss e
 
 **Die Gliederung kommt aus der Taxonomie.** Die Konten werden über die HGB-Taxonomie den Posten nach § 266 und § 275 HGB zugeordnet, nicht aus dem Trainingswissen eines Sprachmodells.
 
-**Die Werkzeuge rechnen, die KI formuliert.** Die Texte des Anhangs formuliert Claude von Anthropic. Jede Zahl und jede Tatsachenbehauptung darin muss auf eine Stelle im Datenmodell verweisen und wird dort centgenau geprüft, bevor sie in das Dokument gelangt. Eine Zahl im Text ohne diesen Verweis wird gemeldet.
+**Die Werkzeuge rechnen, die KI formuliert.** Die Texte des Anhangs formuliert Claude von Anthropic. Jede Zahl darin muss auf eine Stelle im Datenmodell verweisen und wird dort centgenau geprüft, bevor sie in das Dokument gelangt. Eine Zahl im Text ohne diesen Verweis wird gemeldet.
 
 Anthropic hat an dem Repositorium nicht mitgewirkt.
 

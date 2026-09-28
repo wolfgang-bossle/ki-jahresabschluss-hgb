@@ -2,7 +2,7 @@
 jahresabschluss.py
 Zweck: Engine — Saldenliste + Tabelle B (Konto->Konzept) + XBRL-Taxonomie
        => Bilanz (§266) + GuV (§275) als Datenmodell, Bilanzprobe = 0,00 € hart.
-Status: ✅ Produktiv 2026-06-18
+Status: am erfundenen Musterfall gebaut, nicht im Mandantenbetrieb erprobt (README, Einordnung)
 Abhängigkeiten: mcp/config/skr03_mapping.json, taxonomy/*-presentation-*.xml,
                 taxonomy/*-label-de.xml, openpyxl
 Datenagnostisch (§2.1): KEINE Kontonummern/Mandant im Code. Werte aus Saldenliste,

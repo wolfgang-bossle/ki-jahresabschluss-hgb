@@ -5,7 +5,7 @@ Zweck: get_sachverhalt() — lädt den Case-Facts-Block (Sachverhaltsblatt) und
        Enthält NUR Sachverhalte, die nicht in der Saldenliste stehen (Stammdaten,
        Mitarbeiter, Organbezüge, Nachtragsereignisse) — numerische Wahrheiten
        bleiben beim eisernen Grundsatz §2.7 (Saldenliste → Datenmodell).
-Status: ✅ Produktiv 2026-06-27
+Status: am erfundenen Musterfall gebaut, nicht im Mandantenbetrieb erprobt (README, Einordnung)
 Quelle (Default): data/baeckerei_2025/sachverhaltsblatt.json
 Siehe: docs/ANHANG.md (Case-Facts-Block, Bau-Schritt 1)
 """
