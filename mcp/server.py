@@ -80,15 +80,15 @@ _PRUEFERGEBNIS_SCHEMA = {
 }
 
 
-@mcp.tool(title="Jahresabschluss erstellen (§ 266/§ 275 HGB)")
-def jahresabschluss_erstellen(
+@mcp.tool(title="Bilanz und GuV aus Saldenliste ableiten")
+def bilanz_guv_ableiten(
     saldenliste: str = "",
     mapping: str = "",
     taxonomie: str = "",
     anlagenbuchhaltung: str = "",
 ) -> dict:
-    """Erstellt aus einer Saldenliste den HGB-Jahresabschluss: Bilanz (§266 HGB)
-    + GuV (§275 HGB) als vollständiges Datenmodell mit Rückverfolgbarkeit je
+    """Leitet aus einer Saldenliste Bilanz (§266 HGB) und GuV (§275 HGB) ab, als
+    vollständiges Datenmodell mit Rückverfolgbarkeit je
     Position (bis aufs Konto). Die Bilanzprobe wird hart geprüft — ist sie nicht
     0,00 €, schlägt der Aufruf fehl (Aktiva ≠ Passiva wird gemeldet, nie still
     korrigiert).
@@ -243,7 +243,7 @@ def groessenklasse_pruefen(mandant: str = DEFAULT_MANDANT) -> dict:
     Returns:
         {ok, groessenklasse, schwellen_267_abs1, merkmale{gj,vj}, begruendung}.
         ok=True nur bei "klein". Bei "nicht klein": zusätzlich isError=True,
-        errorCategory="validation", isRetryable=False — die Erstellung darf nicht
+        errorCategory="validation", isRetryable=False — die Ableitung darf nicht
         mit Erleichterungen fortgesetzt werden (hart stoppen, melden).
     """
     try:
