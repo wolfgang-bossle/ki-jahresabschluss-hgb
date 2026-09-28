@@ -2,9 +2,9 @@
 
 **Saldenliste · Bilanz · Anhang**
 
-Wolfgang Bossle, CPA · Claude Certified Architect
+Wolfgang Bossle, Registered CPA · Claude Certified Architect – Professional
 
-**→ [Demo-Abschluss herunterladen](../../releases/latest).** Am Release hängt das PDF des Musterfalls.
+**→ [Demo-Abschluss herunterladen](https://github.com/wolfgang-bossle/ki-jahresabschluss-hgb/releases/latest).** Am Release hängt das PDF des Musterfalls.
 
 ## Ausgangspunkt
 
@@ -16,13 +16,22 @@ Das Repositorium zeigt an einem erfundenen Musterfall, wie der Jahresabschluss e
 
 **Die Gliederung kommt aus der Taxonomie.** Die Konten werden über die HGB-Taxonomie den Posten nach § 266 und § 275 HGB zugeordnet, nicht aus dem Trainingswissen eines Sprachmodells.
 
-**Die Werkzeuge rechnen, die KI formuliert.** Die Texte des Anhangs formuliert Claude von Anthropic. Jede Zahl darin muss auf eine Stelle im Datenmodell verweisen und wird dort centgenau geprüft, bevor sie in das Dokument gelangt. Eine Zahl im Text ohne diesen Verweis wird gemeldet.
+**Die Werkzeuge rechnen, die KI formuliert.** Die Texte des Anhangs formuliert Claude von Anthropic. Jede Zahl darin muss auf eine Stelle im Datenmodell verweisen und wird dort centgenau geprüft, bevor sie in das Dokument gelangt. Eine Zahl im Text ohne diesen Verweis wird gemeldet. Die Prüfung erfasst Zahlen, nicht Begriffe. Im Musterfall stand im Anhang zunächst „Geschäftsbericht“ statt „Jahresabschluss“, und der Text hat die Prüfung trotzdem passiert.
+
+**Was außerdem beiliegt.**
+
+- `output/baeckerei_2025/jahresabschluss.html`: derselbe Abschluss als HTML; jede Position lässt sich per Klick bis auf die Konten der Saldenliste aufklappen.
+- `output/fragebogen_sachverhalt.docx`: Fragebogen für die Angaben, die nicht in der Saldenliste stehen, jede Frage mit ihrer Rechtsgrundlage.
+- `data/beratung_2025` und `data/einzelhandel_2025`: zwei weitere erfundene Gesellschaften, Muster Consulting GmbH und Muster Stadtmarkt GmbH, ohne Anlagenspiegel.
+- `data/synth_*`: künstlich erzeugte Saldenlisten für Belastungstests der Rechenlogik, ohne Sachverhaltsblatt.
 
 Anthropic hat an dem Repositorium nicht mitgewirkt.
 
 ## Anwendbarkeit
 
 Das Repositorium ist auf die kleine GmbH im Sinne von § 267 Abs. 1 HGB zugeschnitten; die Größenklasse wird aus den Daten geprüft. Die Gewinn- und Verlustrechnung folgt dem Gesamtkostenverfahren. Die Kontonummern der Musterdaten sind an den SKR 03 angelehnt, aber nicht gegen den offiziellen Kontenrahmen abgeglichen. Alle Gesellschaften, Konten und Zahlen sind frei erfunden.
+
+Die Saldenliste hat vier Spalten: Konto, Bezeichnung, Saldo Geschäftsjahr, Saldo Vorjahr. Alle Salden stehen positiv, Aktivkonten im Soll, Passivkonten im Haben; ob ein GuV-Konto Ertrag oder Aufwand ist, ergibt sich aus der Taxonomie. Ein Bilanzkonto mit Gegenvorzeichen, etwa eine Bank im Haben, bricht den Lauf mit der Kontonummer ab. Umgegliedert wird nicht automatisch.
 
 Die Anhangtexte des Musterfalls liegen formuliert und geprüft im Repositorium. Für eine andere Gesellschaft formuliert Claude sie neu; der MCP-Server `jahresabschluss-hgb` stellt dazu den Kontext bereit und prüft das Ergebnis.
 
@@ -37,6 +46,18 @@ python scripts/render_pdf_demo.py
 ```
 
 `verify.py` prüft die Bilanzprobe und die festen Werte des Musterfalls, `render_pdf_demo.py` erzeugt das PDF unter `output/local/`; das eingecheckte PDF unter `output/baeckerei_2025/` bleibt unverändert.
+
+## Mit Claude nutzen
+
+Der MCP-Server `jahresabschluss-hgb` läuft lokal. Claude Code startet ihn über `.mcp.json`, wenn die Sitzung im Repositorium beginnt; die Datei setzt [uv](https://docs.astral.sh/uv/) voraus. Ohne uv startet `python mcp/server.py` den Server. Formuliert wird in der Claude-Sitzung selbst, ein API-Schlüssel ist nicht nötig.
+
+Ablauf je Abschnitt des Anhangs:
+
+1. `groessenklasse_pruefen` stellt fest, ob die Gesellschaft klein ist.
+2. `anhang_section_kontext` liefert Normtext, Daten und Ausgabeformat des Abschnitts.
+3. Claude formuliert den Abschnitt.
+4. `anhang_section_pruefen` prüft jede Zahl gegen das Datenmodell. Erst bei `ok` wird der Abschnitt unter `output/<mandant>/anhang/` abgelegt.
+5. `python scripts/anhang_stempeln.py` stempelt die Abschnitte, `python scripts/render_pdf_demo.py` erzeugt das PDF. Beide Skripte sind auf den Musterfall eingestellt.
 
 ## Einordnung
 
