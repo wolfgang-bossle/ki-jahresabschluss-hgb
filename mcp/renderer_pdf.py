@@ -129,8 +129,8 @@ def _positionstabelle(positionen, S, avail, summe=None):
 _ASP_SPALTEN = [
     ("ahk_anf", "AHK\nAnf."), ("zugang", "Zugang"), ("abgang_ahk", "Abgang"),
     ("umbuchung", "Umb."), ("ahk_ende", "AHK\nEnde"),
-    ("kumafa_anf", "Σ AfA\nAnf."), ("afa_jahr", "AfA\nJahr"),
-    ("abgang_afa", "Abg.\nAfA"), ("kumafa_ende", "Σ AfA\nEnde"),
+    ("kumafa_anf", "Summe\nAfA Anf."), ("afa_jahr", "AfA\nJahr"),
+    ("abgang_afa", "Abg.\nAfA"), ("kumafa_ende", "Summe\nAfA Ende"),
     ("bw_gj", "BW GJ"), ("bw_vj", "BW VJ"),
 ]
 
@@ -198,7 +198,7 @@ def _anlagenspiegel_flow(asp, S, avail):
         ok = rc.get("abgestimmt")
         flow.append(Spacer(1, 4))
         flow.append(Paragraph(
-            f'{"✓" if ok else "✗"} Reconciliation: Σ AfA Jahr {_eur(rc.get("afa_jahr"))} EUR '
+            f'Reconciliation {"abgestimmt" if ok else "nicht abgestimmt"}: Summe AfA Jahr {_eur(rc.get("afa_jahr"))} EUR '
             f'= AfA-Aufwand Saldenliste {_eur(rc.get("afa_aufwand_saldenliste"))} EUR; '
             f'Buchwert Ende {_eur(rc.get("bw_gj"))} EUR = Bilanz Sachanlagen.', S["note"]))
     return flow
@@ -237,7 +237,7 @@ def _anhang_flow(sections, S, sections_config=None, groessenklasse=None):
         val = sec.get("_validierung", {})
         if val.get("phase3") == "ok":
             flow.append(Paragraph(
-                f'✓ geerdet · {val.get("claims_geprueft","?")} Claims gegen die Wahrheit '
+                f'Geerdet · {val.get("claims_geprueft","?")} Claims gegen die Wahrheit '
                 f'geprüft · 0 Fehler', S["note"]))
     return flow
 
@@ -348,7 +348,7 @@ def render_pdf(datenmodell, konten=None, anhang_sections=None,
                 and round(meta.get("bilanzprobe_vj", 1), 2) == 0.0)
     status = (f"Bilanzprobe {_eur(meta.get('bilanzprobe_gj'))} / "
               f"{_eur(meta.get('bilanzprobe_vj'))} EUR"
-              f"  ·  JÜ aus GuV = Bilanz A.V {'✓' if meta.get('jue_abgestimmt') else '✗'}"
+              f"  ·  JÜ aus GuV = Bilanz A.V {'abgestimmt' if meta.get('jue_abgestimmt') else 'nicht abgestimmt'}"
               f"  ·  Taxonomie {meta.get('taxonomie','')}  ·  Quelle {meta.get('quelle','')}")
 
     flow = [
